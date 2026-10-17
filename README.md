@@ -168,6 +168,7 @@ bot-blocked and not used.
 - **v0.5** — crypto models (direction fails; crash-risk edge found)
 - **v0.6** — agent ensemble protocol + simulated tournament (weighted pool wins)
 - **v1.0** — production policy engine + causal calibration-rescue experiment (shrinkage adopted, Platt demoted), this README
+- **v1.1** — external advice review (`docs/EXTERNAL_ADVICE_REVIEW.md`): peer score + trimmed-mean pool adopted and measured (all adjustment rules score ≈0 peer vs the market — the crowd stands); supervisor search-to-reconcile, anchorer isolation, contamination filters and scenario-mixture outputs adopted into the protocol; blanket √3 extremization **rejected** against our measurements
 
 ## Limitations, stated plainly
 

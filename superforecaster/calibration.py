@@ -503,7 +503,34 @@ def optimize_pool_weights(y, probs, method: str = "extremized",
             "pooled": pooled, "pool_fn": fn, "success": bool(best.success)}
 
 
+def peer_score(y, p_agent, p_crowd) -> float:
+    """Relative Brier vs a contemporaneous crowd/market forecast.
+
+    peer = BS_crowd - BS_agent. > 0 beats the crowd; > ~0.02 sustained over a
+    large question set is 'superforecaster tier' in the ForecastBench /
+    Good Judgment literature. Controls for question difficulty, which raw
+    Brier does not. Added in v1.1 (see docs/EXTERNAL_ADVICE_REVIEW.md).
+    """
+    return float(brier_score(y, p_crowd) - brier_score(y, p_agent))
+
+
+def trimmed_mean_pool(probs, trim: float = 0.1):
+    """Trimmed-mean pool: drop the top/bottom `trim` fraction of agent
+    probabilities per question, average the rest. Robust to one wild agent;
+    validated as an aggregation baseline by Halawi et al. (ForecastBench).
+    probs: (n_questions, n_agents) or (n_agents,)."""
+    P = np.asarray(probs, float)
+    if P.ndim == 1:
+        P = P[None, :]
+    m = P.shape[1]
+    k = int(np.floor(trim * m))
+    Ps = np.sort(P, axis=1)
+    core = Ps[:, k:m - k] if m - 2 * k > 0 else Ps
+    return core.mean(axis=1)
+
+
 __all__ = [
+    "peer_score", "trimmed_mean_pool",
     "brier_score", "log_score", "log_loss", "murphy_decomposition",
     "expected_calibration_error", "maximum_calibration_error", "ece", "mce",
     "calibration_bins", "calibration_table", "evaluate",
