@@ -1,6 +1,23 @@
 # Superforecaster
 
-# 🎯 HEADLINE BRIER — Production: **0.2285** · Benchmark: 0.2290 · Raw models: 0.2336
+# ⭐ NORTH STAR — $\mathcal{N}_{star}$ (Alpha-Kelly Composite): **0.00**
+*The fleet no longer optimizes standalone forecast accuracy. It maximizes
+**market-relative, slippage-adjusted log-wealth growth** (paper simulation):
+$\mathcal{N}_{star} = \mathrm{CWR}_{bid} \times \sqrt{365/\bar{D}_{lock}} \times e^{-10\cdot\widehat{ECE}} - 2.0\cdot\max(0, MDD-0.15)$,
+with trades allowed only when a calibrated posterior $p$ clears the
+execution-adjusted market price $q_{exec}$ by ≥ 0.05 after spread, slippage and
+fees (else **SKIP**), sized at fractional Kelly (λ ∈ [0.25, 0.50], ≤ 15% per
+correlated cluster, crypto damped ×0.5). Per-trade theoretical edge = $D_{KL}(p \parallel q_{exec})$.
+**Current standing: N_star = 0.00 — the fleet has found no validated net edge yet
+(peer score vs market ≈ 0.0000), so it correctly takes ~no trades and preserves
+capital.** For calibration: frontier LLMs in the cited live trials lost −16% to
+−31% by trading without an edge. Zero is the score to beat honestly.
+Mission: *compound net liquidation wealth only where our calibrated posterior
+holds a verifiable information edge over the execution-adjusted market price.*
+Harness: `superforecaster/nstar.py` (fleet-built, backtested in `results/`).*
+
+
+## Calibration scoreboard — HEADLINE BRIER (secondary: gates + ECE feed) — Production: **0.2285** · Benchmark: 0.2290 · Raw models: 0.2336
 *Pooled over 37,589 scored forecasts (n-weighted). Production = the forecasts this
 system would actually ship: skill-gated, shrinkage-disciplined models for markets &
 crypto; the market price itself for prediction markets. Lower is better.
