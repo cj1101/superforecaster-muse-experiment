@@ -1,6 +1,21 @@
 # Superforecaster
 
-An evidence-first forecasting system built by a fleet of AI agents, in the
+# 🎯 HEADLINE BRIER — Production: **0.2285** · Benchmark: 0.2290 · Raw models: 0.2336
+*Pooled over 37,589 scored forecasts (n-weighted). Production = the forecasts this
+system would actually ship: skill-gated, shrinkage-disciplined models for markets &
+crypto; the market price itself for prediction markets. Lower is better.
+Objective: **market prediction dominance** — drive the Markets skill below zero-gap
+and keep it there. Updated by the fleet as new backtests land.*
+
+| Domain | Production Brier | Benchmark Brier | Skill | n |
+|---|---|---|---|---|
+| Markets (priority 1) | 0.2438 | 0.2432 (climatology) | **−0.0024 ← the gap to close** | 17,964 |
+| Prediction markets (priority 2) | 0.0905 | 0.1733 (climatology) | peer vs market: 0.0000 | 287 |
+| Crypto (priority 3) | 0.2163 | 0.2167 (climatology) | +0.0021 | 19,338 |
+
+
+An evidence-first forecasting system built by a fleet of 200 AI agent workstreams
+running continuously, in the
 priority order **(1) markets, (2) prediction markets, (3) crypto** — with a
 calibration/aggregation core and a Tetlock-style multi-agent protocol on top.
 
