@@ -35,26 +35,45 @@ holds a verifiable information edge over the execution-adjusted market price.*
 Engine: `superforecaster/alpha_kelly.py` · Interface: `./sf` CLI (`docs/AGENT_INTERFACE.md`)
 · Full spec: `docs/NORTH_STAR.md`.
 
-## The world field — how this competes
+## The world field — live records (checked 2026-10-17; every figure dated)
 
-$\mathcal{N}_{star}$ is a composite of the four hardest public benchmarks in
-AI forecasting/trading (all in `literature/`, verified real). The published
-state of the art is sobering — **most frontier AI systems lose money live**:
+$\mathcal{N}_{star}$ is a composite of the hardest public benchmarks in AI
+forecasting/trading (papers in `literature/`; full sourced survey in
+`docs/WORLD_FIELD.md`). Two kinds of champions defend this field, and the
+published record is sobering for both: **most frontier AI systems lose money
+live, and the biggest real profits come from speed and structure, not from
+better opinions.**
 
-| Arena | Field | Best published result | The lesson |
+**The trading arenas (LLM agents, real or realistic books):**
+
+| Arena | Status | Best verified record | The lesson |
 | --- | --- | --- | --- |
-| **Prediction Arena** (Harvard/Arcada, live Kalshi+Polymarket, real money) | Frontier LLMs | grok-4-20: +15.5% over 17 days, 71.4% settlement win rate — then **−8.99% in 5 hours** on correlated positions; gemini-3.1-pro: +6.02% in 3 days while trading *zero* curated Kalshi markets; the average model lost **−22.6%** when forced to trade efficient markets | Edge lives in discovery, not in opinions on famous markets; correlation kills |
-| **PolyBench** (38,666 live Polymarket markets, real CLOB) | 7 frontier LLMs | Only **2 of 7** finished positive: MiMo-V2-Flash **+17.6% CWR**, Gemini3-Flash +6.2% — and the leader's alpha collapsed as trade size grew toward $1,000 and swept thin books | Slippage is the silent tax; size is a strategy variable, not an afterthought |
-| **Prophet Arena** (UChicago/USC/Meta, 72,136 live markets) | LLM leaderboard | Ranks on Brier + ECE + CRRA market return jointly; proves a *worse-Brier* agent can out-earn a better-calibrated one when its errors sit on the profitable side of the market price | Accuracy ≠ profit; the market price is the opponent, not the answer key |
-| **LiveTradeBench** (UIUC, live equities + Polymarket) | LLM portfolio agents | Live-streamed, leakage-free portfolio allocation under real volatility regimes | Backtests flatter; only live, marked, cost-aware accounting counts |
+| **Prophet Arena** (UChicago/USC/Meta) | **LIVE** board, 4,480 resolved events, scored thru Oct 15 2026 | #1 Claude Fable 5.1: Brier ≈ 0.052, ECE 0.021, edge over market **+0.061**; #3 Gemini 3.1 Pro posts the best edge (**+0.072**) and return (104%) | The accuracy bar: edge +0.06–0.07 over the market at ECE ≈ 0.02 |
+| **Prediction Arena** (Harvard/Arcada) | **PAUSED** — final standings, data thru Jul 7 2026 ($10K start) | Gemini 3.1 Pro **+74.3%**, GLM 5 +69.4%, Claude Opus 4.6 +40.7% (top 3 were paper trading); bottom: Gemini 3 Pro −31.0% | Even the "live money" arena's winners were paper; the real-money tail is brutal |
+| **PolyBench** (38,666 Polymarket markets, real CLOB) | No live board; repo frozen Mar 2026 = latest official | Only **2 of 7** models positive: MiMo-V2-Flash **+17.6% CWR**, Gemini-3-Flash +6.2%; leader's alpha collapsed as size grew toward $1,000 | Slippage is the silent tax; size is a strategy variable |
+| **LiveTradeBench** (UIUC) | Live board unreachable (Oct 17 2026); latest official = paper window Aug–Oct 2025 | GPT-4.1 best equities (+6.25% cum.); Qwen3-235B best Polymarket (+57.6%) — with a **72.1% max drawdown** | Raw return without drawdown discipline is a liability, and $\mathcal{N}_{star}$ prices it |
 
-Against the *human* bar: elite human superforecasters (Tetlock's Good
-Judgment cohorts) remain the calibration gold standard on geopolitical
-questions, and prediction-market prices themselves are the single hardest
-baseline in this field — across our own 763 resolved markets, no adjustment
-rule beat the raw market price out-of-sample (peer score 0.0000). That is the
-defending champion this system has to beat, net of costs, before it may claim
-anything.
+**The accuracy champions (humans & platforms):**
+
+| Champion | Record | Note |
+| --- | --- | --- |
+| **Good Judgment Superforecasters** (humans) | FOMC decisions since 2023: Brier **0.031 vs CME FedWatch 0.058** — 46% more accurate than the futures market, 4th straight year; historically ~30% more accurate than intelligence analysts with classified access | The calibration gold standard — and they beat a *market*, which is exactly our game |
+| **ForecastBench** (live, updated Oct 17 2026) | Tournament board: Google DeepMind systems 1–3 (Brier Index 69.0/68.9/68.7); human Superforecaster median tied 3rd (68.7); baseline board: Superforecaster median **#1** (67.7) ahead of every raw LLM (best 61.9). "LLM–superforecaster parity achieved June 2026" | Agent systems now match elite humans on accuracy; nobody has yet matched them *and* the market, net of costs |
+| **Metaculus** community + AI bot tournaments | **Unverified** — site bot-walled on 2026-10-17; we do not quote numbers we could not read | Tracked by the intel division |
+
+**The algorithmic establishment (non-LLM):**
+
+| System class | Record | Note |
+| --- | --- | --- |
+| **Agentic time-series systems** (GIFT-Eval, live HF board) | LG EXAONE-Forecast-Agent #1 (MASE 0.610 / CRPS 0.419); best pure foundation models trail (TimesFM-3 0.667, Chronos-2 0.698) | Agents around models beat models alone — architecture is the edge |
+| **Polymarket bots** (the real money) | 14 of the 20 most profitable wallets are automated (Finance Magnates, Mar 2026); arbitrage bots extracted ≈ $40M in a year; one wallet $300 → $400K+ in a month on ultra-short crypto contracts — on **speed, not foresight**; hedge funds entering Kalshi via prime brokers | The profit bar is structural: latency, arbitrage, market-making |
+| **Systematic humans** | "Trump whale" Théo ≈ **$85M** (WSJ) via systematic polling-model buying; M6 competition's investment category won by a fully automated AutoTS pipeline | Discipline + a model + size, again — not punditry |
+
+**The defending champion is the market price itself.** Across our own 763
+resolved Polymarket markets, no adjustment rule beat the raw price
+out-of-sample (peer score 0.0000). Beating it net of spread, slippage, and
+fees — with calibration intact — is the whole game, and it is what
+$\mathcal{N}_{star}$ scores.
 
 ## Where this fleet stands (2026-10-17, all numbers from real runs)
 
