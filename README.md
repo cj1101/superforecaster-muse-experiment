@@ -1,21 +1,90 @@
 # Superforecaster
 
 # ⭐ NORTH STAR — $\mathcal{N}_{star}$ (Alpha-Kelly Composite): **0.00**
-*The fleet no longer optimizes standalone forecast accuracy. It maximizes
-**market-relative, slippage-adjusted log-wealth growth** (paper simulation):
-$\mathcal{N}_{star} = \mathrm{CWR}_{bid} \times \sqrt{365/\bar{D}_{lock}} \times e^{-10\cdot\widehat{ECE}} - 2.0\cdot\max(0, MDD-0.15)$,
-with trades allowed only when a calibrated posterior $p$ clears the
-execution-adjusted market price $q_{exec}$ by ≥ 0.05 after spread, slippage and
-fees (else **SKIP**), sized at fractional Kelly (λ ∈ [0.25, 0.50], ≤ 15% per
-correlated cluster, crypto damped ×0.5). Per-trade theoretical edge = $D_{KL}(p \parallel q_{exec})$.
-**Current standing: N_star = 0.00 — the fleet has found no validated net edge yet
-(peer score vs market ≈ 0.0000), so it correctly takes ~no trades and preserves
-capital.** For calibration: frontier LLMs in the cited live trials lost −16% to
-−31% by trading without an edge. Zero is the score to beat honestly.
+
+## What this number is — and why it is the only score that matters here
+
+Most "AI forecasting" leaderboards grade a *quiz*: how close were your
+probabilities to what happened (Brier score)? This project grades a **trader**:
+**would following this system's advice, at realistic prices, with real order
+books, have compounded money?** $\mathcal{N}_{star}$ is that grade:
+
+$$\mathcal{N}_{star} = \mathrm{CWR}_{bid} \times \sqrt{\frac{365}{\bar{D}_{lock}}} \times e^{-10\cdot\widehat{ECE}} - 2.0\cdot\max(0,\; MDD-0.15)$$
+
+- **CWR_bid** — profit per dollar actually invested, with every open position
+  valued at its *liquidation bid* (what you could sell for right now), not the
+  flattering mid-price.
+- **Velocity** — a 3% edge that locks capital for 9 months is worth less than
+  one that resolves in a week; the score annualizes for lockup time.
+- **Calibration multiplier** — a lucky gambler is indistinguishable from a
+  skilled forecaster until you check calibration; ECE of 0.15 slashes the
+  score by ~73%, so uncalibrated confidence cannot game it.
+- **Drawdown penalty** — blow past a 15% peak-to-trough loss and the score
+  pays for it twice over. Solvency discipline is part of the grade.
+
+Trades are allowed only when a calibrated posterior $p$ beats the
+**execution-adjusted** market price $q_{exec}$ (the volume-weighted price of
+actually filling your size through the order book, plus fees) by ≥ 0.05 —
+otherwise the system must **SKIP**. Sizing is fractional Kelly
+(λ ∈ [0.25, 0.50]), capped at 15% of the account per correlated event cluster,
+with crypto bets halved. In theory (Cover; Meister 2024), the most wealth can
+compound per trade is exactly the information edge $D_{KL}(p \parallel q_{exec})$
+— this benchmark is that theory, enforced with real books and real costs.
 Mission: *compound net liquidation wealth only where our calibrated posterior
 holds a verifiable information edge over the execution-adjusted market price.*
-Harness: `superforecaster/nstar.py` (fleet-built, backtested in `results/`).*
+Engine: `superforecaster/alpha_kelly.py` · Interface: `./sf` CLI (`docs/AGENT_INTERFACE.md`)
+· Full spec: `docs/NORTH_STAR.md`.
 
+## The world field — how this competes
+
+$\mathcal{N}_{star}$ is a composite of the four hardest public benchmarks in
+AI forecasting/trading (all in `literature/`, verified real). The published
+state of the art is sobering — **most frontier AI systems lose money live**:
+
+| Arena | Field | Best published result | The lesson |
+| --- | --- | --- | --- |
+| **Prediction Arena** (Harvard/Arcada, live Kalshi+Polymarket, real money) | Frontier LLMs | grok-4-20: +15.5% over 17 days, 71.4% settlement win rate — then **−8.99% in 5 hours** on correlated positions; gemini-3.1-pro: +6.02% in 3 days while trading *zero* curated Kalshi markets; the average model lost **−22.6%** when forced to trade efficient markets | Edge lives in discovery, not in opinions on famous markets; correlation kills |
+| **PolyBench** (38,666 live Polymarket markets, real CLOB) | 7 frontier LLMs | Only **2 of 7** finished positive: MiMo-V2-Flash **+17.6% CWR**, Gemini3-Flash +6.2% — and the leader's alpha collapsed as trade size grew toward $1,000 and swept thin books | Slippage is the silent tax; size is a strategy variable, not an afterthought |
+| **Prophet Arena** (UChicago/USC/Meta, 72,136 live markets) | LLM leaderboard | Ranks on Brier + ECE + CRRA market return jointly; proves a *worse-Brier* agent can out-earn a better-calibrated one when its errors sit on the profitable side of the market price | Accuracy ≠ profit; the market price is the opponent, not the answer key |
+| **LiveTradeBench** (UIUC, live equities + Polymarket) | LLM portfolio agents | Live-streamed, leakage-free portfolio allocation under real volatility regimes | Backtests flatter; only live, marked, cost-aware accounting counts |
+
+Against the *human* bar: elite human superforecasters (Tetlock's Good
+Judgment cohorts) remain the calibration gold standard on geopolitical
+questions, and prediction-market prices themselves are the single hardest
+baseline in this field — across our own 763 resolved markets, no adjustment
+rule beat the raw market price out-of-sample (peer score 0.0000). That is the
+defending champion this system has to beat, net of costs, before it may claim
+anything.
+
+## Where this fleet stands (2026-10-17, all numbers from real runs)
+
+- **$\mathcal{N}_{star}$ = 0.00** — the fleet has found **no validated net edge
+  yet**, so it takes ~no trades and preserves capital. In a field where the
+  published norm is −16% to −31% of capital, a verified zero with an honest
+  measurement stack is a real position — and the score to beat.
+- First real-data $\mathcal{N}_{star}$ backtest (287 Polymarket test markets,
+  real cost model, live-book-validated): trading the market against itself
+  scores exactly 0.000 (no manufactured profit); our Wave-1 shrink rule is
+  *structurally untradeable* under this benchmark (max deviation 0.0375 < the
+  0.05 hurdle); the one apparently-positive rule (+1.19) is a variance-driven
+  longshot harvest (19.3% win rate, top-3 trades = 108% of profit, 58.8%
+  drawdown) — reported as an artifact, not an edge.
+- Calibration scoreboard (now a gate, not the goal): production Brier
+  **0.2285** vs climatology 0.2290 over 37,589 forecasts; the fleet's one
+  validated quant edge is crypto crash-risk (BTC Brier 0.0901 vs 0.0922,
+  AUC 0.607).
+
+## The road to #1
+
+200 workstreams run 24/7 against a single gap: a posterior that clears
+**+0.05 post-cost edge with calibration intact**. The hunt is ordered the way
+the arenas say edge actually lives: (1) discovery across thousands of
+neglected contracts instead of famous markets, (2) order-book-native signals
+(depth, slippage, cross-venue dislocations), (3) crypto signals gated on
+on-chain data, (4) equity catalyst/event trades sized like prediction
+contracts, (5) calibration engineering that protects the ECE multiplier.
+Every claim this README makes is reproduced from code and data in this repo —
+when $\mathcal{N}_{star}$ moves, it will move here first.
 
 ## Calibration scoreboard — HEADLINE BRIER (secondary: gates + ECE feed) — Production: **0.2285** · Benchmark: 0.2290 · Raw models: 0.2336
 *Pooled over 37,589 scored forecasts (n-weighted). Production = the forecasts this
