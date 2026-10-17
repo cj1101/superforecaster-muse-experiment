@@ -1,0 +1,1028 @@
+{
+  "method": {
+    "scheme": "Walk-forward expanding window. Initial train 756 trading days (~3y). Retrain every 21 days. At forecast date t, training uses only samples i with i+horizon <= t (label fully known by t). Features at t use data <= t only.",
+    "model": "Logistic regression via full-batch gradient descent (L2=1.0, lr=0.05, 300 epochs), intercept initialized at logit(expanding base rate) as anchor. Standardization from train window only. Plus ridge (lam=10) expected-return model.",
+    "features": "mom 2/5/10/21/63/126/252d log returns; z-score vs SMA20/50/200 + dist to SMA; realized vol 10/21/63d + vol ratios; RSI7/14; dist from 52w high + 52w range position; volume trend/z (when available); day-of-week sin/cos + Mon/Fri flags; vol-adjusted 5d momentum; 1d return + abs return.",
+    "climatology": "Expanding base rate of up-moves computed only from training labels known at each forecast date.",
+    "data_source": "Yahoo Finance chart API v8, daily, range=10y, adjclose used for price/returns."
+  },
+  "symbols": {
+    "^GSPC": {
+      "data_start": "2016-10-17",
+      "data_end": "2026-10-16",
+      "n_rows": 2514,
+      "horizons": {
+        "1": {
+          "n": 1757,
+          "base_rate_test": 0.5441,
+          "brier": 0.25176,
+          "brier_climatology": 0.24824,
+          "brier_skill_vs_clim": -0.0142,
+          "log_score": -0.69714,
+          "log_score_climatology": -0.68962,
+          "auc": 0.4856,
+          "mean_pred": 0.5516,
+          "exp_ret_mean_pred": -0.0004,
+          "exp_ret_corr_with_realized": -0.0013,
+          "calibration": [
+            {
+              "bin_lo": 0.2,
+              "bin_hi": 0.3,
+              "n": 3,
+              "mean_pred": 0.2536,
+              "empirical_rate": 0.6667
+            },
+            {
+              "bin_lo": 0.3,
+              "bin_hi": 0.4,
+              "n": 20,
+              "mean_pred": 0.3716,
+              "empirical_rate": 0.4
+            },
+            {
+              "bin_lo": 0.4,
+              "bin_hi": 0.5,
+              "n": 232,
+              "mean_pred": 0.4699,
+              "empirical_rate": 0.5345
+            },
+            {
+              "bin_lo": 0.5,
+              "bin_hi": 0.6,
+              "n": 1280,
+              "mean_pred": 0.5545,
+              "empirical_rate": 0.5422
+            },
+            {
+              "bin_lo": 0.6,
+              "bin_hi": 0.7,
+              "n": 205,
+              "mean_pred": 0.6289,
+              "empirical_rate": 0.5902
+            },
+            {
+              "bin_lo": 0.7,
+              "bin_hi": 0.8,
+              "n": 11,
+              "mean_pred": 0.7282,
+              "empirical_rate": 0.2727
+            },
+            {
+              "bin_lo": 0.8,
+              "bin_hi": 0.9,
+              "n": 4,
+              "mean_pred": 0.8518,
+              "empirical_rate": 0.5
+            },
+            {
+              "bin_lo": 0.9,
+              "bin_hi": 1.0,
+              "n": 2,
+              "mean_pred": 0.9179,
+              "empirical_rate": 1.0
+            }
+          ],
+          "beats_climatology_brier": false
+        },
+        "5": {
+          "n": 1753,
+          "base_rate_test": 0.6041,
+          "brier": 0.25056,
+          "brier_climatology": 0.23999,
+          "brier_skill_vs_clim": -0.0441,
+          "log_score": -0.69669,
+          "log_score_climatology": -0.67309,
+          "auc": 0.4702,
+          "mean_pred": 0.6133,
+          "exp_ret_mean_pred": -0.00037,
+          "exp_ret_corr_with_realized": -0.1087,
+          "calibration": [
+            {
+              "bin_lo": 0.1,
+              "bin_hi": 0.2,
+              "n": 4,
+              "mean_pred": 0.1468,
+              "empirical_rate": 0.75
+            },
+            {
+              "bin_lo": 0.2,
+              "bin_hi": 0.3,
+              "n": 14,
+              "mean_pred": 0.2711,
+              "empirical_rate": 0.5
+            },
+            {
+              "bin_lo": 0.3,
+              "bin_hi": 0.4,
+              "n": 43,
+              "mean_pred": 0.3599,
+              "empirical_rate": 0.7907
+            },
+            {
+              "bin_lo": 0.4,
+              "bin_hi": 0.5,
+              "n": 91,
+              "mean_pred": 0.4578,
+              "empirical_rate": 0.6374
+            },
+            {
+              "bin_lo": 0.5,
+              "bin_hi": 0.6,
+              "n": 443,
+              "mean_pred": 0.5691,
+              "empirical_rate": 0.6163
+            },
+            {
+              "bin_lo": 0.6,
+              "bin_hi": 0.7,
+              "n": 983,
+              "mean_pred": 0.6429,
+              "empirical_rate": 0.587
+            },
+            {
+              "bin_lo": 0.7,
+              "bin_hi": 0.8,
+              "n": 168,
+              "mean_pred": 0.7353,
+              "empirical_rate": 0.6071
+            },
+            {
+              "bin_lo": 0.8,
+              "bin_hi": 0.9,
+              "n": 5,
+              "mean_pred": 0.834,
+              "empirical_rate": 0.8
+            },
+            {
+              "bin_lo": 0.9,
+              "bin_hi": 1.0,
+              "n": 2,
+              "mean_pred": 0.9357,
+              "empirical_rate": 0.5
+            }
+          ],
+          "beats_climatology_brier": false
+        },
+        "21": {
+          "n": 1737,
+          "base_rate_test": 0.688,
+          "brier": 0.24365,
+          "brier_climatology": 0.21719,
+          "brier_skill_vs_clim": -0.1218,
+          "log_score": -0.69236,
+          "log_score_climatology": -0.62685,
+          "auc": 0.4531,
+          "mean_pred": 0.666,
+          "exp_ret_mean_pred": 0.00149,
+          "exp_ret_corr_with_realized": 0.095,
+          "calibration": [
+            {
+              "bin_lo": 0.0,
+              "bin_hi": 0.1,
+              "n": 7,
+              "mean_pred": 0.0795,
+              "empirical_rate": 0.8571
+            },
+            {
+              "bin_lo": 0.1,
+              "bin_hi": 0.2,
+              "n": 21,
+              "mean_pred": 0.1572,
+              "empirical_rate": 0.7619
+            },
+            {
+              "bin_lo": 0.2,
+              "bin_hi": 0.3,
+              "n": 28,
+              "mean_pred": 0.243,
+              "empirical_rate": 0.6786
+            },
+            {
+              "bin_lo": 0.3,
+              "bin_hi": 0.4,
+              "n": 31,
+              "mean_pred": 0.3523,
+              "empirical_rate": 0.7097
+            },
+            {
+              "bin_lo": 0.4,
+              "bin_hi": 0.5,
+              "n": 83,
+              "mean_pred": 0.4606,
+              "empirical_rate": 0.7831
+            },
+            {
+              "bin_lo": 0.5,
+              "bin_hi": 0.6,
+              "n": 213,
+              "mean_pred": 0.5558,
+              "empirical_rate": 0.7934
+            },
+            {
+              "bin_lo": 0.6,
+              "bin_hi": 0.7,
+              "n": 544,
+              "mean_pred": 0.6587,
+              "empirical_rate": 0.6618
+            },
+            {
+              "bin_lo": 0.7,
+              "bin_hi": 0.8,
+              "n": 630,
+              "mean_pred": 0.7426,
+              "empirical_rate": 0.681
+            },
+            {
+              "bin_lo": 0.8,
+              "bin_hi": 0.9,
+              "n": 156,
+              "mean_pred": 0.8356,
+              "empirical_rate": 0.5897
+            },
+            {
+              "bin_lo": 0.9,
+              "bin_hi": 1.0,
+              "n": 24,
+              "mean_pred": 0.9209,
+              "empirical_rate": 0.7083
+            }
+          ],
+          "beats_climatology_brier": false
+        }
+      }
+    },
+    "QQQ": {
+      "data_start": "2016-10-17",
+      "data_end": "2026-10-16",
+      "n_rows": 2514,
+      "horizons": {
+        "1": {
+          "n": 1757,
+          "base_rate_test": 0.5623,
+          "brier": 0.25002,
+          "brier_climatology": 0.24632,
+          "brier_skill_vs_clim": -0.015,
+          "log_score": -0.69366,
+          "log_score_climatology": -0.68577,
+          "auc": 0.5045,
+          "mean_pred": 0.5628,
+          "exp_ret_mean_pred": 2e-05,
+          "exp_ret_corr_with_realized": 0.0304,
+          "calibration": [
+            {
+              "bin_lo": 0.1,
+              "bin_hi": 0.2,
+              "n": 2,
+              "mean_pred": 0.1539,
+              "empirical_rate": 0.5
+            },
+            {
+              "bin_lo": 0.2,
+              "bin_hi": 0.3,
+              "n": 10,
+              "mean_pred": 0.2559,
+              "empirical_rate": 0.4
+            },
+            {
+              "bin_lo": 0.3,
+              "bin_hi": 0.4,
+              "n": 39,
+              "mean_pred": 0.3661,
+              "empirical_rate": 0.4359
+            },
+            {
+              "bin_lo": 0.4,
+              "bin_hi": 0.5,
+              "n": 216,
+              "mean_pred": 0.4648,
+              "empirical_rate": 0.588
+            },
+            {
+              "bin_lo": 0.5,
+              "bin_hi": 0.6,
+              "n": 982,
+              "mean_pred": 0.5562,
+              "empirical_rate": 0.5642
+            },
+            {
+              "bin_lo": 0.6,
+              "bin_hi": 0.7,
+              "n": 466,
+              "mean_pred": 0.6314,
+              "empirical_rate": 0.5579
+            },
+            {
+              "bin_lo": 0.7,
+              "bin_hi": 0.8,
+              "n": 38,
+              "mean_pred": 0.7268,
+              "empirical_rate": 0.5526
+            },
+            {
+              "bin_lo": 0.8,
+              "bin_hi": 0.9,
+              "n": 4,
+              "mean_pred": 0.8301,
+              "empirical_rate": 1.0
+            }
+          ],
+          "beats_climatology_brier": false
+        },
+        "5": {
+          "n": 1753,
+          "base_rate_test": 0.599,
+          "brier": 0.24752,
+          "brier_climatology": 0.24105,
+          "brier_skill_vs_clim": -0.0269,
+          "log_score": -0.69065,
+          "log_score_climatology": -0.67522,
+          "auc": 0.4996,
+          "mean_pred": 0.6047,
+          "exp_ret_mean_pred": 0.00114,
+          "exp_ret_corr_with_realized": -0.0595,
+          "calibration": [
+            {
+              "bin_lo": 0.1,
+              "bin_hi": 0.2,
+              "n": 2,
+              "mean_pred": 0.1506,
+              "empirical_rate": 0.5
+            },
+            {
+              "bin_lo": 0.2,
+              "bin_hi": 0.3,
+              "n": 8,
+              "mean_pred": 0.2672,
+              "empirical_rate": 0.625
+            },
+            {
+              "bin_lo": 0.3,
+              "bin_hi": 0.4,
+              "n": 25,
+              "mean_pred": 0.3579,
+              "empirical_rate": 0.64
+            },
+            {
+              "bin_lo": 0.4,
+              "bin_hi": 0.5,
+              "n": 93,
+              "mean_pred": 0.4669,
+              "empirical_rate": 0.5054
+            },
+            {
+              "bin_lo": 0.5,
+              "bin_hi": 0.6,
+              "n": 646,
+              "mean_pred": 0.5638,
+              "empirical_rate": 0.5991
+            },
+            {
+              "bin_lo": 0.6,
+              "bin_hi": 0.7,
+              "n": 843,
+              "mean_pred": 0.638,
+              "empirical_rate": 0.6287
+            },
+            {
+              "bin_lo": 0.7,
+              "bin_hi": 0.8,
+              "n": 109,
+              "mean_pred": 0.7395,
+              "empirical_rate": 0.4587
+            },
+            {
+              "bin_lo": 0.8,
+              "bin_hi": 0.9,
+              "n": 26,
+              "mean_pred": 0.8322,
+              "empirical_rate": 0.5
+            },
+            {
+              "bin_lo": 0.9,
+              "bin_hi": 1.0,
+              "n": 1,
+              "mean_pred": 0.9037,
+              "empirical_rate": 1.0
+            }
+          ],
+          "beats_climatology_brier": false
+        },
+        "21": {
+          "n": 1737,
+          "base_rate_test": 0.6661,
+          "brier": 0.2435,
+          "brier_climatology": 0.22615,
+          "brier_skill_vs_clim": -0.0767,
+          "log_score": -0.69548,
+          "log_score_climatology": -0.64594,
+          "auc": 0.4724,
+          "mean_pred": 0.6523,
+          "exp_ret_mean_pred": 0.00459,
+          "exp_ret_corr_with_realized": 0.0096,
+          "calibration": [
+            {
+              "bin_lo": 0.1,
+              "bin_hi": 0.2,
+              "n": 7,
+              "mean_pred": 0.1691,
+              "empirical_rate": 1.0
+            },
+            {
+              "bin_lo": 0.2,
+              "bin_hi": 0.3,
+              "n": 23,
+              "mean_pred": 0.2532,
+              "empirical_rate": 0.6522
+            },
+            {
+              "bin_lo": 0.3,
+              "bin_hi": 0.4,
+              "n": 56,
+              "mean_pred": 0.3565,
+              "empirical_rate": 0.5357
+            },
+            {
+              "bin_lo": 0.4,
+              "bin_hi": 0.5,
+              "n": 89,
+              "mean_pred": 0.4637,
+              "empirical_rate": 0.5618
+            },
+            {
+              "bin_lo": 0.5,
+              "bin_hi": 0.6,
+              "n": 303,
+              "mean_pred": 0.56,
+              "empirical_rate": 0.7294
+            },
+            {
+              "bin_lo": 0.6,
+              "bin_hi": 0.7,
+              "n": 639,
+              "mean_pred": 0.6512,
+              "empirical_rate": 0.6964
+            },
+            {
+              "bin_lo": 0.7,
+              "bin_hi": 0.8,
+              "n": 435,
+              "mean_pred": 0.7366,
+              "empirical_rate": 0.6506
+            },
+            {
+              "bin_lo": 0.8,
+              "bin_hi": 0.9,
+              "n": 147,
+              "mean_pred": 0.8389,
+              "empirical_rate": 0.6395
+            },
+            {
+              "bin_lo": 0.9,
+              "bin_hi": 1.0,
+              "n": 38,
+              "mean_pred": 0.927,
+              "empirical_rate": 0.3158
+            }
+          ],
+          "beats_climatology_brier": false
+        }
+      }
+    },
+    "NVDA": {
+      "data_start": "2016-10-17",
+      "data_end": "2026-10-16",
+      "n_rows": 2514,
+      "horizons": {
+        "1": {
+          "n": 1757,
+          "base_rate_test": 0.5413,
+          "brier": 0.24902,
+          "brier_climatology": 0.24843,
+          "brier_skill_vs_clim": -0.0024,
+          "log_score": -0.69128,
+          "log_score_climatology": -0.69001,
+          "auc": 0.5209,
+          "mean_pred": 0.5425,
+          "exp_ret_mean_pred": 0.00082,
+          "exp_ret_corr_with_realized": 0.0419,
+          "calibration": [
+            {
+              "bin_lo": 0.2,
+              "bin_hi": 0.3,
+              "n": 2,
+              "mean_pred": 0.2543,
+              "empirical_rate": 1.0
+            },
+            {
+              "bin_lo": 0.3,
+              "bin_hi": 0.4,
+              "n": 24,
+              "mean_pred": 0.3747,
+              "empirical_rate": 0.25
+            },
+            {
+              "bin_lo": 0.4,
+              "bin_hi": 0.5,
+              "n": 359,
+              "mean_pred": 0.4718,
+              "empirical_rate": 0.5237
+            },
+            {
+              "bin_lo": 0.5,
+              "bin_hi": 0.6,
+              "n": 1104,
+              "mean_pred": 0.5469,
+              "empirical_rate": 0.5471
+            },
+            {
+              "bin_lo": 0.6,
+              "bin_hi": 0.7,
+              "n": 253,
+              "mean_pred": 0.63,
+              "empirical_rate": 0.5573
+            },
+            {
+              "bin_lo": 0.7,
+              "bin_hi": 0.8,
+              "n": 14,
+              "mean_pred": 0.7228,
+              "empirical_rate": 0.6429
+            },
+            {
+              "bin_lo": 0.8,
+              "bin_hi": 0.9,
+              "n": 1,
+              "mean_pred": 0.8828,
+              "empirical_rate": 1.0
+            }
+          ],
+          "beats_climatology_brier": false
+        },
+        "5": {
+          "n": 1753,
+          "base_rate_test": 0.5898,
+          "brier": 0.24601,
+          "brier_climatology": 0.24262,
+          "brier_skill_vs_clim": -0.014,
+          "log_score": -0.68565,
+          "log_score_climatology": -0.67836,
+          "auc": 0.5042,
+          "mean_pred": 0.5873,
+          "exp_ret_mean_pred": 0.00651,
+          "exp_ret_corr_with_realized": 0.0029,
+          "calibration": [
+            {
+              "bin_lo": 0.3,
+              "bin_hi": 0.4,
+              "n": 6,
+              "mean_pred": 0.3701,
+              "empirical_rate": 0.8333
+            },
+            {
+              "bin_lo": 0.4,
+              "bin_hi": 0.5,
+              "n": 145,
+              "mean_pred": 0.4712,
+              "empirical_rate": 0.5655
+            },
+            {
+              "bin_lo": 0.5,
+              "bin_hi": 0.6,
+              "n": 852,
+              "mean_pred": 0.5582,
+              "empirical_rate": 0.5986
+            },
+            {
+              "bin_lo": 0.6,
+              "bin_hi": 0.7,
+              "n": 682,
+              "mean_pred": 0.6362,
+              "empirical_rate": 0.5806
+            },
+            {
+              "bin_lo": 0.7,
+              "bin_hi": 0.8,
+              "n": 67,
+              "mean_pred": 0.727,
+              "empirical_rate": 0.597
+            },
+            {
+              "bin_lo": 0.8,
+              "bin_hi": 0.9,
+              "n": 1,
+              "mean_pred": 0.8036,
+              "empirical_rate": 1.0
+            }
+          ],
+          "beats_climatology_brier": false
+        },
+        "21": {
+          "n": 1737,
+          "base_rate_test": 0.658,
+          "brier": 0.22902,
+          "brier_climatology": 0.2275,
+          "brier_skill_vs_clim": -0.0067,
+          "log_score": -0.65231,
+          "log_score_climatology": -0.64792,
+          "auc": 0.5383,
+          "mean_pred": 0.6557,
+          "exp_ret_mean_pred": 0.02923,
+          "exp_ret_corr_with_realized": -0.0208,
+          "calibration": [
+            {
+              "bin_lo": 0.3,
+              "bin_hi": 0.4,
+              "n": 3,
+              "mean_pred": 0.3884,
+              "empirical_rate": 1.0
+            },
+            {
+              "bin_lo": 0.4,
+              "bin_hi": 0.5,
+              "n": 66,
+              "mean_pred": 0.4645,
+              "empirical_rate": 0.6515
+            },
+            {
+              "bin_lo": 0.5,
+              "bin_hi": 0.6,
+              "n": 351,
+              "mean_pred": 0.5605,
+              "empirical_rate": 0.6439
+            },
+            {
+              "bin_lo": 0.6,
+              "bin_hi": 0.7,
+              "n": 793,
+              "mean_pred": 0.652,
+              "empirical_rate": 0.633
+            },
+            {
+              "bin_lo": 0.7,
+              "bin_hi": 0.8,
+              "n": 443,
+              "mean_pred": 0.7364,
+              "empirical_rate": 0.7336
+            },
+            {
+              "bin_lo": 0.8,
+              "bin_hi": 0.9,
+              "n": 81,
+              "mean_pred": 0.828,
+              "empirical_rate": 0.5432
+            }
+          ],
+          "beats_climatology_brier": false
+        }
+      }
+    },
+    "TSM": {
+      "data_start": "2016-10-17",
+      "data_end": "2026-10-16",
+      "n_rows": 2514,
+      "horizons": {
+        "1": {
+          "n": 1757,
+          "base_rate_test": 0.5162,
+          "brier": 0.25227,
+          "brier_climatology": 0.25006,
+          "brier_skill_vs_clim": -0.0088,
+          "log_score": -0.69796,
+          "log_score_climatology": -0.69328,
+          "auc": 0.5097,
+          "mean_pred": 0.5136,
+          "exp_ret_mean_pred": 0.00074,
+          "exp_ret_corr_with_realized": 0.0537,
+          "calibration": [
+            {
+              "bin_lo": 0.0,
+              "bin_hi": 0.1,
+              "n": 1,
+              "mean_pred": 0.0923,
+              "empirical_rate": 0.0
+            },
+            {
+              "bin_lo": 0.1,
+              "bin_hi": 0.2,
+              "n": 2,
+              "mean_pred": 0.1666,
+              "empirical_rate": 0.5
+            },
+            {
+              "bin_lo": 0.2,
+              "bin_hi": 0.3,
+              "n": 17,
+              "mean_pred": 0.2699,
+              "empirical_rate": 0.4118
+            },
+            {
+              "bin_lo": 0.3,
+              "bin_hi": 0.4,
+              "n": 87,
+              "mean_pred": 0.3723,
+              "empirical_rate": 0.3793
+            },
+            {
+              "bin_lo": 0.4,
+              "bin_hi": 0.5,
+              "n": 531,
+              "mean_pred": 0.4636,
+              "empirical_rate": 0.5292
+            },
+            {
+              "bin_lo": 0.5,
+              "bin_hi": 0.6,
+              "n": 975,
+              "mean_pred": 0.5408,
+              "empirical_rate": 0.52
+            },
+            {
+              "bin_lo": 0.6,
+              "bin_hi": 0.7,
+              "n": 135,
+              "mean_pred": 0.6296,
+              "empirical_rate": 0.5333
+            },
+            {
+              "bin_lo": 0.7,
+              "bin_hi": 0.8,
+              "n": 9,
+              "mean_pred": 0.7304,
+              "empirical_rate": 0.6667
+            }
+          ],
+          "beats_climatology_brier": false
+        },
+        "5": {
+          "n": 1753,
+          "base_rate_test": 0.5545,
+          "brier": 0.25905,
+          "brier_climatology": 0.24783,
+          "brier_skill_vs_clim": -0.0453,
+          "log_score": -0.71263,
+          "log_score_climatology": -0.68883,
+          "auc": 0.4576,
+          "mean_pred": 0.5511,
+          "exp_ret_mean_pred": 0.00389,
+          "exp_ret_corr_with_realized": -0.1142,
+          "calibration": [
+            {
+              "bin_lo": 0.1,
+              "bin_hi": 0.2,
+              "n": 1,
+              "mean_pred": 0.1939,
+              "empirical_rate": 1.0
+            },
+            {
+              "bin_lo": 0.2,
+              "bin_hi": 0.3,
+              "n": 12,
+              "mean_pred": 0.2549,
+              "empirical_rate": 0.75
+            },
+            {
+              "bin_lo": 0.3,
+              "bin_hi": 0.4,
+              "n": 38,
+              "mean_pred": 0.3589,
+              "empirical_rate": 0.7632
+            },
+            {
+              "bin_lo": 0.4,
+              "bin_hi": 0.5,
+              "n": 302,
+              "mean_pred": 0.4677,
+              "empirical_rate": 0.6026
+            },
+            {
+              "bin_lo": 0.5,
+              "bin_hi": 0.6,
+              "n": 1024,
+              "mean_pred": 0.5528,
+              "empirical_rate": 0.5479
+            },
+            {
+              "bin_lo": 0.6,
+              "bin_hi": 0.7,
+              "n": 322,
+              "mean_pred": 0.6289,
+              "empirical_rate": 0.5155
+            },
+            {
+              "bin_lo": 0.7,
+              "bin_hi": 0.8,
+              "n": 53,
+              "mean_pred": 0.7288,
+              "empirical_rate": 0.4528
+            },
+            {
+              "bin_lo": 0.8,
+              "bin_hi": 0.9,
+              "n": 1,
+              "mean_pred": 0.8107,
+              "empirical_rate": 0.0
+            }
+          ],
+          "beats_climatology_brier": false
+        },
+        "21": {
+          "n": 1737,
+          "base_rate_test": 0.62,
+          "brier": 0.26318,
+          "brier_climatology": 0.23877,
+          "brier_skill_vs_clim": -0.1022,
+          "log_score": -0.73125,
+          "log_score_climatology": -0.67093,
+          "auc": 0.4469,
+          "mean_pred": 0.5967,
+          "exp_ret_mean_pred": 0.02068,
+          "exp_ret_corr_with_realized": -0.194,
+          "calibration": [
+            {
+              "bin_lo": 0.1,
+              "bin_hi": 0.2,
+              "n": 8,
+              "mean_pred": 0.1494,
+              "empirical_rate": 0.75
+            },
+            {
+              "bin_lo": 0.2,
+              "bin_hi": 0.3,
+              "n": 33,
+              "mean_pred": 0.2447,
+              "empirical_rate": 0.697
+            },
+            {
+              "bin_lo": 0.3,
+              "bin_hi": 0.4,
+              "n": 80,
+              "mean_pred": 0.3593,
+              "empirical_rate": 0.625
+            },
+            {
+              "bin_lo": 0.4,
+              "bin_hi": 0.5,
+              "n": 185,
+              "mean_pred": 0.4614,
+              "empirical_rate": 0.6054
+            },
+            {
+              "bin_lo": 0.5,
+              "bin_hi": 0.6,
+              "n": 480,
+              "mean_pred": 0.5574,
+              "empirical_rate": 0.675
+            },
+            {
+              "bin_lo": 0.6,
+              "bin_hi": 0.7,
+              "n": 681,
+              "mean_pred": 0.6438,
+              "empirical_rate": 0.6388
+            },
+            {
+              "bin_lo": 0.7,
+              "bin_hi": 0.8,
+              "n": 196,
+              "mean_pred": 0.7391,
+              "empirical_rate": 0.5714
+            },
+            {
+              "bin_lo": 0.8,
+              "bin_hi": 0.9,
+              "n": 73,
+              "mean_pred": 0.8411,
+              "empirical_rate": 0.2055
+            },
+            {
+              "bin_lo": 0.9,
+              "bin_hi": 1.0,
+              "n": 1,
+              "mean_pred": 0.9053,
+              "empirical_rate": 0.0
+            }
+          ],
+          "beats_climatology_brier": false
+        }
+      }
+    }
+  },
+  "latest_forecasts": {
+    "^GSPC": {
+      "symbol": "^GSPC",
+      "as_of": "2026-10-16",
+      "last_price": 7659.43994140625,
+      "h1": {
+        "p_up": 0.599,
+        "exp_log_return": 0.00111,
+        "ret_q10": -0.01315,
+        "ret_q50": 0.00111,
+        "ret_q90": 0.01537,
+        "resid_sd": 0.01113
+      },
+      "h5": {
+        "p_up": 0.5787,
+        "exp_log_return": -0.00054,
+        "ret_q10": -0.0294,
+        "ret_q50": -0.00054,
+        "ret_q90": 0.02832,
+        "resid_sd": 0.02252
+      },
+      "h21": {
+        "p_up": 0.698,
+        "exp_log_return": 0.01266,
+        "ret_q10": -0.04347,
+        "ret_q50": 0.01266,
+        "ret_q90": 0.06879,
+        "resid_sd": 0.0438
+      }
+    },
+    "QQQ": {
+      "symbol": "QQQ",
+      "as_of": "2026-10-16",
+      "last_price": 709.7999877929688,
+      "h1": {
+        "p_up": 0.6614,
+        "exp_log_return": 0.00124,
+        "ret_q10": -0.01671,
+        "ret_q50": 0.00124,
+        "ret_q90": 0.0192,
+        "resid_sd": 0.01401
+      },
+      "h5": {
+        "p_up": 0.5912,
+        "exp_log_return": 0.00369,
+        "ret_q10": -0.03247,
+        "ret_q50": 0.00369,
+        "ret_q90": 0.03984,
+        "resid_sd": 0.02821
+      },
+      "h21": {
+        "p_up": 0.6989,
+        "exp_log_return": 0.02004,
+        "ret_q10": -0.04878,
+        "ret_q50": 0.02004,
+        "ret_q90": 0.08887,
+        "resid_sd": 0.0537
+      }
+    },
+    "NVDA": {
+      "symbol": "NVDA",
+      "as_of": "2026-10-16",
+      "last_price": 214.1300048828125,
+      "h1": {
+        "p_up": 0.6263,
+        "exp_log_return": 0.00258,
+        "ret_q10": -0.03724,
+        "ret_q50": 0.00258,
+        "ret_q90": 0.04239,
+        "resid_sd": 0.03107
+      },
+      "h5": {
+        "p_up": 0.6803,
+        "exp_log_return": 0.01757,
+        "ret_q10": -0.066,
+        "ret_q50": 0.01757,
+        "ret_q90": 0.10115,
+        "resid_sd": 0.06521
+      },
+      "h21": {
+        "p_up": 0.8171,
+        "exp_log_return": 0.09449,
+        "ret_q10": -0.06848,
+        "ret_q50": 0.09449,
+        "ret_q90": 0.25746,
+        "resid_sd": 0.12716
+      }
+    },
+    "TSM": {
+      "symbol": "TSM",
+      "as_of": "2026-10-16",
+      "last_price": 412.6099853515625,
+      "h1": {
+        "p_up": 0.5958,
+        "exp_log_return": 0.00349,
+        "ret_q10": -0.02427,
+        "ret_q50": 0.00349,
+        "ret_q90": 0.03125,
+        "resid_sd": 0.02166
+      },
+      "h5": {
+        "p_up": 0.5341,
+        "exp_log_return": 0.00041,
+        "ret_q10": -0.05606,
+        "ret_q50": 0.00041,
+        "ret_q90": 0.05688,
+        "resid_sd": 0.04406
+      },
+      "h21": {
+        "p_up": 0.6117,
+        "exp_log_return": 0.02395,
+        "ret_q10": -0.09001,
+        "ret_q50": 0.02395,
+        "ret_q90": 0.13792,
+        "resid_sd": 0.08892
+      }
+    }
+  }
+}
