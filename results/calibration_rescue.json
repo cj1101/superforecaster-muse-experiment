@@ -1,0 +1,525 @@
+{
+  "method": "causal expanding calibration, block=63, min_cal=200",
+  "streams": {
+    "crypto/BTC_1d": {
+      "n_scored": 2580,
+      "raw": {
+        "brier": 0.25121,
+        "log_score": 0.69562
+      },
+      "clim": {
+        "brier": 0.25098,
+        "log_score": 0.69513
+      },
+      "platt": {
+        "brier": 0.24996,
+        "log_score": 0.69302
+      },
+      "shrink": {
+        "brier": 0.25046,
+        "log_score": 0.69405
+      },
+      "platt_shrink": {
+        "brier": 0.24996,
+        "log_score": 0.69303
+      },
+      "skill_platt_shrink_vs_clim": 0.0041,
+      "skill_shrink_vs_clim": 0.0021,
+      "skill_platt_vs_clim": 0.0041
+    },
+    "crypto/BTC_30d": {
+      "n_scored": 2551,
+      "raw": {
+        "brier": 0.26377,
+        "log_score": 0.72185
+      },
+      "clim": {
+        "brier": 0.24971,
+        "log_score": 0.69279
+      },
+      "platt": {
+        "brier": 0.2567,
+        "log_score": 0.71589
+      },
+      "shrink": {
+        "brier": 0.24971,
+        "log_score": 0.69279
+      },
+      "platt_shrink": {
+        "brier": 0.2567,
+        "log_score": 0.71589
+      },
+      "skill_platt_shrink_vs_clim": -0.028,
+      "skill_shrink_vs_clim": 0.0,
+      "skill_platt_vs_clim": -0.028
+    },
+    "crypto/BTC_7d": {
+      "n_scored": 2574,
+      "raw": {
+        "brier": 0.25295,
+        "log_score": 0.69918
+      },
+      "clim": {
+        "brier": 0.25026,
+        "log_score": 0.6937
+      },
+      "platt": {
+        "brier": 0.25242,
+        "log_score": 0.69895
+      },
+      "shrink": {
+        "brier": 0.25052,
+        "log_score": 0.69423
+      },
+      "platt_shrink": {
+        "brier": 0.25242,
+        "log_score": 0.69895
+      },
+      "skill_platt_shrink_vs_clim": -0.0086,
+      "skill_shrink_vs_clim": -0.001,
+      "skill_platt_vs_clim": -0.0086
+    },
+    "crypto/BTC_crash7d": {
+      "n_scored": 2574,
+      "raw": {
+        "brier": 0.08705,
+        "log_score": 0.3145
+      },
+      "clim": {
+        "brier": 0.0898,
+        "log_score": 0.32841
+      },
+      "platt": {
+        "brier": 0.08729,
+        "log_score": 0.31735
+      },
+      "shrink": {
+        "brier": 0.08758,
+        "log_score": 0.31813
+      },
+      "platt_shrink": {
+        "brier": 0.08729,
+        "log_score": 0.31731
+      },
+      "skill_platt_shrink_vs_clim": 0.028,
+      "skill_shrink_vs_clim": 0.0247,
+      "skill_platt_vs_clim": 0.028
+    },
+    "crypto/ETH_1d": {
+      "n_scored": 2275,
+      "raw": {
+        "brier": 0.25021,
+        "log_score": 0.6938
+      },
+      "clim": {
+        "brier": 0.24983,
+        "log_score": 0.6928
+      },
+      "platt": {
+        "brier": 0.24947,
+        "log_score": 0.69213
+      },
+      "shrink": {
+        "brier": 0.24922,
+        "log_score": 0.69159
+      },
+      "platt_shrink": {
+        "brier": 0.24945,
+        "log_score": 0.69208
+      },
+      "skill_platt_shrink_vs_clim": 0.0015,
+      "skill_shrink_vs_clim": 0.0024,
+      "skill_platt_vs_clim": 0.0014
+    },
+    "crypto/ETH_30d": {
+      "n_scored": 2246,
+      "raw": {
+        "brier": 0.259,
+        "log_score": 0.7126
+      },
+      "clim": {
+        "brier": 0.25276,
+        "log_score": 0.69882
+      },
+      "platt": {
+        "brier": 0.25982,
+        "log_score": 0.7164
+      },
+      "shrink": {
+        "brier": 0.25471,
+        "log_score": 0.70282
+      },
+      "platt_shrink": {
+        "brier": 0.25977,
+        "log_score": 0.71609
+      },
+      "skill_platt_shrink_vs_clim": -0.0277,
+      "skill_shrink_vs_clim": -0.0077,
+      "skill_platt_vs_clim": -0.0279
+    },
+    "crypto/ETH_7d": {
+      "n_scored": 2269,
+      "raw": {
+        "brier": 0.25054,
+        "log_score": 0.69444
+      },
+      "clim": {
+        "brier": 0.25032,
+        "log_score": 0.6938
+      },
+      "platt": {
+        "brier": 0.25094,
+        "log_score": 0.69512
+      },
+      "shrink": {
+        "brier": 0.25017,
+        "log_score": 0.69353
+      },
+      "platt_shrink": {
+        "brier": 0.25094,
+        "log_score": 0.69512
+      },
+      "skill_platt_shrink_vs_clim": -0.0025,
+      "skill_shrink_vs_clim": 0.0006,
+      "skill_platt_vs_clim": -0.0025
+    },
+    "crypto/ETH_crash7d": {
+      "n_scored": 2269,
+      "raw": {
+        "brier": 0.14122,
+        "log_score": 0.45429
+      },
+      "clim": {
+        "brier": 0.1439,
+        "log_score": 0.46446
+      },
+      "platt": {
+        "brier": 0.14019,
+        "log_score": 0.45236
+      },
+      "shrink": {
+        "brier": 0.14174,
+        "log_score": 0.45673
+      },
+      "platt_shrink": {
+        "brier": 0.14019,
+        "log_score": 0.45236
+      },
+      "skill_platt_shrink_vs_clim": 0.0258,
+      "skill_shrink_vs_clim": 0.015,
+      "skill_platt_vs_clim": 0.0258
+    },
+    "markets/^GSPC_1d": {
+      "n_scored": 1505,
+      "raw": {
+        "brier": 0.25291,
+        "log_score": 0.69921
+      },
+      "clim": {
+        "brier": 0.24924,
+        "log_score": 0.69164
+      },
+      "platt": {
+        "brier": 0.25004,
+        "log_score": 0.69327
+      },
+      "shrink": {
+        "brier": 0.24954,
+        "log_score": 0.69224
+      },
+      "platt_shrink": {
+        "brier": 0.25,
+        "log_score": 0.6932
+      },
+      "skill_platt_shrink_vs_clim": -0.003,
+      "skill_shrink_vs_clim": -0.0012,
+      "skill_platt_vs_clim": -0.0032
+    },
+    "markets/^GSPC_5d": {
+      "n_scored": 1501,
+      "raw": {
+        "brier": 0.25239,
+        "log_score": 0.69979
+      },
+      "clim": {
+        "brier": 0.24333,
+        "log_score": 0.67991
+      },
+      "platt": {
+        "brier": 0.24392,
+        "log_score": 0.68124
+      },
+      "shrink": {
+        "brier": 0.24354,
+        "log_score": 0.68034
+      },
+      "platt_shrink": {
+        "brier": 0.24388,
+        "log_score": 0.68114
+      },
+      "skill_platt_shrink_vs_clim": -0.0023,
+      "skill_shrink_vs_clim": -0.0009,
+      "skill_platt_vs_clim": -0.0024
+    },
+    "markets/^GSPC_21d": {
+      "n_scored": 1485,
+      "raw": {
+        "brier": 0.24663,
+        "log_score": 0.69776
+      },
+      "clim": {
+        "brier": 0.22169,
+        "log_score": 0.63636
+      },
+      "platt": {
+        "brier": 0.22609,
+        "log_score": 0.64971
+      },
+      "shrink": {
+        "brier": 0.22366,
+        "log_score": 0.64091
+      },
+      "platt_shrink": {
+        "brier": 0.22607,
+        "log_score": 0.64967
+      },
+      "skill_platt_shrink_vs_clim": -0.0198,
+      "skill_shrink_vs_clim": -0.0089,
+      "skill_platt_vs_clim": -0.0198
+    },
+    "markets/QQQ_1d": {
+      "n_scored": 1505,
+      "raw": {
+        "brier": 0.25231,
+        "log_score": 0.69852
+      },
+      "clim": {
+        "brier": 0.24819,
+        "log_score": 0.68955
+      },
+      "platt": {
+        "brier": 0.25015,
+        "log_score": 0.6938
+      },
+      "shrink": {
+        "brier": 0.2486,
+        "log_score": 0.6904
+      },
+      "platt_shrink": {
+        "brier": 0.25013,
+        "log_score": 0.69376
+      },
+      "skill_platt_shrink_vs_clim": -0.0078,
+      "skill_shrink_vs_clim": -0.0017,
+      "skill_platt_vs_clim": -0.0079
+    },
+    "markets/QQQ_5d": {
+      "n_scored": 1501,
+      "raw": {
+        "brier": 0.2517,
+        "log_score": 0.69945
+      },
+      "clim": {
+        "brier": 0.24542,
+        "log_score": 0.68415
+      },
+      "platt": {
+        "brier": 0.24835,
+        "log_score": 0.69093
+      },
+      "shrink": {
+        "brier": 0.24604,
+        "log_score": 0.68549
+      },
+      "platt_shrink": {
+        "brier": 0.24833,
+        "log_score": 0.69089
+      },
+      "skill_platt_shrink_vs_clim": -0.0119,
+      "skill_shrink_vs_clim": -0.0025,
+      "skill_platt_vs_clim": -0.0119
+    },
+    "markets/QQQ_21d": {
+      "n_scored": 1485,
+      "raw": {
+        "brier": 0.24907,
+        "log_score": 0.70914
+      },
+      "clim": {
+        "brier": 0.2338,
+        "log_score": 0.66216
+      },
+      "platt": {
+        "brier": 0.24153,
+        "log_score": 0.68593
+      },
+      "shrink": {
+        "brier": 0.23587,
+        "log_score": 0.6675
+      },
+      "platt_shrink": {
+        "brier": 0.24111,
+        "log_score": 0.68421
+      },
+      "skill_platt_shrink_vs_clim": -0.0313,
+      "skill_shrink_vs_clim": -0.0089,
+      "skill_platt_vs_clim": -0.0331
+    },
+    "markets/NVDA_1d": {
+      "n_scored": 1505,
+      "raw": {
+        "brier": 0.2505,
+        "log_score": 0.69434
+      },
+      "clim": {
+        "brier": 0.24901,
+        "log_score": 0.69116
+      },
+      "platt": {
+        "brier": 0.24978,
+        "log_score": 0.69275
+      },
+      "shrink": {
+        "brier": 0.24936,
+        "log_score": 0.69187
+      },
+      "platt_shrink": {
+        "brier": 0.24978,
+        "log_score": 0.69275
+      },
+      "skill_platt_shrink_vs_clim": -0.0031,
+      "skill_shrink_vs_clim": -0.0014,
+      "skill_platt_vs_clim": -0.0031
+    },
+    "markets/NVDA_5d": {
+      "n_scored": 1501,
+      "raw": {
+        "brier": 0.24993,
+        "log_score": 0.6938
+      },
+      "clim": {
+        "brier": 0.24651,
+        "log_score": 0.68626
+      },
+      "platt": {
+        "brier": 0.25062,
+        "log_score": 0.69527
+      },
+      "shrink": {
+        "brier": 0.24717,
+        "log_score": 0.68763
+      },
+      "platt_shrink": {
+        "brier": 0.25062,
+        "log_score": 0.69527
+      },
+      "skill_platt_shrink_vs_clim": -0.0167,
+      "skill_shrink_vs_clim": -0.0027,
+      "skill_platt_vs_clim": -0.0167
+    },
+    "markets/NVDA_21d": {
+      "n_scored": 1485,
+      "raw": {
+        "brier": 0.23725,
+        "log_score": 0.67005
+      },
+      "clim": {
+        "brier": 0.2391,
+        "log_score": 0.67212
+      },
+      "platt": {
+        "brier": 0.25119,
+        "log_score": 0.70791
+      },
+      "shrink": {
+        "brier": 0.2389,
+        "log_score": 0.67157
+      },
+      "platt_shrink": {
+        "brier": 0.25119,
+        "log_score": 0.70791
+      },
+      "skill_platt_shrink_vs_clim": -0.0506,
+      "skill_shrink_vs_clim": 0.0008,
+      "skill_platt_vs_clim": -0.0506
+    },
+    "markets/TSM_1d": {
+      "n_scored": 1505,
+      "raw": {
+        "brier": 0.25272,
+        "log_score": 0.69878
+      },
+      "clim": {
+        "brier": 0.25058,
+        "log_score": 0.6943
+      },
+      "platt": {
+        "brier": 0.25111,
+        "log_score": 0.69541
+      },
+      "shrink": {
+        "brier": 0.25055,
+        "log_score": 0.69426
+      },
+      "platt_shrink": {
+        "brier": 0.25109,
+        "log_score": 0.69537
+      },
+      "skill_platt_shrink_vs_clim": -0.002,
+      "skill_shrink_vs_clim": 0.0001,
+      "skill_platt_vs_clim": -0.0021
+    },
+    "markets/TSM_5d": {
+      "n_scored": 1501,
+      "raw": {
+        "brier": 0.25747,
+        "log_score": 0.70913
+      },
+      "clim": {
+        "brier": 0.24936,
+        "log_score": 0.6919
+      },
+      "platt": {
+        "brier": 0.24888,
+        "log_score": 0.6909
+      },
+      "shrink": {
+        "brier": 0.24936,
+        "log_score": 0.6919
+      },
+      "platt_shrink": {
+        "brier": 0.24888,
+        "log_score": 0.69091
+      },
+      "skill_platt_shrink_vs_clim": 0.0019,
+      "skill_shrink_vs_clim": 0.0,
+      "skill_platt_vs_clim": 0.0019
+    },
+    "markets/TSM_21d": {
+      "n_scored": 1485,
+      "raw": {
+        "brier": 0.26444,
+        "log_score": 0.73447
+      },
+      "clim": {
+        "brier": 0.24199,
+        "log_score": 0.6775
+      },
+      "platt": {
+        "brier": 0.24814,
+        "log_score": 0.69329
+      },
+      "shrink": {
+        "brier": 0.24266,
+        "log_score": 0.67899
+      },
+      "platt_shrink": {
+        "brier": 0.24808,
+        "log_score": 0.69313
+      },
+      "skill_platt_shrink_vs_clim": -0.0252,
+      "skill_shrink_vs_clim": -0.0028,
+      "skill_platt_vs_clim": -0.0254
+    }
+  }
+}
