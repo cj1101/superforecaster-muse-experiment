@@ -1,0 +1,500 @@
+{
+  "data_source": "Coinbase Exchange public candles API (daily), paginated 290d chunks; Kraken cross-checked (~720 candles only), Binance geo-blocked/not used",
+  "split": "walk-forward expanding window, min train 1095 days, refit every 30 days, horizon-purged training labels",
+  "assets": {
+    "BTC": {
+      "date_range": "2015-07-20..2026-10-17",
+      "n_daily_candles": 4108,
+      "n_features": 21,
+      "feature_names": [
+        "mom1",
+        "mom7",
+        "mom14",
+        "mom30",
+        "mom90",
+        "mom180",
+        "ma_gap7",
+        "ma_gap30",
+        "ma_gap90",
+        "vol7",
+        "vol30",
+        "vol90",
+        "vol_of_vol30",
+        "vol_ratio",
+        "dd_ath",
+        "dd_90",
+        "rsi14",
+        "weekend",
+        "dow_sin",
+        "dow_cos",
+        "volz30"
+      ],
+      "horizons": {
+        "1": {
+          "up": {
+            "n": 2832,
+            "base_rate": 0.5102401129943502,
+            "brier": 0.2507768932778503,
+            "brier_climatology": 0.2506527936156915,
+            "brier_skill_vs_climatology": -0.0004951058409070619,
+            "log_score": -0.6947516547761641,
+            "log_score_climatology": -0.6944603215599117,
+            "auc": 0.5286813041515007,
+            "mean_pred": 0.5400013906770482,
+            "calibration_buckets": [
+              {
+                "bucket": "[0.2,0.4)",
+                "n": 6,
+                "mean_pred": 0.37539580698693364,
+                "freq": 0.5
+              },
+              {
+                "bucket": "[0.4,0.5)",
+                "n": 663,
+                "mean_pred": 0.4729002133083569,
+                "freq": 0.49019607843137253
+              },
+              {
+                "bucket": "[0.5,0.6)",
+                "n": 1766,
+                "mean_pred": 0.5452795442578975,
+                "freq": 0.5050962627406569
+              },
+              {
+                "bucket": "[0.6,0.8)",
+                "n": 396,
+                "mean_pred": 0.630378194790902,
+                "freq": 0.5656565656565656
+              },
+              {
+                "bucket": "[0.8,1.0]",
+                "n": 1,
+                "mean_pred": 0.9052818353941593,
+                "freq": 1.0
+              }
+            ]
+          },
+          "expected_return": {
+            "n": 2832,
+            "mae_logret": 0.021832099831577228,
+            "mae_climatology": 0.021485281395466682,
+            "mae_skill_vs_climatology": -0.016142140739367816,
+            "rmse_logret": 0.03271876815212853,
+            "rmse_climatology": 0.03264338938447555,
+            "corr_pred_actual": 0.06763916287287446,
+            "direction_accuracy": 0.5222457627118644,
+            "mean_pred_logret": 0.0007235680085607898,
+            "mean_actual_logret": 0.0011031166910134612
+          },
+          "eval_start": "2019-01-15",
+          "eval_end": "2026-10-16"
+        },
+        "7": {
+          "up": {
+            "n": 2826,
+            "base_rate": 0.5314932767162066,
+            "brier": 0.2536916528537866,
+            "brier_climatology": 0.25009591885963933,
+            "brier_skill_vs_climatology": -0.01437741971377493,
+            "log_score": -0.7007130179260469,
+            "log_score_climatology": -0.6933670916771422,
+            "auc": 0.49355391200453774,
+            "mean_pred": 0.5564083030420424,
+            "calibration_buckets": [
+              {
+                "bucket": "[0.2,0.4)",
+                "n": 13,
+                "mean_pred": 0.38835888853335593,
+                "freq": 0.5384615384615384
+              },
+              {
+                "bucket": "[0.4,0.5)",
+                "n": 467,
+                "mean_pred": 0.4691914954441156,
+                "freq": 0.5481798715203426
+              },
+              {
+                "bucket": "[0.5,0.6)",
+                "n": 1681,
+                "mean_pred": 0.5506279213244014,
+                "freq": 0.5187388459250446
+              },
+              {
+                "bucket": "[0.6,0.8)",
+                "n": 660,
+                "mean_pred": 0.634144195394212,
+                "freq": 0.5484848484848485
+              },
+              {
+                "bucket": "[0.8,1.0]",
+                "n": 5,
+                "mean_pred": 0.8216131533955207,
+                "freq": 1.0
+              }
+            ]
+          },
+          "expected_return": {
+            "n": 2826,
+            "mae_logret": 0.06327748037229587,
+            "mae_climatology": 0.06032985643043549,
+            "mae_skill_vs_climatology": -0.048858461071578985,
+            "rmse_logret": 0.087644134340002,
+            "rmse_climatology": 0.08525345352804761,
+            "corr_pred_actual": 0.06031713483699343,
+            "direction_accuracy": 0.5187544232130219,
+            "mean_pred_logret": 0.007320228693253679,
+            "mean_actual_logret": 0.007748623122823179
+          },
+          "eval_start": "2019-01-15",
+          "eval_end": "2026-10-10"
+        },
+        "30": {
+          "up": {
+            "n": 2803,
+            "base_rate": 0.5697466999643239,
+            "brier": 0.2812689425849821,
+            "brier_climatology": 0.24786560762775336,
+            "brier_skill_vs_climatology": -0.1347638959552393,
+            "log_score": -0.7640713424646148,
+            "log_score_climatology": -0.6891016455916049,
+            "auc": 0.43070963280030655,
+            "mean_pred": 0.5875654895190857,
+            "calibration_buckets": [
+              {
+                "bucket": "[0.0,0.2)",
+                "n": 71,
+                "mean_pred": 0.15447475862953303,
+                "freq": 0.9436619718309859
+              },
+              {
+                "bucket": "[0.2,0.4)",
+                "n": 161,
+                "mean_pred": 0.3219248214882125,
+                "freq": 0.8819875776397516
+              },
+              {
+                "bucket": "[0.4,0.5)",
+                "n": 153,
+                "mean_pred": 0.46279001712270923,
+                "freq": 0.5947712418300654
+              },
+              {
+                "bucket": "[0.5,0.6)",
+                "n": 953,
+                "mean_pred": 0.5557637512414446,
+                "freq": 0.5508919202518363
+              },
+              {
+                "bucket": "[0.6,0.8)",
+                "n": 1424,
+                "mean_pred": 0.6643094167998755,
+                "freq": 0.5161516853932584
+              },
+              {
+                "bucket": "[0.8,1.0]",
+                "n": 41,
+                "mean_pred": 0.9200518518001011,
+                "freq": 0.9024390243902439
+              }
+            ]
+          },
+          "expected_return": {
+            "n": 2803,
+            "mae_logret": 0.16538967941805643,
+            "mae_climatology": 0.14293649705709313,
+            "mae_skill_vs_climatology": -0.15708501903467553,
+            "rmse_logret": 0.21158784252568233,
+            "rmse_climatology": 0.1855999472547456,
+            "corr_pred_actual": -0.07255785646539892,
+            "direction_accuracy": 0.48376739207991437,
+            "mean_pred_logret": 0.04331999761207265,
+            "mean_actual_logret": 0.03387956100552177
+          },
+          "eval_start": "2019-01-15",
+          "eval_end": "2026-09-17"
+        }
+      },
+      "crash_7d": {
+        "n": 2826,
+        "base_rate": 0.09978768577494693,
+        "brier": 0.09005974074246935,
+        "brier_climatology": 0.09223046814546347,
+        "brier_skill_vs_climatology": 0.023535903553807302,
+        "log_score": -0.3226502479262036,
+        "log_score_climatology": -0.3347731353783078,
+        "auc": 0.6068722400642312,
+        "mean_pred": 0.1268519231365707,
+        "calibration_buckets": [
+          {
+            "bucket": "[0.0,0.2)",
+            "n": 2512,
+            "mean_pred": 0.10968177764770971,
+            "freq": 0.09076433121019108
+          },
+          {
+            "bucket": "[0.2,0.4)",
+            "n": 306,
+            "mean_pred": 0.2601998960067626,
+            "freq": 0.17647058823529413
+          },
+          {
+            "bucket": "[0.4,0.5)",
+            "n": 8,
+            "mean_pred": 0.41771764435407716,
+            "freq": 0.0
+          }
+        ],
+        "definition": "P(min close in next 7d <= 0.90 * close[t])",
+        "eval_start": "2019-01-15",
+        "eval_end": "2026-10-10"
+      }
+    },
+    "ETH": {
+      "date_range": "2016-05-18..2026-10-17",
+      "n_daily_candles": 3803,
+      "n_features": 27,
+      "feature_names": [
+        "mom1",
+        "mom7",
+        "mom14",
+        "mom30",
+        "mom90",
+        "mom180",
+        "ma_gap7",
+        "ma_gap30",
+        "ma_gap90",
+        "vol7",
+        "vol30",
+        "vol90",
+        "vol_of_vol30",
+        "vol_ratio",
+        "dd_ath",
+        "dd_90",
+        "rsi14",
+        "weekend",
+        "dow_sin",
+        "dow_cos",
+        "volz30",
+        "btc_mom1",
+        "btc_mom7",
+        "btc_mom30",
+        "btc_mom90",
+        "btc_vol30",
+        "rel_mom30"
+      ],
+      "horizons": {
+        "1": {
+          "up": {
+            "n": 2527,
+            "base_rate": 0.5164226355362089,
+            "brier": 0.24994997653513487,
+            "brier_climatology": 0.24987186676364237,
+            "brier_skill_vs_climatology": -0.00031259930341165365,
+            "log_score": -0.6932040273720277,
+            "log_score_climatology": -0.6928910117410182,
+            "auc": 0.5413266361909062,
+            "mean_pred": 0.5062766572977041,
+            "calibration_buckets": [
+              {
+                "bucket": "[0.2,0.4)",
+                "n": 77,
+                "mean_pred": 0.3755028939313782,
+                "freq": 0.4675324675324675
+              },
+              {
+                "bucket": "[0.4,0.5)",
+                "n": 1190,
+                "mean_pred": 0.46376103911346833,
+                "freq": 0.4831932773109244
+              },
+              {
+                "bucket": "[0.5,0.6)",
+                "n": 1067,
+                "mean_pred": 0.537957144798602,
+                "freq": 0.5473289597000938
+              },
+              {
+                "bucket": "[0.6,0.8)",
+                "n": 190,
+                "mean_pred": 0.6417599561264992,
+                "freq": 0.5631578947368421
+              },
+              {
+                "bucket": "[0.8,1.0]",
+                "n": 3,
+                "mean_pred": 0.8790294831372046,
+                "freq": 1.0
+              }
+            ]
+          },
+          "expected_return": {
+            "n": 2527,
+            "mae_logret": 0.02922301374702365,
+            "mae_climatology": 0.028640526579744415,
+            "mae_skill_vs_climatology": -0.020337865145649614,
+            "rmse_logret": 0.04283148510562613,
+            "rmse_climatology": 0.042664752055503755,
+            "corr_pred_actual": 0.07104259140450857,
+            "direction_accuracy": 0.5085081123862287,
+            "mean_pred_logret": 0.0008556055742155372,
+            "mean_actual_logret": 0.0010222910865365408
+          },
+          "eval_start": "2019-11-16",
+          "eval_end": "2026-10-16"
+        },
+        "7": {
+          "up": {
+            "n": 2521,
+            "base_rate": 0.5232050773502578,
+            "brier": 0.2507394803936353,
+            "brier_climatology": 0.25012498342850153,
+            "brier_skill_vs_climatology": -0.0024567596435620676,
+            "log_score": -0.6948463889465223,
+            "log_score_climatology": -0.6934058351133475,
+            "auc": 0.530459721540672,
+            "mean_pred": 0.5082990546802015,
+            "calibration_buckets": [
+              {
+                "bucket": "[0.2,0.4)",
+                "n": 80,
+                "mean_pred": 0.3826555473028343,
+                "freq": 0.5125
+              },
+              {
+                "bucket": "[0.4,0.5)",
+                "n": 1120,
+                "mean_pred": 0.46201015535932777,
+                "freq": 0.49910714285714286
+              },
+              {
+                "bucket": "[0.5,0.6)",
+                "n": 1147,
+                "mean_pred": 0.5393625134944567,
+                "freq": 0.5431560592850916
+              },
+              {
+                "bucket": "[0.6,0.8)",
+                "n": 170,
+                "mean_pred": 0.6556323732694593,
+                "freq": 0.5529411764705883
+              },
+              {
+                "bucket": "[0.8,1.0]",
+                "n": 4,
+                "mean_pred": 0.812948157041047,
+                "freq": 0.5
+              }
+            ]
+          },
+          "expected_return": {
+            "n": 2521,
+            "mae_logret": 0.08434460278676086,
+            "mae_climatology": 0.07964209980921974,
+            "mae_skill_vs_climatology": -0.05904544190579886,
+            "rmse_logret": 0.11541939312436379,
+            "rmse_climatology": 0.1115236243660092,
+            "corr_pred_actual": 0.06043477749500653,
+            "direction_accuracy": 0.48790162633875445,
+            "mean_pred_logret": 0.009330284761878522,
+            "mean_actual_logret": 0.007382344170288658
+          },
+          "eval_start": "2019-11-16",
+          "eval_end": "2026-10-10"
+        },
+        "30": {
+          "up": {
+            "n": 2498,
+            "base_rate": 0.5472377902321858,
+            "brier": 0.25767796188245673,
+            "brier_climatology": 0.2508742640158578,
+            "brier_skill_vs_climatology": -0.02711995147564794,
+            "log_score": -0.7083611138128733,
+            "log_score_climatology": -0.6950154788924394,
+            "auc": 0.5079837550134955,
+            "mean_pred": 0.5150830165864568,
+            "calibration_buckets": [
+              {
+                "bucket": "[0.2,0.4)",
+                "n": 349,
+                "mean_pred": 0.3523612674179051,
+                "freq": 0.664756446991404
+              },
+              {
+                "bucket": "[0.4,0.5)",
+                "n": 875,
+                "mean_pred": 0.4523282366103039,
+                "freq": 0.48914285714285716
+              },
+              {
+                "bucket": "[0.5,0.6)",
+                "n": 754,
+                "mean_pred": 0.5489501460121856,
+                "freq": 0.4907161803713528
+              },
+              {
+                "bucket": "[0.6,0.8)",
+                "n": 475,
+                "mean_pred": 0.6594954529384879,
+                "freq": 0.6252631578947369
+              },
+              {
+                "bucket": "[0.8,1.0]",
+                "n": 45,
+                "mean_pred": 0.9054963518029977,
+                "freq": 0.8888888888888888
+              }
+            ]
+          },
+          "expected_return": {
+            "n": 2498,
+            "mae_logret": 0.22742865602387918,
+            "mae_climatology": 0.18975841421538853,
+            "mae_skill_vs_climatology": -0.1985168455599149,
+            "rmse_logret": 0.2846075052561863,
+            "rmse_climatology": 0.24452874771774513,
+            "corr_pred_actual": 0.012497759841276842,
+            "direction_accuracy": 0.4611689351481185,
+            "mean_pred_logret": 0.07760219830118725,
+            "mean_actual_logret": 0.034069603455938326
+          },
+          "eval_start": "2019-11-16",
+          "eval_end": "2026-09-17"
+        }
+      },
+      "crash_7d": {
+        "n": 2521,
+        "base_rate": 0.16977389924633082,
+        "brier": 0.1417420645594534,
+        "brier_climatology": 0.14459545745959645,
+        "brier_skill_vs_climatology": 0.019733627530729048,
+        "log_score": -0.4567843076958635,
+        "log_score_climatology": -0.4663311955698448,
+        "auc": 0.5771508053100901,
+        "mean_pred": 0.21620388609044103,
+        "calibration_buckets": [
+          {
+            "bucket": "[0.0,0.2)",
+            "n": 1165,
+            "mean_pred": 0.16236218580624298,
+            "freq": 0.15450643776824036
+          },
+          {
+            "bucket": "[0.2,0.4)",
+            "n": 1321,
+            "mean_pred": 0.258102247224145,
+            "freq": 0.18243754731264195
+          },
+          {
+            "bucket": "[0.4,0.5)",
+            "n": 35,
+            "mean_pred": 0.4269994796180923,
+            "freq": 0.2
+          }
+        ],
+        "definition": "P(min close in next 7d <= 0.90 * close[t])",
+        "eval_start": "2019-11-16",
+        "eval_end": "2026-10-10"
+      }
+    }
+  }
+}
