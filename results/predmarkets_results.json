@@ -1,0 +1,431 @@
+{
+  "generated_at_utc": "2026-10-17T19:21:38.516891+00:00",
+  "source": "Polymarket Gamma + CLOB (public APIs, fetched live)",
+  "kalshi_probe": {
+    "attempted": true,
+    "usable": false,
+    "note": "status=finalized -> bad_request; status=settled works but the feed is dominated by multivariate combo markets and last_price is null, so Kalshi is not scored. Polymarket is the scored source.",
+    "n_returned": 100,
+    "n_with_result": 100,
+    "n_with_last_price": 0
+  },
+  "price_proxy": "CLOB daily history: last print at/before close-horizon (freshness window horizon+14d); horizons 30/14/7/3/1d; headline = T-7d. NOT Gamma outcomePrices/lastTradePrice (those are the resolution / ~0-1 at close).",
+  "filters": {
+    "top_per_month_by_volume": 25,
+    "min_volume_usd": 50000.0,
+    "windows": "2024-01..2026-09 monthly end-date windows",
+    "binary_yes_no_only": true,
+    "clean_resolution_only": "outcomePrices in {[1,0],[0,1]}"
+  },
+  "n_gamma_rows_fetched": 819,
+  "n_clean_markets": 763,
+  "n_snapshots_total": 3407,
+  "markets_date_range": [
+    "2024-01-10 23:47:24+00:00",
+    "2026-10-06 02:22:39+00:00"
+  ],
+  "split": {
+    "method": "markets sorted by closed_time; earliest 60% fit, latest 40% test",
+    "cutoff_closed_time": "2025-07-23 02:37:59+00:00",
+    "n_fit_markets": 457,
+    "n_test_markets": 306
+  },
+  "total_volume_usd_clean_markets": 26124431609.89,
+  "analyses": {
+    "primary_T7": {
+      "n_fit_snapshots": 414,
+      "n_test_snapshots": 287,
+      "n_fit_markets": 414,
+      "n_test_markets": 287,
+      "base_rate_test": 0.223,
+      "best_rule_by_fit": "logit_shrink",
+      "best_rule_beats_raw_on_test_brier": false,
+      "scores": {
+        "raw": {
+          "params": {},
+          "fit_brier": 0.08991,
+          "fit_log": 0.26357,
+          "test_brier": 0.09051,
+          "test_log": 0.28805,
+          "test_ece": 0.07775
+        },
+        "shrink_fixed": {
+          "params": {
+            "s": 0.9250000000000002
+          },
+          "fit_brier": 0.08889,
+          "fit_log": 0.27829,
+          "test_brier": 0.09023,
+          "test_log": 0.29493,
+          "test_ece": 0.07164
+        },
+        "logit_shrink": {
+          "params": {
+            "b": 0.6
+          },
+          "fit_brier": 0.08444,
+          "fit_log": 0.26307,
+          "test_brier": 0.09095,
+          "test_log": 0.28857,
+          "test_ece": 0.07704
+        },
+        "logit_time": {
+          "params": {
+            "b0": 0.6,
+            "b1": -2.7755575615628914e-17
+          },
+          "fit_brier": 0.08444,
+          "fit_log": 0.26307,
+          "test_brier": 0.09095,
+          "test_log": 0.28857,
+          "test_ece": 0.07704
+        },
+        "logit_time_vol": {
+          "params": {
+            "b0": 0.7,
+            "b1": -0.05,
+            "b2": 0.0
+          },
+          "fit_brier": 0.08444,
+          "fit_log": 0.26347,
+          "test_brier": 0.091,
+          "test_log": 0.28896,
+          "test_ece": 0.07464
+        },
+        "bucket_recal": {
+          "params": {
+            "edges": [
+              0.0,
+              0.001,
+              0.0015,
+              0.0025,
+              0.006,
+              0.017,
+              0.05020000000000026,
+              0.15,
+              0.34600000000000053,
+              0.7293,
+              1.0
+            ],
+            "values": [
+              0.05,
+              0.001,
+              0.001,
+              0.0011045143346170305,
+              0.0035060975609756094,
+              0.025688521677327648,
+              0.20230044345898007,
+              0.3693807746979389,
+              0.5557233924611973,
+              0.8743203624733475
+            ]
+          },
+          "fit_brier": 0.08464,
+          "fit_log": 0.25145,
+          "test_brier": 0.0909,
+          "test_log": 0.28261,
+          "test_ece": 0.02613
+        }
+      },
+      "calibration_table_test": [
+        {
+          "bucket": "0-.05",
+          "n": 167,
+          "mean_market_price": 0.0076,
+          "empirical_freq": 0.024,
+          "mean_best_rule_price": 0.0429
+        },
+        {
+          "bucket": ".05-.1",
+          "n": 18,
+          "mean_market_price": 0.0702,
+          "empirical_freq": 0.2778,
+          "mean_best_rule_price": 0.1743
+        },
+        {
+          "bucket": ".1-.2",
+          "n": 18,
+          "mean_market_price": 0.1458,
+          "empirical_freq": 0.1667,
+          "mean_best_rule_price": 0.2558
+        },
+        {
+          "bucket": ".2-.3",
+          "n": 12,
+          "mean_market_price": 0.2314,
+          "empirical_freq": 0.5833,
+          "mean_best_rule_price": 0.3269
+        },
+        {
+          "bucket": ".3-.4",
+          "n": 11,
+          "mean_market_price": 0.3438,
+          "empirical_freq": 0.1818,
+          "mean_best_rule_price": 0.404
+        },
+        {
+          "bucket": ".4-.5",
+          "n": 18,
+          "mean_market_price": 0.4432,
+          "empirical_freq": 0.2778,
+          "mean_best_rule_price": 0.4658
+        },
+        {
+          "bucket": ".5-.6",
+          "n": 12,
+          "mean_market_price": 0.5519,
+          "empirical_freq": 0.8333,
+          "mean_best_rule_price": 0.5313
+        },
+        {
+          "bucket": ".6-.7",
+          "n": 9,
+          "mean_market_price": 0.6568,
+          "empirical_freq": 0.6667,
+          "mean_best_rule_price": 0.5963
+        },
+        {
+          "bucket": ".7-.8",
+          "n": 8,
+          "mean_market_price": 0.7606,
+          "empirical_freq": 1.0,
+          "mean_best_rule_price": 0.6673
+        },
+        {
+          "bucket": ".8-.9",
+          "n": 6,
+          "mean_market_price": 0.8639,
+          "empirical_freq": 1.0,
+          "mean_best_rule_price": 0.753
+        },
+        {
+          "bucket": ".9-.95",
+          "n": 2,
+          "mean_market_price": 0.92,
+          "empirical_freq": 1.0,
+          "mean_best_rule_price": 0.8125
+        },
+        {
+          "bucket": ".95-1",
+          "n": 6,
+          "mean_market_price": 0.9778,
+          "empirical_freq": 1.0,
+          "mean_best_rule_price": 0.914
+        }
+      ],
+      "raw_calibration_by_horizon_test": {}
+    },
+    "pooled_all_horizons": {
+      "n_fit_snapshots": 2033,
+      "n_test_snapshots": 1374,
+      "n_fit_markets": 454,
+      "n_test_markets": 304,
+      "base_rate_test": 0.2147,
+      "best_rule_by_fit": "logit_time",
+      "best_rule_beats_raw_on_test_brier": false,
+      "scores": {
+        "raw": {
+          "params": {},
+          "fit_brier": 0.07276,
+          "fit_log": 0.21954,
+          "test_brier": 0.07125,
+          "test_log": 0.22507,
+          "test_ece": 0.04206
+        },
+        "shrink_fixed": {
+          "params": {
+            "s": 0.9500000000000002
+          },
+          "fit_brier": 0.07251,
+          "fit_log": 0.2313,
+          "test_brier": 0.07137,
+          "test_log": 0.2356,
+          "test_ece": 0.04776
+        },
+        "logit_shrink": {
+          "params": {
+            "b": 0.7000000000000001
+          },
+          "fit_brier": 0.07071,
+          "fit_log": 0.22203,
+          "test_brier": 0.07189,
+          "test_log": 0.2306,
+          "test_ece": 0.04503
+        },
+        "logit_time": {
+          "params": {
+            "b0": 0.8000000000000002,
+            "b1": -0.05000000000000002
+          },
+          "fit_brier": 0.0706,
+          "fit_log": 0.22136,
+          "test_brier": 0.07177,
+          "test_log": 0.2303,
+          "test_ece": 0.04028
+        },
+        "logit_time_vol": {
+          "params": {
+            "b0": 0.8,
+            "b1": -0.05,
+            "b2": 0.0
+          },
+          "fit_brier": 0.0706,
+          "fit_log": 0.22136,
+          "test_brier": 0.07177,
+          "test_log": 0.2303,
+          "test_ece": 0.04028
+        },
+        "bucket_recal": {
+          "params": {
+            "edges": [
+              0.0,
+              0.001,
+              0.0015,
+              0.0025,
+              0.005,
+              0.0135,
+              0.043,
+              0.145,
+              0.3930000000000007,
+              0.7829999999999996,
+              1.0
+            ],
+            "values": [
+              0.05,
+              0.001,
+              0.001,
+              0.001,
+              0.009673159191081152,
+              0.02040034675273695,
+              0.1554264077840884,
+              0.40932341531858696,
+              0.6205462470832253,
+              0.9330355231612295
+            ]
+          },
+          "fit_brier": 0.07136,
+          "fit_log": 0.22082,
+          "test_brier": 0.07522,
+          "test_log": 0.23184,
+          "test_ece": 0.02727
+        }
+      },
+      "calibration_table_test": [
+        {
+          "bucket": "0-.05",
+          "n": 816,
+          "mean_market_price": 0.0075,
+          "empirical_freq": 0.011,
+          "mean_best_rule_price": 0.0276
+        },
+        {
+          "bucket": ".05-.1",
+          "n": 85,
+          "mean_market_price": 0.0704,
+          "empirical_freq": 0.1647,
+          "mean_best_rule_price": 0.142
+        },
+        {
+          "bucket": ".1-.2",
+          "n": 84,
+          "mean_market_price": 0.1439,
+          "empirical_freq": 0.2619,
+          "mean_best_rule_price": 0.2279
+        },
+        {
+          "bucket": ".2-.3",
+          "n": 53,
+          "mean_market_price": 0.2414,
+          "empirical_freq": 0.3585,
+          "mean_best_rule_price": 0.3166
+        },
+        {
+          "bucket": ".3-.4",
+          "n": 41,
+          "mean_market_price": 0.3515,
+          "empirical_freq": 0.2683,
+          "mean_best_rule_price": 0.3963
+        },
+        {
+          "bucket": ".4-.5",
+          "n": 58,
+          "mean_market_price": 0.445,
+          "empirical_freq": 0.2759,
+          "mean_best_rule_price": 0.4613
+        },
+        {
+          "bucket": ".5-.6",
+          "n": 48,
+          "mean_market_price": 0.5583,
+          "empirical_freq": 0.6667,
+          "mean_best_rule_price": 0.541
+        },
+        {
+          "bucket": ".6-.7",
+          "n": 45,
+          "mean_market_price": 0.6513,
+          "empirical_freq": 0.7111,
+          "mean_best_rule_price": 0.6093
+        },
+        {
+          "bucket": ".7-.8",
+          "n": 31,
+          "mean_market_price": 0.7479,
+          "empirical_freq": 0.9032,
+          "mean_best_rule_price": 0.679
+        },
+        {
+          "bucket": ".8-.9",
+          "n": 29,
+          "mean_market_price": 0.8513,
+          "empirical_freq": 0.9655,
+          "mean_best_rule_price": 0.774
+        },
+        {
+          "bucket": ".9-.95",
+          "n": 16,
+          "mean_market_price": 0.9208,
+          "empirical_freq": 1.0,
+          "mean_best_rule_price": 0.8568
+        },
+        {
+          "bucket": ".95-1",
+          "n": 68,
+          "mean_market_price": 0.9876,
+          "empirical_freq": 1.0,
+          "mean_best_rule_price": 0.9646
+        }
+      ],
+      "raw_calibration_by_horizon_test": {
+        "1": {
+          "n": 304,
+          "brier": 0.04344
+        },
+        "3": {
+          "n": 300,
+          "brier": 0.05419
+        },
+        "7": {
+          "n": 287,
+          "brier": 0.09051
+        },
+        "14": {
+          "n": 258,
+          "brier": 0.08419
+        },
+        "30": {
+          "n": 225,
+          "brier": 0.09217
+        }
+      }
+    }
+  },
+  "caveats": [
+    "Liquidity at close is ~0 for resolved markets; lifetime volume is the trust/liquidity proxy.",
+    "Sample is the top-25-by-volume binary markets per month: it over-represents politics/crypto/sports event markets that attracted volume, and under-represents thin markets (survivorship/selection).",
+    "Daily CLOB fidelity: the snapshot print can be up to 14 days older than its nominal horizon for illiquid stretches (freshness window); horizons are nominal, not exact.",
+    "Snapshots of the same market at different horizons are correlated; pooled analysis counts them as samples, primary T-7 analysis does not.",
+    "Markets within an event (e.g. mutually exclusive Fed-decision buckets) are correlated; no event-level clustering adjustment is applied.",
+    "Kalshi not scored: settled feed dominated by multivariate combos with null last_price (see kalshi_probe)."
+  ]
+}

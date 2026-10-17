@@ -1,0 +1,764 @@
+market_id,question,category,closed_time,outcome,volume,liquidity_at_close
+253254,Bitcoin ETF approved by Jan 15?,,2024-01-10 23:47:24+00:00,1,12622418.42,0.0
+253657,SEC approves first spot Bitcoin ETF on Jan 10?,,2024-01-11 01:01:35+00:00,1,957594.51,279370.95
+252836,Taiwan Presidential Election: Will Lai Ching-te win?,,2024-01-13 14:17:57+00:00,1,1809553.58,0.0
+253221,Taiwan Presidential Election: Will Ko Wen-je win?,,2024-01-13 14:45:51+00:00,0,1356952.12,0.0
+253220,Taiwan Presidential Election: Will Hou Yu-ih win?,,2024-01-13 14:47:07+00:00,0,620031.71,0.0
+253668,Will Nikki Haley win the 2024 Republican Iowa Caucus?,,2024-01-16 11:45:18+00:00,0,347771.36,29497.42
+253670,Will Vivek Ramaswamy win the 2024 Republican Iowa Caucus?,,2024-01-16 11:45:44+00:00,0,299249.4,16163.57
+253663,Will someone else place 2nd in the 2024 Iowa Caucus?,,2024-01-16 12:16:40+00:00,0,555599.93,233790.94
+253660,Will Ramaswamy place 2nd in the 2024 Iowa Caucus?,,2024-01-16 12:17:10+00:00,0,1717761.93,69104.61
+253662,Will DeSantis place 2nd in the 2024 Iowa Caucus?,,2024-01-16 12:30:14+00:00,1,421868.34,63738.83
+253659,Will Haley place 2nd in the 2024 Iowa Caucus?,,2024-01-16 12:31:12+00:00,0,358510.97,140157.77
+253778,BTC ETFs first week combined AUM under $10 billion?,,2024-01-20 09:45:12+00:00,0,604171.53,34428.63
+253608,Will Donald Trump win the New Hampshire Republican Primary?,,2024-01-24 11:03:24+00:00,1,1385145.33,69139.09
+253607,Will Nikki Haley win the New Hampshire Republican Primary?,,2024-01-24 11:16:50+00:00,0,1305920.99,33060.35
+253615,Will anyone else win the New Hampshire Republican Primary?,,2024-01-24 12:16:03+00:00,0,833479.61,179820.21
+253613,Will Vivek Ramaswamy win the New Hampshire Republican Primary?,,2024-01-24 12:16:59+00:00,0,381188.35,220927.15
+253614,Will Asa Hutchinson win the New Hampshire Republican Primary?,,2024-01-24 12:17:35+00:00,0,497060.76,186312.35
+253611,Will Ron DeSantis win the New Hampshire Republican Primary?,,2024-01-24 12:17:51+00:00,0,702175.69,97705.96
+253891,Trump margin of victory in New Hampshire Primary >15%,,2024-01-24 20:31:40+00:00,0,997617.26,31908.4
+253896,Trump margin of victory in New Hampshire Primary 10-12.5%,,2024-01-29 15:17:23+00:00,1,344986.22,32056.57
+253894,Trump margin of victory in New Hampshire Primary 12.5-15%,,2024-01-29 17:17:16+00:00,0,313736.56,12402.21
+253492,Fed rate cut by January 31?,,2024-02-01 07:00:53+00:00,0,413985.13,0.0
+253519,"Will BTC hit $50,000 by Jan 31?",,2024-02-01 07:15:31+00:00,0,878477.52,0.0
+253541,Hamas lose power in Gaza before February?,,2024-02-02 03:00:42+00:00,1,731344.66,0.0
+254311,Will Tucker Carlson interview Putin in February?,,2024-02-07 19:46:46+00:00,1,266060.71,0.0
+253605,Will the San Francisco 49ers win Super Bowl LVIII?,,2024-02-12 07:02:54+00:00,0,284791.83,19638.35
+253619,Will the Kansas City Chiefs win Super Bowl LVIII?,,2024-02-12 07:18:12+00:00,1,426345.8,8352.66
+254240,"Will BTC hit $50,000 in February?",,2024-02-12 19:31:20+00:00,1,404460.75,0.0
+254409,Will Biden drop out by Friday?,,2024-02-17 07:15:41+00:00,0,670991.96,0.0
+254411,"Will ETH hit $3,000 in February?",,2024-02-20 16:01:31+00:00,1,277741.15,0.0
+254046,Will Nikki Haley drop out before South Carolina primary?,,2024-02-24 14:03:04+00:00,0,649853.54,0.0
+253934,Will Ron DeSantis win the South Carolina Republican Primary?,,2024-02-25 06:47:24+00:00,0,490761.5,283146.82
+253932,Will Donald Trump win the South Carolina Republican Primary?,,2024-02-25 07:01:50+00:00,1,784485.33,406695.11
+253933,Will Nikki Haley win the South Carolina Republican Primary?,,2024-02-25 07:03:47+00:00,0,285432.6,401469.0
+254096,Will Trump win the South Carolina Primary by more than 50% of the vote?,,2024-02-25 10:45:07+00:00,0,487250.31,8984.92
+254098,Will Trump win the South Carolina Primary by less than 10% of the vote?,,2024-02-25 11:02:02+00:00,0,1109418.39,105821.88
+254410,Will Ether Rock sell for over $600k at Sotheby’s?,,2024-02-27 00:31:19+00:00,0,490789.37,0.0
+254425,"Will BTC hit $55,000 in February?",,2024-02-27 04:03:49+00:00,1,473880.33,0.0
+254093,Will Trump win the South Carolina Primary by between 20-30% of the vote?,,2024-03-01 03:31:56+00:00,1,420917.37,48093.81
+254092,Will Trump win the South Carolina Primary by between 10-20% of the vote?,,2024-03-01 03:47:57+00:00,0,843811.73,50486.7
+253507,CZ jail before March?,,2024-03-01 07:00:51+00:00,0,382872.44,0.0
+253796,Will Sweden join NATO by February 29?,,2024-03-01 07:03:21+00:00,0,429236.59,0.0
+254427,Was the Super Bowl rigged?,,2024-03-01 07:04:55+00:00,0,421416.49,0.0
+254040,Will Israel invade Lebanon before March?,,2024-03-01 08:19:31+00:00,0,408699.99,0.0
+253462,Will U.S. Supreme Court vote to reinstate Trump on Colorado's 2024 ballot?,,2024-03-04 18:16:34+00:00,1,244342.63,0.0
+253986,Will 'Dune: Part Two' gross under $70m opening weekend?,,2024-03-05 03:48:52+00:00,0,196971.51,110011.53
+253989,Will 'Dune: Part Two' gross between $90m-100m opening weekend?,,2024-03-05 04:01:18+00:00,0,376596.01,18253.45
+253990,Will 'Dune: Part Two' gross over $100m opening weekend?,,2024-03-05 04:02:26+00:00,0,474792.37,34308.32
+254181,Will Nikki Haley drop out before Super Tuesday?,,2024-03-05 14:04:55+00:00,0,377957.64,0.0
+253443,Bitcoin all time high by Mar 31?,,2024-03-05 17:17:13+00:00,1,1279448.95,0.0
+255282,Will Trump win California Republican Primary?,,2024-03-06 08:02:57+00:00,1,173012.38,0.0
+255295,Will Trump win Vermont Republican Primary?,,2024-03-06 08:33:38+00:00,0,233416.04,0.0
+253484,Trump wins every state in Rep. Nomination?,,2024-03-06 08:34:34+00:00,0,819850.48,0.0
+255307,Bitcoin new all time high by Friday?,,2024-03-08 18:02:09+00:00,1,199844.81,0.0
+254128,US government shutdown by Mar 9?,,2024-03-12 00:33:40+00:00,1,388204.08,0.0
+253034,Will Putin be reelected?,,2024-03-17 20:37:14+00:00,1,384569.35,0.0
+252919,Indonesia Election: Prabowo Subianto wins?,,2024-03-20 16:37:56+00:00,1,270567.59,0.0
+254246,Will the Fed raise interest rates by 25+ bps after its 2024 March meeting?,,2024-03-20 21:14:43+00:00,0,197105.48,0.0
+253453,Fed rate cut by March 20?,,2024-03-21 06:05:05+00:00,0,1907759.26,0.0
+252511,SBF sentenced to 50+ years?,,2024-03-28 17:57:28+00:00,0,363283.03,0.0
+500208,SBF sentence less than 5 years?,,2024-03-28 19:05:36+00:00,0,197747.47,0.0
+500209,SBF sentence between 5 and 10 years?,,2024-03-28 19:05:52+00:00,0,234855.94,0.0
+500211,SBF sentence between 20 and 30 years?,,2024-03-28 19:10:04+00:00,1,186737.45,0.0
+500210,SBF sentence between 10 and 20 years?,,2024-03-28 19:10:08+00:00,0,178660.31,0.0
+253358,Will Zelensky remain President of Ukraine through March?,,2024-04-01 06:06:06+00:00,1,172813.33,0.0
+253426,Hunter Biden arrested before April?,,2024-04-01 06:11:50+00:00,0,224191.0,0.0
+254775,Biden to drop out before April?,,2024-04-01 06:26:26+00:00,0,243703.22,0.0
+500414,Ukraine responsible for Moscow attack? ,,2024-04-01 06:26:38+00:00,0,349784.9,0.0
+254836,"Will BTC hit $80,000 in March?",,2024-04-01 06:31:46+00:00,0,261879.58,0.0
+254558,Will Trump be Speaker by April 1?,,2024-04-02 06:00:45+00:00,0,778183.73,0.0
+254171,Will Trump tweet again by April 1?,,2024-04-02 06:00:55+00:00,0,153134.41,0.0
+500233,Will Alabama win the NCAA tournament?,,2024-04-07 06:19:06+00:00,0,177793.62,0.0
+500218,Will UConn win the NCAA tournament?,,2024-04-09 06:46:16+00:00,1,153501.46,0.0
+500268,Will Purdue win the NCAA tournament?,,2024-04-09 06:46:20+00:00,0,147514.31,0.0
+254808,Will 2024 have the hottest March on record?,,2024-04-10 20:12:08+00:00,1,232240.08,0.0
+255221,Will Adam Schiff get first place in the California Senate Primary?,,2024-04-13 10:42:38+00:00,1,622624.68,0.0
+255222,Will Steve Garvey get first place in the California Senate Primary?,,2024-04-13 10:42:44+00:00,0,438218.33,0.0
+500889,Israel military action against Iran by April 15?,,2024-04-16 06:04:34+00:00,0,307829.25,0.0
+500890,U.S. military action against Iran by April 15?,,2024-04-16 06:04:50+00:00,0,276950.66,0.0
+254216,Will Atletico Madrid win the 2023-24 Champions League?,,2024-04-17 00:09:30+00:00,0,197994.79,0.0
+254210,Will Arsenal win the 2023-24 Champions League?,,2024-04-18 00:05:13+00:00,0,166291.71,0.0
+254847,SBF reduced sentence because autism?,,2024-04-18 21:49:37+00:00,0,184917.23,0.0
+500943,Israel military action against Iran by Friday?,,2024-04-19 07:07:47+00:00,1,391886.62,0.0
+255343,Congress passes bill banning TikTok by April 30?,,2024-04-24 03:47:28+00:00,1,146220.7,0.0
+254019,"Will Donald Trump be President of the USA on April 30, 2024?",,2024-04-30 18:01:05+00:00,0,134093.44,0.0
+501144,CZ sentenced to 36 months or more in prison?,,2024-04-30 22:31:03+00:00,0,275082.6,0.0
+501145,CZ sentenced to 30-35 months in prison?,,2024-04-30 22:31:09+00:00,0,152380.41,0.0
+500320,Israel ground offensive in Rafah by April 30?,,2024-05-01 00:09:17+00:00,0,129294.97,0.0
+500568,"Will Bitcoin reach $100,000 in April?",,2024-05-01 06:10:11+00:00,0,144019.29,0.0
+500624,"Will Bitcoin reach $75,000 in April?",,2024-05-01 06:10:19+00:00,0,168686.38,0.0
+500566,"Will Bitcoin reach $80,000 in April?",,2024-05-01 06:15:03+00:00,0,144119.74,0.0
+500325,Will Israel invade Lebanon before May?,,2024-05-01 06:15:23+00:00,0,186815.83,0.0
+253246,LayerZero airdrop by April?,,2024-05-01 06:30:51+00:00,0,139682.02,0.0
+500357,Fed raises interest rates by 25+ bps after 2024 May meeting?,,2024-05-01 21:09:00+00:00,0,286083.44,0.0
+500359,Fed decreases interest rates by 25 bps after 2024 May meeting?,,2024-05-01 21:09:02+00:00,0,234731.02,0.0
+500360,Fed decreases interest rates by 50+ bps after May 2024 meeting?,,2024-05-01 21:09:06+00:00,0,214654.56,0.0
+500358,No change in Fed interest rates after 2024 May meeting?,,2024-05-01 21:14:06+00:00,1,165142.11,0.0
+500415,Will Trump be Speaker by May 1?,,2024-05-02 06:01:00+00:00,0,229198.85,0.0
+253299,Fed rate cut by May 1?,,2024-05-02 06:01:04+00:00,0,1608415.7,0.0
+501218,Will Friend.Tech airdrop by Thursday?,,2024-05-07 00:21:45+00:00,0,161688.86,0.0
+501427,Drake arrested by Friday? ,,2024-05-11 06:04:08+00:00,0,158109.33,0.0
+254549,Will Switzerland win Eurovision 2024?,,2024-05-12 02:14:37+00:00,1,162710.87,0.0
+254537,Will Croatia win Eurovision 2024?,,2024-05-12 02:14:57+00:00,0,149719.88,0.0
+255015,Will 'Dune: Part Two' gross more than $300m by May 15?,,2024-05-17 01:37:05+00:00,0,170859.63,0.0
+254080,Will Oleksandr Usyk beat Tyson Fury in Ring of Fire?,,2024-05-19 02:51:26+00:00,1,151516.18,0.0
+501679,Will Iran President Raisi be found today?,,2024-05-23 00:21:54+00:00,1,311736.37,0.0
+253587,Ethereum spot ETF approved by June 30?,,2024-05-23 23:34:35+00:00,1,971400.98,0.0
+253750,Ethereum ETF approved by May 31?,,2024-05-24 00:14:40+00:00,1,13226512.33,0.0
+501717,Will ETH hit $4k by Friday?,,2024-05-25 06:06:14+00:00,0,176171.84,0.0
+253807,Will Indiana Pacers be 2023-24 NBA Champions?,,2024-05-28 05:56:35+00:00,0,361916.75,0.0
+501835,Was Caitlyn Jenner hacked?,,2024-05-31 00:29:21+00:00,0,2871418.7,0.0
+501631,Did Keith Gill (RoaringKitty) sell his X account?,,2024-06-01 06:15:15+00:00,0,585457.0,0.0
+501029,Mike Johnson out as Speaker before June?,,2024-06-01 06:15:31+00:00,0,203963.08,0.0
+501722,Ethereum all time high in May?,,2024-06-01 06:30:09+00:00,0,215440.96,0.0
+254212,Will Real Madrid win the 2023-24 Champions League?,,2024-06-02 00:14:32+00:00,1,207108.72,0.0
+254208,Will Dortmund win the 2023-24 Champions League?,,2024-06-02 00:14:38+00:00,0,188245.65,0.0
+253653,Mexican Presidential Election: Will Claudia Sheinbaum win?,,2024-06-03 12:46:24+00:00,1,747925.29,0.0
+253865,Mexican Presidential Election: Will Jorge Álvarez Máynez win?,,2024-06-03 12:50:54+00:00,0,415551.52,0.0
+253866,Mexican Presidential Election: Will another candidate win?,,2024-06-03 12:56:18+00:00,0,232879.55,0.0
+253654,Mexican Presidential Election: Will Xóchitl Gálvez win?,,2024-06-03 12:56:24+00:00,0,686502.8,0.0
+254564,Taiko airdrop by June 30?,,2024-06-05 22:25:05+00:00,1,501528.58,0.0
+255345,Indian Election: Modi reelected?,,2024-06-09 18:25:00+00:00,1,377942.06,0.0
+501306,No change in Fed interest rates after 2024 June meeting?,,2024-06-12 21:11:56+00:00,1,530059.99,0.0
+501304,Fed decreases interest rates by 50+ bps after June 2024 meeting?,,2024-06-12 21:17:06+00:00,0,571695.35,0.0
+501307,Fed increases interest rates by 25+ bps after June 2024 meeting?,,2024-06-12 21:17:10+00:00,0,582731.69,0.0
+501305,Fed decreases interest rates by 25 bps after June 2024 meeting?,,2024-06-12 21:22:25+00:00,0,602846.11,0.0
+254247,Fed rate cut by June 12?,,2024-06-13 06:09:57+00:00,0,1253483.92,0.0
+501848,NVIDIA largest company before June 15?,,2024-06-14 22:13:40+00:00,0,352823.44,0.0
+254469,zkSync airdrop by June 30?,,2024-06-17 09:31:18+00:00,1,1735369.91,0.0
+253814,Will Dallas Mavericks be 2023-24 NBA Champions?,,2024-06-18 06:55:18+00:00,0,577307.82,0.0
+253799,Will Boston Celtics 2023-24 NBA Champions?,,2024-06-18 06:55:28+00:00,1,520370.7,0.0
+254485,LayerZero airdrop by June 30?,,2024-06-20 21:08:21+00:00,1,729959.92,0.0
+502609,Did Barron Trump launch $DJT?,,2024-06-24 06:23:49+00:00,0,2075604.17,0.0
+502710,Was Barron involved in $DJT?,,2024-06-26 00:20:11+00:00,0,1143639.21,0.0
+502570,Is $DJT real?,,2024-06-26 00:25:23+00:00,0,6383820.76,0.0
+254457,Blast airdrop by June 30?,,2024-06-26 18:05:09+00:00,1,366875.08,0.0
+502885,Will Ukraine win?,,2024-06-26 21:05:23+00:00,0,355309.66,0.0
+502711,"Will Trump say ""Crypto"" or ""Bitcoin"" during the debate?",,2024-06-28 06:37:29+00:00,0,345299.03,0.0
+254429,EigenLayer airdrop by June 30?,,2024-07-01 06:25:58+00:00,0,377945.44,0.0
+253399,Ceasefire between Russia and Ukraine by June 30?,,2024-07-01 06:40:27+00:00,0,357703.46,0.0
+502223,Biden drops out by July 4? ,,2024-07-05 06:02:55+00:00,0,4490151.55,0.0
+502547,Will Reform win 7+ seats in UK Election?,,2024-07-05 17:34:38+00:00,0,564446.32,0.0
+503131,Biden drops out by July 12?,,2024-07-13 06:02:01+00:00,0,2139767.08,0.0
+501987,Will Spain win the 2024 Euros?,,2024-07-15 00:22:33+00:00,1,1318412.12,0.0
+254112,Will JD Vance win the 2024 Republican VP nomination?,,2024-07-16 02:11:25+00:00,1,6452293.01,0.0
+501432,Will Tulsi Gabbard win the 2024 Republican VP nomination?,,2024-07-16 02:16:19+00:00,0,1887165.57,0.0
+501431,Will Doug Burgum win the 2024 Republican VP nomination?,,2024-07-16 02:31:23+00:00,0,2687918.07,0.0
+254191,Will Marco Rubio win the 2024 Republican VP nomination?,,2024-07-16 02:41:49+00:00,0,3619916.78,0.0
+253995,Will Vivek Ramaswamy win the 2024 Republican VP nomination?,,2024-07-16 02:47:27+00:00,0,6674832.41,0.0
+254196,Will a Trump family member win the 2024 Republican VP nomination?,,2024-07-16 02:52:33+00:00,0,3805135.7,0.0
+253994,Will Kristi Noem win the 2024 Republican VP nomination?,,2024-07-16 02:57:39+00:00,0,4356530.86,0.0
+253996,Will Nikki Haley win the 2024 Republican VP nomination?,,2024-07-16 02:57:53+00:00,0,4569010.35,0.0
+501433,Will Michael Flynn win the 2024 Republican VP nomination?,,2024-07-16 03:02:31+00:00,0,1802365.77,0.0
+254005,Will Ben Carson win the 2024 Republican VP nomination?,,2024-07-16 03:02:47+00:00,0,4993587.5,0.0
+501440,Will Glenn Youngkin win the 2024 Republican VP nomination?,,2024-07-16 03:02:57+00:00,0,1827864.59,0.0
+253999,Will Robert F. Kennedy Jr. win the 2024 Republican VP nomination?,,2024-07-16 03:03:07+00:00,0,4035172.28,0.0
+253691,Will Donald J. Trump win the 2024 Republican presidential nomination?,,2024-07-16 03:08:17+00:00,1,6074886.86,0.0
+254001,Will Tucker Carlson win the 2024 Republican VP nomination?,,2024-07-16 03:08:21+00:00,0,6008855.24,0.0
+253998,Will Byron Donalds win the 2024 Republican VP nomination?,,2024-07-16 03:08:27+00:00,0,3760323.9,0.0
+254000,Will Ron DeSantis win the 2024 Republican VP nomination?,,2024-07-16 03:12:27+00:00,0,3540382.36,0.0
+253992,Will Tim Scott win the 2024 Republican VP nomination?,,2024-07-16 03:12:37+00:00,0,4881266.8,0.0
+240380,[Single Market] Will Donald J. Trump win the U.S. 2024 Republican presidential nomination?,US-current-affairs,2024-07-18 00:10:37.491895+00:00,1,6552460.32,0.0
+503254,Biden drops out in July? ,,2024-07-21 20:45:10+00:00,1,2092272.62,0.0
+504030,Will Biden resign during his speech today?,,2024-07-25 02:13:47+00:00,0,1177909.39,0.0
+504021,Kamala president by Friday?,,2024-07-27 06:05:05+00:00,0,4789954.11,0.0
+503983,Will Elon Musk give a speech at Bitcoin conference? ,,2024-07-28 01:27:22+00:00,0,1625822.47,0.0
+503707,Will Trump announce strategic Bitcoin reserve?,,2024-08-01 00:31:32+00:00,1,2789316.2,0.0
+503011,Will Biden announce resignation by July 31?,,2024-08-01 06:08:40+00:00,0,11663215.12,0.0
+254443,Fed rate cut by July 31?,,2024-08-01 06:13:34+00:00,0,1727507.99,0.0
+254258,Will Michelle Obama announce presidential run before August?,,2024-08-01 06:13:40+00:00,0,1483098.4,0.0
+253703,Will Michelle Obama win the 2024 Democratic Presidential Nomination?,,2024-08-06 07:19:08+00:00,0,47510450.44,0.0
+253701,Will Kamala Harris win the 2024 Democratic Presidential Nomination?,,2024-08-06 07:29:04+00:00,1,54563172.65,0.0
+253698,Will Gavin Newsom win the 2024 Democratic Presidential Nomination?,,2024-08-06 10:34:28+00:00,0,37514692.52,0.0
+253874,Will Dean Phillips win the 2024 Democratic Presidential Nomination?,,2024-08-06 11:24:56+00:00,0,22226397.94,0.0
+253699,Will Robert F. Kennedy Jr. win the 2024 Democratic Presidential Nomination?,,2024-08-06 11:56:02+00:00,0,28528853.89,0.0
+253842,Will Elizabeth Warren win the 2024 Democratic Presidential Nomination?,,2024-08-06 12:01:24+00:00,0,16590051.98,0.0
+253702,Will Hillary Clinton win the 2024 Democratic Presidential Nomination?,,2024-08-06 12:01:30+00:00,0,35289981.76,0.0
+253843,Will someone else win the 2024 Democratic Presidential Nomination?,,2024-08-06 12:06:48+00:00,0,28123133.59,0.0
+253697,Will Joe Biden win the 2024 Democratic Presidential Nomination?,,2024-08-06 12:11:54+00:00,0,57519438.44,0.0
+502006,Will Edmundo González win the 2024 Venezuela presidential election?,,2024-08-06 16:34:29+00:00,1,1734378.79,0.0
+503191,Will Tim Walz be the 2024 Democratic VP nominee?,,2024-08-06 18:17:24+00:00,1,12902914.06,0.0
+502002,Will Nicolas Maduro Win the 2024 Venezuela presidential election?,,2024-08-06 18:37:36+00:00,0,2594710.24,0.0
+251581,Trump and Biden both win nomination?,,2024-08-06 21:39:06+00:00,0,4174022.0,0.0
+503188,Will Hillary Clinton be the 2024 Democratic VP nominee?,,2024-08-06 23:00:32+00:00,0,5005051.36,0.0
+503176,Will Gretchen Whitmer be the 2024 Democratic VP nominee?,,2024-08-06 23:10:54+00:00,0,5769374.22,0.0
+503181,Will Michelle Obama be the 2024 Democratic VP nominee?,,2024-08-06 23:10:58+00:00,0,6557745.54,0.0
+503185,Will J. B. Pritzker be the 2024 Democratic VP nominee?,,2024-08-06 23:11:02+00:00,0,5844373.91,0.0
+503175,Will Pete Buttigieg be the 2024 Democratic VP nominee?,,2024-08-06 23:16:30+00:00,0,9023366.09,0.0
+503228,Will Mark Kelly be the 2024 Democratic VP nominee?,,2024-08-06 23:16:36+00:00,0,12826516.15,0.0
+503189,Will Roy Cooper be the 2024 Democratic VP nominee?,,2024-08-06 23:16:40+00:00,0,5206054.38,0.0
+503227,Will Josh Shapiro be the 2024 Democratic VP nominee?,,2024-08-06 23:21:48+00:00,0,16505096.89,0.0
+504033,Will another man be the 2024 Democratic VP nominee?,,2024-08-06 23:22:04+00:00,0,5287492.85,0.0
+503190,Will Andy Beshear be the 2024 Democratic VP nominee?,,2024-08-06 23:22:10+00:00,0,11499090.47,0.0
+240382,[Single Market] Will Joe Biden win the U.S. 2024 Democratic presidential nomination?,US-current-affairs,2024-08-07 13:51:50.562992+00:00,0,5770423.69,0.0
+503330,2024 July hottest on record?,,2024-08-09 17:19:59+00:00,1,2715913.38,0.0
+504653,Kamala Harris replaced as nominee at DNC?,,2024-08-23 05:48:18+00:00,0,15865808.65,0.0
+505567,Will RFK Jr. drop out by Friday?,,2024-08-27 00:28:24+00:00,1,9659775.26,0.0
+503535,RFK Jr. endorses Trump in August?,,2024-08-27 00:28:34+00:00,1,6195836.69,0.0
+503989,JD Vance replaced as Republican VP nominee?,,2024-09-01 06:19:20+00:00,0,7019568.87,0.0
+506161,Will USA win the most medals in the 2024 Paralympics?,,2024-09-09 00:47:41+00:00,0,4469905.716765,0.0
+505760,Microphones muted during ABC debate?,,2024-09-14 00:20:48+00:00,1,5037700.512494,0.0
+255335,Fed rate cut by September 18?,,2024-09-18 20:17:10+00:00,1,20345317.826273,0.0
+504069,Fed decreases interest rates by 50+ bps after September 2024 meeting?,,2024-09-18 21:09:08+00:00,1,10906333.42219,0.0
+504071,No change in Fed interest rates after 2024 September meeting?,,2024-09-18 21:14:22+00:00,0,23499210.730061,0.0
+504070,Fed decreases interest rates by 25 bps after September 2024 meeting?,,2024-09-18 21:24:56+00:00,0,6660914.249885,0.0
+504072,Fed increases interest rates by 25+ bps after September 2024 meeting?,,2024-09-18 21:25:00+00:00,0,17625581.465252,0.0
+508311,Will Elon tweet 200-224 times?,,2024-10-03 12:53:39+00:00,0,3558988.708811,0.0
+507472,Israeli forces enters Lebanon in September?,,2024-10-04 00:24:46+00:00,1,10886668.249385,0.0
+508313,Will Elon tweet 250-274 times?,,2024-10-04 11:35:43+00:00,0,2710043.876095,0.0
+504664,Will Israel invade Lebanon before November?,,2024-10-06 00:28:04+00:00,1,5313533.726507,0.0
+506125,Will Marina Helena win the 2024 São Paulo mayoral election?,,2024-10-07 06:24:24+00:00,0,14849907.389069,0.0
+507417,Will Israel invade Lebanon in September?,,2024-10-08 00:25:08+00:00,0,13817736.165943,0.0
+508427,Will another candidate win the Tunisia presidential election?,,2024-10-08 02:45:06+00:00,0,5495540.12333,0.0
+506755,Will 'Joker: Folie à Deux' gross between $135-150m opening weekend?,,2024-10-08 03:06:00+00:00,0,3120549.338401,0.0
+508795,Will the HBO documentary identify Paul Le Roux as Satoshi?,,2024-10-09 04:50:53+00:00,0,2570248.480181,0.0
+508792,Will the HBO documentary identify someone else as Satoshi?,,2024-10-09 04:50:59+00:00,1,3874665.894388,0.0
+508798,Will the HBO documentary identify Vili Lehdonvirta as Satoshi?,,2024-10-09 04:56:05+00:00,0,2556929.583028,0.0
+508788,Will the HBO documentary identify Adam Back as Satoshi?,,2024-10-09 04:56:15+00:00,0,7341786.79342,0.0
+508793,Will the HBO documentary identify David Kleiman as Satoshi?,,2024-10-09 04:56:21+00:00,0,3115366.153443,0.0
+508790,Will the HBO documentary identify Elon Musk as Satoshi?,,2024-10-09 05:01:03+00:00,0,3068927.129225,0.0
+508783,Will the HBO documentary identify Len Sassaman as Satoshi?,,2024-10-09 05:05:41+00:00,0,4617164.821827,0.0
+508786,Will the HBO documentary identify Nick Szabo as Satoshi?,,2024-10-09 05:05:49+00:00,0,2873063.268886,0.0
+502571,Will Trump launch a coin before the election?,,2024-10-18 00:22:28+00:00,1,76899060.598799,0.0
+508551,Israel military response against Iran in October?,,2024-10-26 01:52:59+00:00,1,3265662.832514,0.0
+506126,Will another candidate win the 2024 São Paulo mayoral election?,,2024-10-28 01:21:05+00:00,0,21001687.12647,0.0
+506316,Will Lionel Messi win the Ballon d’Or?,,2024-10-28 20:09:19+00:00,0,6976098.476255,0.0
+506323,Will Phil Foden win the Ballon d’Or?,,2024-10-28 22:02:10+00:00,0,6183473.395939,0.0
+506317,Will Nico Williams win the Ballon d’Or?,,2024-10-28 22:11:26+00:00,0,5686966.912417,0.0
+506322,Will Harry Kane win the Ballon d’Or?,,2024-10-28 23:48:33+00:00,0,6241329.781569,0.0
+506319,Will Toni Kroos win the Ballon d’Or?,,2024-10-28 23:53:00+00:00,0,4340140.855336,0.0
+506321,Will Kylian Mbappe win the Ballon d’Or?,,2024-10-29 00:24:01+00:00,0,3193236.750482,0.0
+509855,Israel military action against Iraq before November?,,2024-10-30 00:25:09+00:00,1,27780153.857752,0.0
+501958,Trump sentenced to no prison time?,,2024-11-05 08:46:30+00:00,1,1514093.113306,0.0
+501960,Trump sentenced to between 12 and 23 months prison time?,,2024-11-05 11:55:46+00:00,0,3461448.079339,0.0
+501961,Trump sentenced to between 24 and 35 months prison time?,,2024-11-05 11:55:50+00:00,0,2663689.67615,0.0
+504873,Will Gavin Newsom be D-nom for VP on Election Day?,,2024-11-05 14:09:03+00:00,0,92886849.31616,0.0
+253591,Will Donald Trump win the 2024 US Presidential Election?,,2024-11-06 15:17:41+00:00,1,1531479284.504353,0.0
+253597,Will Kamala Harris win the 2024 US Presidential Election?,,2024-11-06 18:03:54+00:00,0,1037039118.18879,0.0
+253593,Will Nikki Haley win the 2024 US Presidential Election?,,2024-11-06 18:04:10+00:00,0,107529158.083605,0.0
+253594,Will Gavin Newsom win the 2024 US Presidential Election?,,2024-11-06 18:08:56+00:00,0,54161276.228088,0.0
+253595,Will Robert F. Kennedy Jr. win the 2024 US Presidential Election?,,2024-11-06 18:09:00+00:00,0,141605110.748029,0.0
+253609,Will Michelle Obama win the 2024 US Presidential Election?,,2024-11-06 19:00:15+00:00,0,153382275.618594,0.0
+253592,Will Joe Biden win the 2024 US Presidential Election?,,2024-11-06 19:31:03+00:00,0,72176112.338298,0.0
+253596,Will Ron DeSantis win the 2024 US Presidential Election?,,2024-11-06 19:31:05+00:00,0,46309049.202369,0.0
+253610,Will Hillary Clinton win the 2024 US Presidential Election?,,2024-11-06 19:45:30+00:00,0,93307167.686999,0.0
+253642,Will any other Republican Politician win the 2024 US Presidential Election?,,2024-11-06 19:45:36+00:00,0,241655099.850067,0.0
+253641,Will any other Democratic Politician win the 2024 US Presidential Election?,,2024-11-06 19:54:53+00:00,0,116558196.386525,0.0
+504494,Fed increases interest rates by 25+ bps after November 2024 meeting?,,2024-11-07 22:44:32+00:00,0,133955589.249666,0.0
+255052,Will a candidate from another party win Arizona Presidential Election?,,2024-11-10 08:31:45+00:00,0,2968663.457244,0.0
+253706,Will Donald Trump win the popular vote in the 2024 Presidential Election?,,2024-11-11 22:30:39+00:00,1,119932620.818624,0.0
+253731,Will Hillary Clinton win the popular vote in the 2024 Presidential Election?,,2024-11-12 07:59:27+00:00,0,70237132.505143,0.0
+253736,Will any other Democrat Politician win the popular vote in the 2024 Presidential Election?,,2024-11-12 08:18:43+00:00,0,36496306.548087,0.0
+253730,Will Michelle Obama win the popular vote in the 2024 Presidential Election?,,2024-11-12 09:03:01+00:00,0,36970806.278363,0.0
+253728,Will Ron DeSantis win the popular vote in the 2024 Presidential Election?,,2024-11-12 09:03:05+00:00,0,39315353.333832,0.0
+253724,Will RFK Jr. win the popular vote in the 2024 Presidential Election?,,2024-11-12 09:52:55+00:00,0,47770370.83836,0.0
+253727,Kamala Harris wins the popular vote?,,2024-11-12 10:03:19+00:00,0,163779786.645492,0.0
+255396,Will Jake Paul win his boxing match against Mike Tyson?,,2024-11-16 08:54:22+00:00,1,15917754.336328,0.0
+255398,Will Jake Paul vs. Mike Tyson have no official winner?,,2024-11-16 08:59:08+00:00,0,14968970.920633,0.0
+255397,Will Mike Tyson win his boxing match against Jake Paul?,,2024-11-16 09:03:46+00:00,0,32399877.164035,0.0
+508671,Israel strike on Iranian nuclear facility in 2024?,,2024-11-19 00:27:30+00:00,1,10075557.869042,0.0
+509218,Will the Democratic candidate win Nevada by 3.0%-4.0%? ,,2024-11-27 08:27:48+00:00,0,47843276.232386,0.0
+503320,Will the Giants win Super Bowl 2025?,,2024-11-29 04:32:09+00:00,0,107857306.638451,0.0
+509188,Will the Democratic candidate win Wisconsin by 3%-4.0%? ,,2024-11-30 00:17:43+00:00,0,37386911.778964,0.0
+503314,Will the Raiders win Super Bowl 2025?,,2024-11-30 02:39:51+00:00,0,123969933.295517,0.0
+503329,Will the Patriots win Super Bowl 2025?,,2024-12-02 00:36:34+00:00,0,74275772.258203,0.0
+503312,Will the Jaguars win Super Bowl 2025?,,2024-12-03 07:55:34+00:00,0,25428418.733293,0.0
+506013,Will the Jaguars win the AFC Championship?,,2024-12-03 08:10:16+00:00,0,13874915.27278,0.0
+507792,Israel x Hezbollah Ceasefire in 2024?,,2024-12-05 00:31:32+00:00,1,40061277.633281,0.0
+507242,Will the Democratic candidate win Pennsylvania by 1.5%-2.0%?,,2024-12-05 04:16:19+00:00,0,109063759.600993,0.0
+255229,Will Bitcoin hit $100k in 2024?,,2024-12-05 04:46:26+00:00,1,22807235.891544,0.0
+514215,"Bitcoin above $98,000 on December 6?",,2024-12-06 19:24:58+00:00,1,10177786.150918,0.0
+505971,Will another team win the 2024 F1 Constructors Championship?,,2024-12-08 20:53:23+00:00,0,31284285.708133,0.0
+505412,Will Florida State win the 2025 College Football Playoff?,,2024-12-08 21:44:13+00:00,0,15876071.38908,0.0
+505429,Will NC State win the 2025 College Football Playoff?,,2024-12-08 21:49:15+00:00,0,12151636.838837,0.0
+505431,Will Oklahoma State win the 2025 College Football Playoff?,,2024-12-08 21:49:21+00:00,0,9828619.3758,0.0
+505430,Will Louisville win the 2025 College Football Playoff?,,2024-12-08 21:49:27+00:00,0,17644160.157113,0.0
+503327,Will the Titans win Super Bowl 2025?,,2024-12-08 23:57:34+00:00,0,119500829.411718,0.0
+503304,Will the Browns win Super Bowl 2025?,,2024-12-09 00:42:52+00:00,0,115257552.257456,0.0
+506021,Will the Jets win the AFC Championship?,,2024-12-09 00:57:10+00:00,0,18544716.995136,0.0
+509307,Will New Hampshire be the closest state?,,2024-12-11 09:17:30+00:00,0,50856971.134739,0.0
+507312,Will Slovan Bratislava win the UEFA Champions League?,,2024-12-11 22:58:39+00:00,0,32130923.31674,0.0
+506027,Will the Panthers win the NFC Championship?,,2024-12-16 00:49:26+00:00,0,9139034.759551,0.0
+503301,Will the Panthers win Super Bowl 2025?,,2024-12-16 00:49:34+00:00,0,139314923.974714,0.0
+504706,Democrats win popular vote by 7% or more?,,2024-12-18 00:57:44+00:00,0,20419616.790282,0.0
+504677,GOP wins popular vote by 3-4%?,,2024-12-18 01:02:28+00:00,0,15905191.80409,0.0
+504700,Democrats win popular vote by 1-2%?,,2024-12-18 01:07:08+00:00,0,12680742.873291,0.0
+254580,Will Fed cut interest rates 6+ times in 2024?,,2024-12-18 22:09:14+00:00,0,20169086.258574,0.0
+504584,Fed decreases interest rates by 75+ bps after December 2024 meeting?,,2024-12-18 22:24:42+00:00,0,13304399.0156328,0.0
+507419,Will the FED change rates to another level after December meeting?,,2024-12-18 22:29:58+00:00,0,11155452.805379,0.0
+504588,Fed increases interest rates by 25+ bps after December 2024 meeting?,,2024-12-18 22:34:46+00:00,0,10228496.464075,0.0
+515539,"Bitcoin above $100,000 on December 20?",,2024-12-20 19:09:29+00:00,0,10202409.081955,0.0
+506968,Will Israel invade Syria in 2024?,,2024-12-21 00:31:57+00:00,1,16819559.7366551,0.0
+503297,Will the Cardinals win Super Bowl 2025?,,2024-12-23 00:54:56+00:00,0,43228740.8968111,0.0
+506037,Will the 49ers win the NFC Championship?,,2024-12-23 01:00:18+00:00,0,10176706.869723,0.0
+506202,Will there be a US Government shutdown? ,,2024-12-25 00:28:03+00:00,1,53500373.740494,0.0
+503311,Will the Colts win Super Bowl 2025?,,2024-12-30 00:23:46+00:00,0,26827625.2609891,0.0
+506011,Will the Colts win the AFC Championship?,,2024-12-30 00:28:36+00:00,0,18226414.886526,0.0
+503325,Will the Seahawks win Super Bowl 2025?,,2024-12-30 07:55:39+00:00,0,20673323.934183,0.0
+514368,"Will Bitcoin reach $110,000 in December?",,2025-01-01 07:22:12+00:00,0,10676794.972932,0.0
+255322,Will Bitcoin hit $250k in 2024?,,2025-01-01 07:37:40+00:00,0,9422713.94942905,0.0
+254432,Ethereum all time high in 2024?,,2025-01-01 07:37:52+00:00,0,19510179.2052032,0.0
+254250,Will 'Joker 2' gross most in 2024?,,2025-01-03 08:20:05+00:00,0,27351093.5083624,0.0
+254251,Will 'Furiosa: A Mad Max Saga' gross most in 2024?,,2025-01-03 08:20:09+00:00,0,21691619.0902797,0.0
+254252,Will 'Despicable Me 4' gross most in 2024?,,2025-01-03 08:30:05+00:00,0,25803996.5807667,0.0
+254249,Will 'Dune: Part 2' gross most in 2024?,,2025-01-03 08:30:11+00:00,0,19502938.234954,0.0
+512245,Will Jack Bergman be the first elected Speaker of the House for the 119th congress?,,2025-01-03 23:17:21+00:00,0,58633495.646624,0.0
+512248,Will Elise Stefanik be the first elected Speaker of the House for the 119th congress?,,2025-01-03 23:22:45+00:00,0,54151183.846678,0.0
+512246,Will Austin Scott be the first elected Speaker of the House for the 119th congress?,,2025-01-03 23:22:49+00:00,0,67258993.77656,0.0
+503298,Will the Falcons win Super Bowl 2025?,,2025-01-06 01:01:14+00:00,0,49889785.2261379,0.0
+503317,Will the Dolphins win Super Bowl 2025?,,2025-01-06 03:36:11+00:00,0,23773212.1942749,0.0
+506008,Will the Bengals win the AFC Championship?,,2025-01-06 03:36:19+00:00,0,11263774.3642499,0.0
+505036,Will Garrett Wilson be the top Fantasy Flex Player?,,2025-01-06 09:32:00+00:00,0,10474614.47247,0.0
+517192,"Bitcoin above $97,000 on January 10?",,2025-01-10 19:02:51+00:00,0,8846664.201678,0.0
+506006,Global heat increase between 1.22°C and 1.24°C for 2024?,,2025-01-10 19:37:21+00:00,0,9466873.29085309,0.0
+503323,Will the Steelers win Super Bowl 2025?,,2025-01-12 07:13:07+00:00,0,32651063.5802148,0.0
+516497,Yoon arrested by January 31?,,2025-01-15 03:59:18+00:00,1,8759994.498878,0.0
+503310,Will the Texans win Super Bowl 2025?,,2025-01-19 03:42:27+00:00,0,33300682.7113171,0.0
+519110,Was Trump hacked?,,2025-01-20 07:02:08+00:00,0,22213305.879178,0.0
+503013,Will Biden finish his term?,,2025-01-20 19:45:27+00:00,1,64552171.3431552,0.0
+511754,Will Donald Trump be inaugurated?,,2025-01-20 22:51:36+00:00,1,400409526.886835,0.0
+511753,Will Kamala Harris be inaugurated?,,2025-01-21 00:20:56+00:00,0,72247146.4466322,0.0
+511755,Will someone else be inaugurated?,,2025-01-21 00:35:20+00:00,0,28689878.975383,0.0
+507276,TikTok banned in the US before May 2025?,,2025-01-22 00:31:19+00:00,1,119653357.735965,0.0
+513158,Will Keith Rabois be appointed as the next Florida senator?,,2025-01-22 01:49:49+00:00,0,44989666.665491,0.0
+507310,Will Red Star Belgrade win the UEFA Champions League?,,2025-01-22 02:15:44+00:00,0,69281806.2784465,0.0
+507293,Will Bologna win the UEFA Champions League? ,,2025-01-22 03:44:11+00:00,0,36952708.8056862,0.0
+512159,Will Trump pardon Ross Ulbricht in his first 100 days?,,2025-01-22 03:49:09+00:00,1,6087387.385208,0.0
+506109,Will Matthew Stafford win NFL MVP for the 2024-25 season?,,2025-01-24 03:05:14+00:00,0,18886263.2792296,0.0
+506105,Will Dak Prescott win NFL MVP for the 2024-25 season?,,2025-01-24 03:10:06+00:00,0,37958529.9175012,0.0
+506116,Will Kyler Murray win NFL MVP for the 2024-25 season?,,2025-01-24 03:10:16+00:00,0,19618409.681784,0.0
+506743,Southampton wins the Premier League?,,2025-01-25 20:46:29+00:00,0,88209349.4471296,0.0
+503328,Will the Commanders win Super Bowl 2025?,,2025-01-27 03:19:21+00:00,0,30528260.8240941,0.0
+512325,Fed increases interest rates by 25+ bps after January 2025 meeting?,,2025-01-29 22:53:00+00:00,0,56978076.059909,0.0
+512320,Fed decreases interest rates by 75+ bps after January 2025 meeting?,,2025-01-29 22:53:06+00:00,0,48840781.093981,0.0
+512321,Fed decreases interest rates by 50 bps after January 2025 meeting?,,2025-01-29 22:57:56+00:00,0,42815445.766141,0.0
+512324,No change in Fed interest rates after January 2025 meeting?,,2025-01-29 23:03:08+00:00,1,21033386.279391,0.0
+512323,Fed decreases interest rates by 25 bps after January 2025 meeting?,,2025-01-29 23:03:10+00:00,0,21247359.999879,0.0
+506739,Leicester City wins the Premier League?,,2025-02-15 18:20:09+00:00,0,39993196.630568,0.0
+506746,Wolverhampton Wanderers win the Premier League?,,2025-02-16 19:53:46+00:00,0,34783333.4737516,0.0
+507316,Will Stade Brestois win the UEFA Champions League?,,2025-02-20 02:07:21+00:00,0,41179694.4249909,0.0
+514162,Will AfD win the most seats in the next German election?,,2025-02-24 12:35:40+00:00,0,18597089.079314,0.0
+514163,Will Grünen win the most seats in the next German election?,,2025-02-24 12:35:48+00:00,0,19221605.525162,0.0
+514164,Will BSW win the most seats in the next German election?,,2025-02-24 12:40:42+00:00,0,19989626.707533,0.0
+514165,Will another party win the most seats in the next German election?,,2025-02-24 12:45:52+00:00,0,28301064.519864,0.0
+515761,Will FDP win the most seats in the next German election?,,2025-02-24 12:45:58+00:00,0,21222938.680058,0.0
+518609,Will the San Jose Sharks win the 2025 President’s Trophy?,,2025-02-25 11:18:49+00:00,0,17217303.425142,0.0
+506736,Everton wins the Premier League?,,2025-02-27 03:13:13+00:00,0,47715614.588373,0.0
+506740,Manchester United wins the Premier League?,,2025-02-27 03:17:42+00:00,0,71063868.0240101,0.0
+522080,Will Kanye launch a coin in February?,,2025-03-01 08:00:23+00:00,0,27507326.472995,0.0
+526224,Trump admin announces cutting Ukraine aid by Friday?,,2025-03-07 01:14:47+00:00,1,5885980.871932,0.0
+526068,"Ethereum above $2,300 on March 7?",,2025-03-07 19:23:23+00:00,0,4345803.661636,0.0
+526067,"Bitcoin above $84,000 on March 7?",,2025-03-07 19:23:33+00:00,1,6513649.365194,0.0
+506735,Crystal Palace wins the Premier League?,,2025-03-08 20:14:31+00:00,0,35267758.6719579,0.0
+506732,Brentford wins the Premier League?,,2025-03-08 22:46:38+00:00,0,39954624.5030888,0.0
+507895,Will the Utah Jazz win the 2025 NBA Finals?,,2025-03-11 06:37:23+00:00,0,129911351.465261,0.0
+507292,Will Benfica win the UEFA Champions League?,,2025-03-11 23:07:19+00:00,0,35397837.4947546,0.0
+507290,Will Bayer Leverkusen win the UEFA Champions League?,,2025-03-12 01:18:02+00:00,0,46780244.180184,0.0
+507882,Will the New Orleans Pelicans win the 2025 NBA Finals?,,2025-03-14 06:27:43+00:00,0,59019076.767924,0.0
+526842,Will Fed end QT before May?,,2025-03-17 00:23:49+00:00,1,6253067.825541,0.0
+518009,U.S. Government funding lapse on March 15?,,2025-03-19 00:54:58+00:00,1,9824901.649265,0.0
+516011,Fed increases interest rates by 25+ bps after March 2025 meeting?,,2025-03-19 21:31:45+00:00,0,21544318.532625,0.0
+516010,No change in Fed interest rates after March 2025 meeting?,,2025-03-19 21:31:51+00:00,1,17161804.938166,0.0
+516008,Fed decreases interest rates by 50+ bps after March 2025 meeting?,,2025-03-19 21:31:55+00:00,0,22150914.603213,0.0
+516009,Fed decreases interest rates by 25 bps after March 2025 meeting?,,2025-03-19 21:36:45+00:00,0,17180913.164155,0.0
+528099,"Bitcoin above $83,000 on March 21?",,2025-03-21 18:33:21+00:00,1,2923229.982481,0.0
+507896,Will the Washington Wizards win the 2025 NBA Finals?,,2025-03-22 04:46:37+00:00,0,130194075.547845,0.0
+527882,Russia x Ukraine Ceasefire by Friday? ,,2025-03-22 06:24:21+00:00,0,5570175.617364,0.0
+507859,Will the Charlotte Hornets win the 2025 NBA Finals?,,2025-03-24 04:10:55+00:00,0,116668813.604393,0.0
+508802,Will the Charlotte Hornets win the Eastern Conference?,,2025-03-24 04:10:57+00:00,0,71286704.6916941,0.0
+521607,Ukraine agrees to Trump mineral deal before April?,,2025-03-25 00:21:27+00:00,1,7079947.244644,0.0
+518601,Will the Calgary Flames win the 2025 President’s Trophy?,,2025-03-26 07:57:37+00:00,0,7824700.712076,0.0
+507858,Will the Brooklyn Nets win the 2025 NBA Finals?,,2025-03-28 05:52:38+00:00,0,56529405.934386,0.0
+529560,"Bitcoin above $84,000 on March 28?",,2025-03-28 18:31:43+00:00,1,2927270.79579,0.0
+528805,Energy infrastructure ceasefire in Ukraine in March? ,,2025-03-29 00:23:06+00:00,1,5748304.618242,0.0
+518566,Will the Ottawa Senators win the 2025 President’s Trophy?,,2025-03-29 06:21:31+00:00,0,5281062.290244,0.0
+509939,Will Torino win the Serie A?,,2025-03-30 21:34:17+00:00,0,5188970.944296,0.0
+516449,Ethereum all time high by March 31?,,2025-04-01 06:34:08+00:00,0,3372208.713829,0.0
+514670,Yoon out as president of South Korea before April?,,2025-04-01 07:20:28+00:00,0,32369092.703828,0.0
+515514,"Will Ethereum hit $4,500.00 by March 31?",,2025-04-01 07:41:20+00:00,0,3519383.48134,0.0
+526657,"Will Bitcoin reach $95,000 again by March 31?",,2025-04-01 07:46:32+00:00,0,2897893.675742,0.0
+515506,"Will Bitcoin reach $110,000 by March 31?",,2025-04-01 07:46:38+00:00,0,6976571.855402,0.0
+526179,"Will Bitcoin dip to $75,000 by March 31?",,2025-04-01 07:51:10+00:00,0,4097021.610682,0.0
+515503,"Will Bitcoin reach $150,000 by March 31?",,2025-04-01 07:51:30+00:00,0,4273926.841544,0.0
+515505,"Will Bitcoin reach $120,000 by March 31?",,2025-04-01 07:51:34+00:00,0,4250183.439874,0.0
+515504,"Will Bitcoin reach $130,000 by March 31?",,2025-04-01 07:51:44+00:00,0,3368945.251766,0.0
+515557,"Will Bitcoin dip to $70,000 by March 31?",,2025-04-01 07:51:54+00:00,0,5033087.295531,0.0
+515502,"Will Bitcoin reach $200,000 by March 31?",,2025-04-01 08:01:20+00:00,0,6211260.142575,0.0
+519906,Was JFK assassination an inside job?,,2025-04-01 08:36:26+00:00,0,10929301.182604,0.0
+506737,Fulham wins the Premier League?,,2025-04-02 00:22:32+00:00,0,45980562.580378,0.0
+507894,Will the Toronto Raptors win the 2025 NBA Finals?,,2025-04-02 06:13:03+00:00,0,154220299.964432,0.0
+506731,Bournemouth wins the Premier League?,,2025-04-03 00:32:38+00:00,0,45034352.6773588,0.0
+506733,Brighton & Hove Albion wins the Premier League?,,2025-04-03 00:47:40+00:00,0,67314791.6835854,0.0
+506730,Aston Villa wins the Premier League?,,2025-04-03 00:53:02+00:00,0,32877839.687567,0.0
+518549,Will the Edmonton Oilers win the 2025 President’s Trophy?,,2025-04-04 08:28:13+00:00,0,7128891.93502,0.0
+509105,Will the Philadelphia Flyers win the 2025 Stanley Cup?,,2025-04-06 05:39:32+00:00,0,45686975.6152203,0.0
+529312,Yoon out as president of South Korea before May?,,2025-04-08 00:31:41+00:00,1,40212917.298398,0.0
+507403,Will RC Celta de Vigo win La Liga?,,2025-04-12 22:31:05+00:00,0,33181867.8214223,0.0
+506742,Nottingham Forest wins the Premier League?,,2025-04-13 18:53:29+00:00,0,101429202.233424,0.0
+507401,Will Real Betis win La Liga?,,2025-04-13 23:22:17+00:00,0,71762810.4120828,0.0
+509536,Will Paul George lead the NBA in Scoring?,,2025-04-14 04:18:28+00:00,0,9427745.240114,0.0
+509413,Will Giannis Antetokounmpo lead the NBA in Assists?,,2025-04-14 04:40:08+00:00,0,18101044.353532,0.0
+507286,Will Aston Villa win the UEFA Champions League?,,2025-04-16 00:18:15+00:00,0,133113813.382904,0.0
+533744,Will Trump lower tariffs on China in April? ,,2025-04-16 08:19:34+00:00,1,11020745.16158,0.0
+507860,Will the Chicago Bulls win the 2025 NBA Finals?,,2025-04-17 06:05:47+00:00,0,53153256.9951301,0.0
+507892,Will the Sacramento Kings win the 2025 NBA Finals?,,2025-04-17 08:51:19+00:00,0,378011506.511399,0.0
+507856,Will the Atlanta Hawks win the 2025 NBA Finals?,,2025-04-19 05:45:53+00:00,0,62225174.1342532,0.0
+510319,Trump ends Ukraine war in first 90 days?,,2025-04-24 00:57:31+00:00,0,56491984.2956951,0.0
+507873,Will the Miami Heat win the 2025 NBA Finals?,,2025-04-29 05:58:54+00:00,0,86041732.719889,0.0
+517600,Conservatives win majority in Canadian election?,,2025-04-30 05:32:19+00:00,0,7322211.32496,0.0
+517586,Will the Liberal Party win the most seats in the next Canadian election?,,2025-04-30 05:38:37+00:00,1,5152025.201466,0.0
+512250,Will Trump create Bitcoin reserve in first 100 days?,,2025-04-30 06:00:51+00:00,0,23324353.367396,0.0
+516143,Will Putin meet with Trump in first 100 days?,,2025-04-30 07:58:21+00:00,0,6796181.626846,0.0
+533253,Will another party win the most seats in Prince Edward Island in the next Canadian Election?,,2025-04-30 09:37:33+00:00,0,8774625.777255,0.0
+516767,Will Pierre Poilievre be the next Canadian Prime Minister?,,2025-04-30 11:29:47+00:00,0,67376035.838465,0.0
+516771,Will Justin Trudeau be the next Canadian Prime Minister?,,2025-04-30 12:24:11+00:00,0,5148798.146629,0.0
+516770,Will Jagmeet Singh be the next Canadian Prime Minister?,,2025-04-30 12:33:43+00:00,0,8476681.915239,0.0
+533245,Will another party win the most seats in New Brunswick in the next Canadian Election?,,2025-04-30 14:14:29+00:00,0,8479328.57891,0.0
+516769,Will Mark Carney be the next Canadian Prime Minister?,,2025-04-30 19:37:50+00:00,1,36416000.185007,0.0
+532869,Will Dogecoin reach $0.50 in April?,,2025-05-01 08:10:03+00:00,0,6043088.094674,0.0
+512341,Will Elena Lasconi win the 2024 Romanian Presidential election?,,2025-05-01 08:54:07+00:00,0,9657896.45691801,0.0
+512338,Will Marcel Ciolacu win the 2024 Romanian Presidential election?,,2025-05-01 09:03:43+00:00,0,9941723.513819,0.0
+512340,Will Nicolae Ciucă win the 2024 Romanian Presidential election?,,2025-05-01 09:18:53+00:00,0,326507670.562732,0.0
+512342,Will another candidate win the 2024 Romanian Presidential election?,,2025-05-01 09:28:37+00:00,1,12316645.738355,0.0
+508805,Will the Detroit Pistons win the Eastern Conference?,,2025-05-02 07:11:40+00:00,0,60253518.153967,0.0
+507864,Will the Detroit Pistons win the 2025 NBA Finals?,,2025-05-02 07:11:42+00:00,0,61077508.080874,0.0
+532897,Trump x Ukraine mineral deal signed before May?,,2025-05-04 01:10:41+00:00,1,6833523.777216,0.0
+507869,Will the LA Clippers win the 2025 NBA Finals?,,2025-05-04 07:06:33+00:00,0,69838997.3981325,0.0
+507413,Will another team win La Liga?,,2025-05-16 02:53:33+00:00,0,46180509.9261022,0.0
+531734,Will the next Government of Canada be a Liberal majority?,,2025-05-17 03:35:47+00:00,0,6726160.903071,0.0
+519066,Will George Simion win the Romanian presidential election?,,2025-05-19 02:59:19+00:00,0,31796892.976285,0.0
+519068,Will Nicușor Dan win the Romanian presidential election?,,2025-05-19 04:09:33+00:00,1,50991003.196931,0.0
+519075,Will Hunor Kelemen win the Romanian presidential election?,,2025-05-19 05:38:37+00:00,0,80897096.543524,0.0
+507305,Will Paris Saint-Germain win the UEFA Champions League?,,2025-05-31 23:58:38+00:00,1,51320576.4557441,0.0
+507300,Will Inter Milan win the UEFA Champions League?,,2025-06-01 00:05:52+00:00,0,82978657.0443518,0.0
+514139,Will Rafał Trzaskowski be the next President of Poland?,,2025-06-02 08:55:20+00:00,0,40863065.298881,0.0
+534189,Will Lee Jae-myung be elected the next president of South Korea?,,2025-06-03 21:33:32+00:00,1,88035547.447225,0.0
+534197,Will Kim Moon-soo be elected the next president of South Korea?,,2025-06-03 21:49:12+00:00,0,73197949.803466,0.0
+534220,Will Lee Jun-seok be elected the next president of South Korea?,,2025-06-03 21:54:36+00:00,0,51905307.266619,0.0
+507868,Will the Indiana Pacers win the 2025 NBA Finals?,,2025-06-23 08:17:15+00:00,0,73646892.531998,0.0
+548721,Will Ethereum reach $4000 in June?,,2025-07-01 07:14:01+00:00,0,2466116.838962,0.0
+548723,Will Ethereum reach $3000 in June?,,2025-07-01 08:23:41+00:00,0,1918187.67785,0.0
+555311,Will the price of Bitcoin be between $106K and $108K on July 1?,,2025-07-02 17:33:01+00:00,0,2262269.461544,0.0
+555310,Will the price of Bitcoin be between $104K and $106K on July 1?,,2025-07-02 18:54:49+00:00,1,1894672.237636,0.0
+552649,Israel x Iran ceasefire before July? ,,2025-07-03 00:42:48+00:00,1,51779894.19503,0.0
+513650,Solana ETF approved by July 31?,,2025-07-05 04:02:20+00:00,1,1882646.590054,0.0
+557759,Will MicroStrategy purchase Bitcoin July 1-7?,,2025-07-08 06:00:35+00:00,0,2461790.069924,0.0
+546814,Will Zelenskyy wear a suit before July?,,2025-07-09 00:30:39+00:00,0,242231180.272023,0.0
+541780,Will Novak Djokovic win Wimbledon 2025?,,2025-07-11 20:59:16+00:00,0,2071915.249306,0.0
+561786,Pump.fun announces public raise sold out in the first hour?,,2025-07-12 16:40:32+00:00,1,2320940.25008,0.0
+541777,Will Carlos Alcaraz win Wimbledon 2025?,,2025-07-13 21:34:41+00:00,0,4463693.993646,0.0
+541775,Will Jannik Sinner win Wimbledon 2025?,,2025-07-13 21:34:41+00:00,1,3540557.186299,0.0
+547975,Will PSG win the FIFA Club World Cup?,,2025-07-14 00:43:00+00:00,0,2169404.462092,0.0
+547977,Will Chelsea win the FIFA Club World Cup?,,2025-07-14 00:46:10+00:00,1,2309109.576443,0.0
+557763,Will Bitcoin reach $120K in July?,,2025-07-14 05:43:43+00:00,1,2488473.067375,0.0
+555752,Israel x Hamas ceasefire by July 15?,,2025-07-16 06:04:33+00:00,0,5286246.984554,0.0
+562634,"Bitcoin above $118,000 on July 18?",,2025-07-18 18:02:59+00:00,0,2776079.621126,0.0
+562641,Will the price of Bitcoin be between $117K and $118K on July 18?,,2025-07-18 19:09:03+00:00,1,1917561.206811,0.0
+564614,Andy Byron out as Astronomer CEO by next Friday?,,2025-07-23 02:37:59+00:00,1,5893906.367246,0.0
+528973,Fed decreases interest rates by 25 bps after July 2025 meeting?,,2025-07-30 21:07:17+00:00,0,23551704.395621,0.0
+528972,Fed decreases interest rates by 50+ bps after July 2025 meeting?,,2025-07-30 21:08:11+00:00,0,40912544.015545,0.0
+528975,Fed increases interest rates by 25+ bps after July 2025 meeting?,,2025-07-30 21:09:13+00:00,0,43479262.352112,0.0
+528974,No change in Fed interest rates after July 2025 meeting?,,2025-07-30 21:10:09+00:00,1,28670116.640169,0.0
+567470,Thailand strikes Cambodia by Friday?,,2025-07-31 02:13:07+00:00,1,15037403.469426,0.0
+562686,Will Bitcoin reach $140K in July?,,2025-08-01 06:02:16+00:00,0,2052833.269743,0.0
+557762,Will Bitcoin reach $150K in July?,,2025-08-01 06:02:24+00:00,0,5372746.646437,0.0
+553786,Khamenei out as Supreme Leader of Iran by July 31?,,2025-08-01 06:04:10+00:00,0,2464018.013192,0.0
+564249,Jerome Powell out as Fed Chair by July 31?,,2025-08-01 06:06:10+00:00,0,2565264.650535,0.0
+558316,Will Bitcoin reach $200K in July?,,2025-08-01 06:06:18+00:00,0,4612360.039851,0.0
+558317,Will Bitcoin reach $130K in July?,,2025-08-01 06:08:16+00:00,0,4367871.622898,0.0
+557766,Will Bitcoin dip to $100K in July?,,2025-08-01 06:11:22+00:00,0,2366320.44463,0.0
+551017,Israel x Hamas ceasefire before August?,,2025-08-01 06:11:24+00:00,0,11176262.09989,0.0
+557770,Will Ethereum reach $4000 in July?,,2025-08-01 06:12:24+00:00,0,7517688.702565,0.0
+570815,Will GPT-5 be released by August 10?,,2025-08-07 21:25:45+00:00,1,2171523.283793,0.0
+574227,Bitcoin above $117000 on August 15?,,2025-08-15 18:03:58+00:00,1,2133457.434414,0.0
+573539, Will Trump meet with Putin by August 15?,,2025-08-15 21:16:22+00:00,1,3687571.235263,0.0
+574841,Trump deploys National Guard in D.C. by Monday?,,2025-08-16 02:33:14+00:00,1,7921692.162743,0.0
+563308,Israel x Hamas ceasefire by August 15?,,2025-08-16 06:03:04+00:00,0,5412173.8282,0.0
+571085,Will Manchester City win on 2025-08-16?,,2025-08-16 21:38:24+00:00,1,2080463.483138,0.0
+572996,Will a dildo be thrown onto the court at a WNBA game on Saturday?,,2025-08-20 15:26:11+00:00,0,2572056.09619,0.0
+525414,Will the Colorado Rockies win the 2025 World Series?,,2025-08-24 22:23:47+00:00,0,5715142.223909,0.0
+567030,Houthi strike on Israel by August 31?,,2025-08-28 00:27:37+00:00,1,13308140.845727,0.0
+574604,Will MrBeast raise $40M for clean water by August 31?,,2025-09-01 02:06:12+00:00,1,7326525.907317,0.0
+567307,Will Putin meet with Zelenskyy by August 31?,,2025-09-01 06:07:58+00:00,0,2975900.084239,0.0
+572376,Will Ethereum reach $5000 in August?,,2025-09-01 06:08:04+00:00,0,3516467.062081,0.0
+573564,Russia x Ukraine ceasefire by August 31?,,2025-09-01 06:08:28+00:00,0,4485078.595963,0.0
+563309,Israel x Hamas ceasefire by August 31?,,2025-09-01 06:08:38+00:00,0,7169803.747769,0.0
+579077,Was Kanye hacked?,,2025-09-01 06:15:46+00:00,0,2068467.886908,0.0
+564250,Jerome Powell out as Fed Chair by August 31?,,2025-09-01 06:23:52+00:00,0,2689593.466853,0.0
+563716,Will Trump try to fire Powell by August 31?,,2025-09-01 06:25:48+00:00,0,2052017.956162,0.0
+573700,"Trump, Putin, and Zelensky meet together by August 31?",,2025-09-01 06:28:56+00:00,0,2180594.374663,0.0
+585694,Will Trump resign today?,,2025-09-03 06:06:56+00:00,0,9746847.213005,0.0
+580810,Will MicroStrategy purchase Bitcoin August 26-September 1?,,2025-09-05 00:29:32+00:00,0,4487549.808763,0.0
+541811,Will Jannik Sinner win the 2025 US Open?,,2025-09-08 00:40:02+00:00,0,5176691.39314,0.0
+575171,Will Tesla launch a driverless Robotaxi service by October 31?,,2025-09-11 00:28:31+00:00,1,6604477.871118,0.0
+569679,Israel x Hamas ceasefire by September 15?,,2025-09-16 06:00:28+00:00,0,3363702.359818,0.0
+542538,Fed decreases interest rates by 25 bps after September 2025 meeting?,,2025-09-17 21:08:44+00:00,1,36329925.673244,0.0
+542540,Fed increases interest rates by 25+ bps after September 2025 meeting?,,2025-09-17 21:26:38+00:00,0,67002488.50419,0.0
+542537,Fed decreases interest rates by 50+ bps after September 2025 meeting?,,2025-09-17 21:27:38+00:00,0,49890284.071409,0.0
+542539,No change in Fed interest rates after September 2025 meeting?,,2025-09-17 21:27:42+00:00,0,67368762.49652,0.0
+580840,Will Trump impose more sanctions on Russia by September 30?,,2025-09-19 00:44:52+00:00,1,8030505.614676,0.0
+525361,Will Lewis Hamilton be the 2025 Drivers Champion?,,2025-09-21 19:46:02+00:00,0,20546601.59142,0.0
+560187,Lord Miles completes 40-day water fast in the desert?,,2025-09-29 21:17:19+00:00,0,14296822.328016,0.0
+559640,Xi Jinping out before October?,,2025-10-01 06:25:51+00:00,0,4472728.61844,0.0
+581247,Lisa Cook out as Fed Governor by September 30?,,2025-10-01 06:26:45+00:00,0,7598984.9543,0.0
+569680,Israel x Hamas ceasefire by September 30?,,2025-10-01 06:30:45+00:00,0,5951176.84486,0.0
+537194,Russia x Ukraine ceasefire before October?,,2025-10-01 06:30:47+00:00,0,8775890.64125,0.0
+585592,US government shutdown by October 1?,,2025-10-01 06:31:43+00:00,1,13491651.789377,0.0
+599844,Trump strikes another drug boat by Sep 30?,,2025-10-05 01:22:42+00:00,0,6805884.965751,0.0
+578140,Israel x Hamas ceasefire by October 31?,,2025-10-09 02:01:34+00:00,1,6659880.871753,0.0
+616561,Israel x Hamas ceasefire by October 10?,,2025-10-09 02:04:40+00:00,1,5865684.505132,0.0
+516944,Will Donald Trump win Nobel Peace Prize in 2025?,,2025-10-10 11:03:16+00:00,0,29847196.049885,0.0
+560856,Will Donald Trump win the Nobel Peace Prize in 2025?,,2025-10-10 12:10:18+00:00,0,13949920.231067,0.0
+543259,Will Andrónico Rodríguez win the 2025 Bolivia presidential election?,,2025-10-20 05:14:17+00:00,0,7326758.679552,0.0
+543262,Will Jorge “Tuto” Quiroga win the 2025 Bolivia presidential election?,,2025-10-20 05:15:23+00:00,0,6479504.061819,0.0
+543265,Will Rodrigo Paz win the 2025 Bolivia presidential election?,,2025-10-20 05:16:23+00:00,1,6918532.545232,0.0
+529277,Will Peter Casey win the Irish Presidential Election?,,2025-10-25 21:42:41+00:00,0,9175537.640013,0.0
+529278,Will Frances Fitzgerald win the Irish Presidential Election?,,2025-10-25 21:53:33+00:00,0,115067178.333268,0.0
+553811,Fed decreases interest rates by 25 bps after October 2025 meeting?,,2025-10-29 21:15:21+00:00,1,51626217.76071,0.0
+553810,Fed decreases interest rates by 50+ bps after October 2025 meeting?,,2025-10-29 21:16:17+00:00,0,52589989.131546,0.0
+553812,No change in Fed interest rates after October 2025 meeting?,,2025-10-29 21:19:07+00:00,0,46052653.992844,0.0
+566097,Will Trump meet with Xi Jinping by October 31?,,2025-10-30 05:39:11+00:00,1,9134078.220091,0.0
+649955,Over $1.8B committed to the MegaETH public sale?,,2025-10-30 15:34:45+00:00,0,14824151.336275,0.0
+654456,Over $1.4B committed to the MegaETH public sale?,,2025-10-30 15:35:49+00:00,0,16882337.715217,0.0
+553813,Fed increases interest rates by 25+ bps after October 2025 meeting?,,2025-10-31 03:33:31+00:00,0,102216689.131463,0.0
+618949,Will Bitcoin reach $200k in October?,,2025-11-01 06:06:20+00:00,0,15617197.1584,0.0
+587981,Will Monad perform an airdrop by October 31? ,,2025-11-01 06:14:04+00:00,0,11023838.946488,0.0
+579306,US x Venezuela military engagement by October 31?,,2025-11-01 06:19:58+00:00,0,6816571.45939,0.0
+525410,Will the Los Angeles Dodgers win the 2025 World Series?,,2025-11-02 07:46:27+00:00,1,10561644.990771,0.0
+525386,Will the Toronto Blue Jays win the 2025 World Series?,,2025-11-02 07:55:39+00:00,0,8901922.461705,0.0
+570342,Katy Perry and Justin Trudeau confirmed relationship by October 31?,,2025-11-04 00:32:01+00:00,0,6152916.306385,0.0
+538932,Will Zohran Mamdani win the 2025 NYC mayoral election?,,2025-11-05 05:44:47+00:00,1,143254859.334333,0.0
+538929,Will Andrew Cuomo win the 2025 NYC mayoral election?,,2025-11-05 05:56:23+00:00,0,48755937.180665,0.0
+538928,Will Eric Adams win the 2025 NYC mayoral election?,,2025-11-05 06:12:19+00:00,0,24498006.503446,0.0
+538933,Will Zellnor Myrie win the 2025 NYC mayoral election?,,2025-11-05 06:13:17+00:00,0,19383661.523146,0.0
+538930,Will Curtis Sliwa win the 2025 NYC mayoral election?,,2025-11-05 06:13:17+00:00,0,60402049.764981,0.0
+538935,Will Brad Lander win the 2025 NYC mayoral election?,,2025-11-05 06:13:17+00:00,0,29246888.170365,0.0
+538938,Will Rudy Giuliani win the 2025 NYC mayoral election?,,2025-11-05 06:14:19+00:00,0,17399211.228589,0.0
+538937,Will Adrienne Adams win the 2025 NYC mayoral election?,,2025-11-05 06:14:21+00:00,0,17172736.263185,0.0
+538931,Will Jim Walden win the 2025 NYC mayoral election?,,2025-11-05 06:14:21+00:00,0,49207581.601009,0.0
+538936,Will Andrew Yang win the 2025 NYC mayoral election?,,2025-11-05 06:15:25+00:00,0,9355140.22698,0.0
+525362,Will George Russell be the 2025 Drivers Champion?,,2025-11-10 06:35:19+00:00,0,29698106.695952,0.0
+623602,Will the Government shutdown end November 8-11?,,2025-11-12 08:06:57+00:00,0,11773855.877798,0.0
+673597,Will the government shutdown end November 12?,,2025-11-13 08:57:32+00:00,0,13086678.140873,0.0
+623604,Will the Government shutdown end November 16 or later?,,2025-11-13 14:43:26+00:00,0,9839429.155274,0.0
+680994,Will Gemini 3.0 be released on November 18 2025?,,2025-11-18 20:17:31+00:00,1,9333885.203982,0.0
+541627,Will Marco Enríquez-Ominami win the Chilean presidential election?,,2025-11-20 11:59:21+00:00,0,11376039.492757,0.0
+541625,Will Ximena Rincón win the Chilean presidential election?,,2025-11-20 12:06:31+00:00,0,13270465.032302,0.0
+540229,Will the New York Giants win Super Bowl 2026?,,2025-11-24 02:43:05+00:00,0,37490995.246916,0.0
+649847,Monad market cap (FDV) >$4B one day after launch?,,2025-11-28 00:33:23+00:00,0,34894820.551069,0.0
+540206,Will the Arizona Cardinals win Super Bowl 2026?,,2025-12-01 00:41:18+00:00,0,42048002.788895,0.0
+540228,Will the New Orleans Saints win Super Bowl 2026?,,2025-12-01 01:01:14+00:00,0,48283192.641205,0.0
+540236,Will the Tennessee Titans win Super Bowl 2026?,,2025-12-01 01:03:10+00:00,0,70848160.38227,0.0
+631220,Will Tesla be the largest company in the world by market cap on November 30?,,2025-12-01 01:04:14+00:00,0,11637679.639845,0.0
+540222,Will the Las Vegas Raiders win Super Bowl 2026?,,2025-12-01 03:44:10+00:00,0,50242113.927574,0.0
+621018,US x Venezuela military engagement by November 30?,,2025-12-01 07:18:48+00:00,0,9188343.67475,0.0
+566331,Will Polymarket US go live in 2025?,,2025-12-06 00:32:35+00:00,1,65428102.459334,0.0
+540230,Will the New York Jets win Super Bowl 2026?,,2025-12-08 01:03:11+00:00,0,57232072.113335,0.0
+540213,Will the Cleveland Browns win Super Bowl 2026?,,2025-12-08 01:12:59+00:00,0,51375598.94358,0.0
+521918,Will UCR hold the most seats in the Chamber of Deputies following the 2025 Argentina election?,,2025-12-10 10:43:35+00:00,0,10876038.028228,0.0
+570361,Fed decreases interest rates by 25 bps after December 2025 meeting?,,2025-12-10 22:16:48+00:00,1,54634506.683355,0.0
+570362,No change in Fed interest rates after December 2025 meeting?,,2025-12-10 22:17:52+00:00,0,44523455.111481,0.0
+570360,Fed decreases interest rates by 50+ bps after December 2025 meeting?,,2025-12-10 22:17:52+00:00,0,161574382.129451,0.0
+570363,Fed increases interest rates by 25+ bps after December 2025 meeting?,,2025-12-10 22:18:48+00:00,0,133173605.453166,0.0
+540226,Will the Minnesota Vikings win Super Bowl 2026?,,2025-12-15 00:31:33+00:00,0,11351131.121443,0.0
+540212,Will the Cincinnati Bengals win Super Bowl 2026?,,2025-12-15 00:50:37+00:00,0,39998043.163255,0.0
+540225,Will the Miami Dolphins win Super Bowl 2026?,,2025-12-16 07:33:47+00:00,0,64086195.940181,0.0
+571191,Will Rob Riggle win the 2025 National Heads-Up Poker Championship?,,2025-12-19 04:32:15+00:00,0,38337948.635363,0.0
+571202,Will David Williams win the 2025 National Heads-Up Poker Championship?,,2025-12-19 05:02:57+00:00,0,26661572.0032,0.0
+571214,Will Chef Phillip win the 2025 National Heads-Up Poker Championship?,,2025-12-19 05:02:57+00:00,0,22533633.258365,0.0
+691854,Will Jake Paul win his boxing match against Anthony Joshua?,,2025-12-20 08:33:46+00:00,0,26258664.60106,0.0
+540214,Will the Dallas Cowboys win Super Bowl 2026?,,2025-12-21 04:28:37+00:00,0,14853068.898842,0.0
+556077,Will lighter perform an airdrop by December 31? ,,2025-12-30 09:19:35+00:00,1,26021665.1755,0.0
+516846,Will Saudi Aramco be the largest company in the world by market cap on December 31?,,2026-01-01 01:11:43+00:00,0,25240782.288934,0.0
+516719,Russia x Ukraine ceasefire in 2025?,,2026-01-01 07:18:23+00:00,0,73752993.267722,0.0
+516861,"Will Bitcoin reach $1,000,000 by December 31, 2025?",,2026-01-01 07:20:31+00:00,0,31394607.518008,0.0
+551963,Xi Jinping out in 2025?,,2026-01-01 08:18:43+00:00,0,78655911.742866,0.0
+563368,Will Satoshi move any Bitcoin in 2025?,,2026-01-01 08:27:53+00:00,0,44180791.509037,0.0
+516947,Maduro out in 2025?,,2026-01-01 08:30:59+00:00,0,34641400.627049,0.0
+516710,US recession in 2025?,,2026-01-01 09:23:25+00:00,0,11734512.428529,0.0
+686122,Lighter market cap (FDV) >$1B one day after launch?,,2026-01-03 01:35:37+00:00,1,55056697.127347,0.0
+556033,Lighter market cap (FDV) >$2B one day after launch?,,2026-01-03 08:30:07+00:00,1,25086666.676263,0.0
+588775,US x Venezuela military engagement by December 31?,,2026-01-05 00:33:37+00:00,0,51073020.592839,0.0
+812010,"Will Eleven die in ""Stranger Things: Season 5""?",,2026-01-05 00:43:49+00:00,0,80824835.00196,0.0
+614699,US strikes Yemen by December 31?,,2026-01-05 01:47:47+00:00,1,3348633.815936,0.0
+1116706,"New ""Stranger Things"" episode released by Wednesday? ",,2026-01-08 07:15:19+00:00,0,15181604.224152,0.0
+540210,Will the Carolina Panthers win Super Bowl 2026?,,2026-01-11 04:18:46+00:00,0,60236453.888354,0.0
+540211,Will the Chicago Bears win Super Bowl 2026?,,2026-01-19 06:52:46+00:00,0,10640593.553636,0.0
+1192781,"Will Melania say ""Career"" during AI talk on Friday?",,2026-01-21 00:33:28+00:00,0,31097575.061839,0.0
+566174,Will Slavia Pragu win the 2025–26 Champions League?,,2026-01-22 01:24:24+00:00,0,28392439.058395,0.0
+601699,No change in Fed interest rates after January 2026 meeting?,,2026-01-28 22:52:08+00:00,1,106767096.072298,0.0
+601697,Fed decreases interest rates by 50+ bps after January 2026 meeting?,,2026-01-28 22:53:04+00:00,0,235065166.637259,0.0
+601698,Fed decreases interest rates by 25 bps after January 2026 meeting?,,2026-01-28 22:54:06+00:00,0,101211542.667667,0.0
+601700,Fed increases interest rates by 25+ bps after January 2026 meeting?,,2026-01-28 23:04:04+00:00,0,216455743.153891,0.0
+1119646,"New ""Stranger Things"" episode released by January 31? ",,2026-02-01 07:04:14+00:00,0,10643992.245096,0.0
+704339,"Russia x Ukraine ceasefire by January 31, 2026?",,2026-02-01 07:27:48+00:00,0,26995077.577181,0.0
+1106713,Khamenei out as Supreme Leader of Iran by January 31?,,2026-02-01 07:27:52+00:00,0,49748804.334599,0.0
+1092199,"US strikes Iran by January 31, 2026?",,2026-02-01 07:29:42+00:00,0,41754060.055673,0.0
+956450,"Will the U.S. invade Venezuela by January 31, 2026?",,2026-02-01 07:41:52+00:00,0,8368550.515088,0.0
+1082749,"Will Ethereum reach $6,000 in January?",,2026-02-01 07:46:58+00:00,0,13219840.034141,0.0
+1082748,"Will Bitcoin reach $150,000 in January?",,2026-02-01 07:48:00+00:00,0,26660909.268647,0.0
+1082781,"Will Bitcoin reach $100,000 in January?",,2026-02-01 07:50:52+00:00,0,13025594.701676,0.0
+994900,"Israel strikes Iran by January 31, 2026?",,2026-02-01 12:04:54+00:00,0,16913391.371627,0.0
+1144023,U.S. anti-cartel ground operation in Mexico by January 31?,,2026-02-04 00:26:48+00:00,1,30194309.815936,0.0
+680392,US government shutdown Saturday?,,2026-02-04 00:35:28+00:00,1,157296576.448084,0.0
+569437,Will Raul Perestrello win the 2026 Portugal presidential election?,,2026-02-09 04:08:29+00:00,0,18905388.951092,0.0
+569426,Will André Ventura win the 2026 Portugal presidential election?,,2026-02-09 04:25:29+00:00,0,19399481.037677,0.0
+540234,Will the Seattle Seahawks win Super Bowl 2026?,,2026-02-09 07:17:21+00:00,1,15295581.172679,0.0
+540227,Will the New England Patriots win Super Bowl 2026?,,2026-02-09 07:20:11+00:00,0,17884421.031288,0.0
+1328039,"US x Iran meeting by February 6, 2026?",,2026-02-10 04:34:17+00:00,1,22688333.506431,0.0
+1335520,"US strikes Iran by February 9, 2026?",,2026-02-10 07:29:57+00:00,0,17561112.38258,0.0
+1273610,"US strikes Iran by February 13, 2026?",,2026-02-14 07:02:13+00:00,0,15146244.148657,0.0
+1308327,Government shutdown on Saturday?,,2026-02-15 07:08:39+00:00,0,13550398.086217,0.0
+1335034,Will BV Borussia 09 Dortmund win on 2026-02-17?,,2026-02-18 01:36:11+00:00,1,11617612.259371,0.0
+1320793,"US strikes Iran by February 20, 2026?",,2026-02-21 07:28:42+00:00,0,18810054.309004,0.0
+566167,Will Olympiakos win the 2025–26 Champions League?,,2026-02-25 01:15:32+00:00,0,21360158.2305,0.0
+1386659,"US strikes Iran by February 24, 2026?",,2026-02-25 07:41:40+00:00,0,16942273.879883,0.0
+1386662,"US strikes Iran by February 26, 2026?",,2026-02-27 07:32:33+00:00,0,14489547.184748,0.0
+1386664,"US strikes Iran by February 27, 2026?",,2026-02-28 07:11:23+00:00,0,25087849.055634,0.0
+1405325,"Will Elon Musk post 100-119 tweets from February 24 to March 3, 2026?",,2026-02-28 09:10:17+00:00,0,15713299.040921,0.0
+1198423,"US strikes Iran by February 28, 2026?",,2026-02-28 09:31:17+00:00,1,89652867.363489,0.0
+566242,Will Mallorca win the 2025–26 La Liga?,,2026-02-28 21:29:27+00:00,0,18654900.399518,0.0
+1423580,"Will Elon Musk post 0-19 tweets from February 27 to March 6, 2026?",,2026-03-01 04:19:13+00:00,0,23864336.99083,0.0
+1303355,"Will Bitcoin reach $150,000 in February?",,2026-03-01 08:07:05+00:00,0,28829221.50917,0.0
+1303357,"Will Ethereum reach $4,400 in February?",,2026-03-01 09:23:07+00:00,0,8802970.895394,0.0
+1384029,Will Arsenal FC win on 2026-03-01?,,2026-03-01 21:39:03+00:00,1,10093606.974152,0.0
+566203,Will Leeds win the 2025–26 English Premier League?,,2026-03-01 21:45:09+00:00,0,38359350.122948,0.0
+566192,Will Tottenham win the 2025–26 English Premier League?,,2026-03-01 21:54:55+00:00,0,30343735.157611,0.0
+916732,Khamenei out as Supreme Leader of Iran by March 31?,,2026-03-04 00:58:01+00:00,1,63238697.721704,0.0
+1180303,Khamenei out as Supreme Leader of Iran by February 28?,,2026-03-04 01:05:25+00:00,1,131114970.827221,0.0
+1391203,Will Liverpool FC win on 2026-03-03?,,2026-03-04 01:27:55+00:00,0,11995661.364783,0.0
+654413,Will the Fed decrease interest rates by 25 bps after the March 2026 meeting?,,2026-03-18 21:18:07+00:00,0,87103283.7263213,0.0
+654415,Will the Fed increase interest rates by 25+ bps after the March 2026 meeting?,,2026-03-18 21:19:03+00:00,0,172972056.63332495,0.0
+1509243,Will Liverpool FC win on 2026-03-18?,,2026-03-19 00:52:01+00:00,1,8167338.320957994,0.0
+566189,Will Chelsea win the 2025–26 English Premier League?,,2026-03-21 23:28:27+00:00,0,91279169.5885377,0.0
+1467766,Will Crude Oil (CL) hit (HIGH) $100 by end of March?,,2026-03-31 07:09:45+00:00,1,16595338.399712065,0.0
+958442,Will the Iranian regime fall by March 31?,,2026-04-01 06:48:37+00:00,0,63229537.94105003,0.0
+1467765,Will Crude Oil (CL) hit (HIGH) $110 by end of March?,,2026-04-01 07:12:39+00:00,0,8009442.956812905,0.0
+1516204,Will Crude Oil (CL) hit (HIGH) $200 by end of March?,,2026-04-01 07:12:41+00:00,0,12487118.882864993,0.0
+1477563,Will Crude Oil (CL) hit (HIGH) $150 by end of March?,,2026-04-01 07:13:31+00:00,0,9471175.115201969,0.0
+666860,Trump out as President by March 31?,,2026-04-01 07:34:43+00:00,0,13448709.655509828,0.0
+1473040,"Will Bitcoin reach $150,000 in March?",,2026-04-01 07:36:59+00:00,0,24149352.753224906,0.0
+701290,"Will China invade Taiwan by March 31, 2026?",,2026-04-01 07:49:15+00:00,0,10607442.318742946,0.0
+604490,Will Trump visit China by March 31?,,2026-04-01 08:17:59+00:00,0,10369639.104046939,0.0
+1484949,Netanyahu out by March 31?,,2026-04-05 06:13:09+00:00,0,104205875.48971872,0.0
+1162940,US forces enter Iran by March 31?,,2026-04-05 06:15:11+00:00,0,73927762.4785615,0.0
+1455604,Will Trump talk to Xi Jinping in March?,,2026-04-07 02:22:03+00:00,0,12358578.449661002,0.0
+1235517,Will Phạm Minh Chính be the next President of Vietnam?,,2026-04-07 08:24:11+00:00,0,15557300.26332597,0.0
+1569627,US x Iran ceasefire by April 15?,,2026-04-08 01:24:31+00:00,1,24621548.021247767,0.0
+1640919,US forces enter Iran by April 30?,,2026-04-09 00:28:21+00:00,1,269049107.0837461,0.0
+1706788,US x Iran ceasefire by April 7?,,2026-04-11 00:28:39+00:00,1,173696184.17746878,0.0
+566229,Will Atletico Madrid win the 2025–26 La Liga?,,2026-04-12 01:00:13+00:00,0,32336186.639486924,0.0
+948045,Will Movement for a Better Hungary (Jobbik) win the most seats in the next Hungarian parliamentary election?,,2026-04-13 00:59:55+00:00,0,16550425.532013956,0.0
+1706358,"Military action against Iran ends by April 17, 2026?",,2026-04-17 00:41:06+00:00,1,28778654.98897903,0.0
+553882,Will the Charlotte Hornets win the 2026 NBA Finals?,,2026-04-18 06:17:40+00:00,0,36535986.5725531,0.0
+1994007,"Israel x Hezbollah ceasefire by April 18, 2026?",,2026-04-21 00:28:28+00:00,1,98599882.2899258,0.0
+1919417,"US x Iran permanent peace deal by April 22, 2026?",,2026-04-23 07:34:32+00:00,0,26051734.516940523,0.0
+566230,Will Villarreal win the 2025–26 La Liga?,,2026-04-24 01:42:36+00:00,0,27716401.252553035,0.0
+1567746,Iran x Israel/US conflict ends by April 15?,,2026-04-25 00:30:06+00:00,1,17450416.216830038,0.0
+1706766,Iran x Israel/US conflict ends by April 7?,,2026-04-25 00:43:00+00:00,1,48720376.31273075,0.0
+566193,Will Aston Villa win the 2025–26 English Premier League?,,2026-04-25 23:14:38+00:00,0,20122826.904156744,0.0
+669660,Will the Fed decrease interest rates by 50+ bps after the April 2026 meeting?,,2026-04-29 21:24:08+00:00,0,66025383.9220003,0.0
+669661,Will the Fed decrease interest rates by 25 bps after the April 2026 meeting?,,2026-04-29 21:24:18+00:00,0,65311948.7161929,0.0
+669662,Will there be no change in Fed interest rates after the April 2026 meeting?,,2026-04-29 21:24:28+00:00,1,76909226.49304736,0.0
+669663,Will the Fed increase interest rates by 25+ bps after the April 2026 meeting?,,2026-04-29 21:24:38+00:00,0,75978206.16104123,0.0
+2000802,Will Arsenal FC win on 2026-04-29?,,2026-04-30 00:29:08+00:00,0,18387774.814044967,0.0
+2036399,"US x Iran ceasefire extended by April 22, 2026?",,2026-05-01 00:32:42+00:00,0,203621392.1401,0.0
+1611267,Kharg Island no longer under Iranian control by April 30?,,2026-05-01 06:47:52+00:00,0,17372089.246162925,0.0
+1919421,"US x Iran permanent peace deal by April 30, 2026?",,2026-05-01 07:20:50+00:00,0,24173101.268068768,0.0
+1507751,Will the Iranian regime fall by April 30?,,2026-05-01 13:56:36+00:00,0,52714900.01335832,0.0
+566191,Will Manchester United win the 2025–26 English Premier League?,,2026-05-02 22:40:08+00:00,0,17010531.74043873,0.0
+1003798,Will the Indian National Congress (INC) win the most seats in the 2026 Tamil Nadu Legislative Assembly election?,,2026-05-04 20:27:32+00:00,0,17877969.460003857,0.0
+1819243,QatarEnergy announces/resumes LNG production in Qatar by April 30?,,2026-05-05 00:30:00+00:00,1,25495050.864901926,0.0
+566146,Will Atletico Madrid win the 2025–26 Champions League?,,2026-05-06 00:39:54+00:00,0,24660057.10849773,0.0
+567561,Will the next Prime Minister of Hungary be Péter Magyar?,,2026-05-09 17:02:22+00:00,1,24555476.477281053,0.0
+567560,Will the next Prime Minister of Hungary be Viktor Orbán?,,2026-05-09 17:36:51+00:00,0,25456113.707224935,0.0
+567564,Will the next Prime Minister of Hungary be István Kapitány?,,2026-05-09 17:37:49+00:00,0,21744519.72813603,0.0
+1171663,"Russia x Ukraine ceasefire by June 30, 2026?",,2026-05-09 19:45:22+00:00,1,60668118.31172506,0.0
+1795527,"Russia x Ukraine ceasefire by May 31, 2026?",,2026-05-09 19:52:26+00:00,1,141250712.68070313,0.0
+1540766,Strait of Hormuz traffic returns to normal by end of April?,,2026-05-12 15:25:37+00:00,0,38005859.138665095,0.0
+1985666,Will Trump visit China by May 15?,,2026-05-13 17:18:32+00:00,1,15068494.055106035,0.0
+1530214,Will Manchester City FC win on 2026-03-21?,,2026-05-14 01:45:06+00:00,1,8098202.505656997,0.0
+2099029,"US x Iran permanent peace deal by May 15, 2026?",,2026-05-16 06:49:05+00:00,0,18446435.319120057,0.0
+2054133,Strait of Hormuz traffic returns to normal by May 15?,,2026-05-19 21:47:23+00:00,0,17940559.114660934,0.0
+2159863,"Will Trump say ""Iran"" during events with Xi Jinping?",,2026-05-23 00:41:11+00:00,0,28337791.229197014,0.0
+2324252,"US x Iran permanent peace deal by May 26, 2026?",,2026-05-27 06:10:31+00:00,0,22930944.340371944,0.0
+566170,Will Club Brugge win the 2025–26 Champions League?,,2026-05-28 16:15:39+00:00,0,19413483.377014894,0.0
+566136,Will PSG win the 2025–26 Champions League?,,2026-05-30 22:08:28+00:00,1,19428880.867619038,0.0
+566140,Will Arsenal win the 2025–26 Champions League?,,2026-05-30 22:09:34+00:00,0,23610235.70386833,0.0
+2316216,Will Paris Saint-Germain FC win on 2026-05-30?,,2026-05-30 23:36:05+00:00,0,38427417.853250585,0.0
+1707932,Will the Iranian regime fall by May 31?,,2026-06-01 07:09:24+00:00,0,38330965.45359882,0.0
+1919425,"US x Iran permanent peace deal by May 31, 2026?",,2026-06-01 12:17:00+00:00,0,87888981.28583376,0.0
+1809560,Strait of Hormuz traffic returns to normal by end of May?,,2026-06-02 18:21:25+00:00,0,34564221.91767358,0.0
+2169995,"MicroStrategy sells any Bitcoin by May 31, 2026?",,2026-06-04 00:34:19+00:00,0,375813104.55575246,0.0
+553866,Will the San Antonio Spurs win the 2026 NBA Finals?,,2026-06-14 06:36:06+00:00,0,42740007.48347176,0.0
+553858,Will the New York Knicks win the 2026 NBA Finals?,,2026-06-14 06:38:22+00:00,1,30553323.311588034,0.0
+1897073,Will Belgium win on 2026-06-15?,,2026-06-16 01:53:27+00:00,0,29529221.83360376,0.0
+906972,Will the Fed decrease interest rates by 50+ bps after the June 2026 meeting?,,2026-06-17 21:07:23+00:00,0,37866883.42341023,0.0
+906974,Will there be no change in Fed interest rates after the June 2026 meeting?,,2026-06-17 21:07:28+00:00,1,43061416.20801809,0.0
+906973,Will the Fed decrease interest rates by 25 bps after the June 2026 meeting?,,2026-06-17 21:15:16+00:00,0,30934915.761426214,0.0
+906975,Will the Fed increase interest rates by 25 bps after the June 2026 meeting?,,2026-06-17 21:20:40+00:00,0,31037182.120555956,0.0
+2270330,"US x Iran permanent peace deal by June 15, 2026?",,2026-06-18 00:32:19+00:00,1,177370818.43892464,0.0
+1962237,"US x Iran permanent peace deal by June 30, 2026?",,2026-06-18 00:33:07+00:00,1,49036513.606860146,0.0
+1897147,Will Germany win on 2026-06-20?,,2026-06-20 22:26:04+00:00,1,31040324.64426019,0.0
+1897329,Will Japan win on 2026-06-25?,,2026-06-26 01:10:41+00:00,0,29397547.75841289,0.0
+1897356,Will United States win on 2026-06-25?,,2026-06-26 04:18:55+00:00,0,36081118.38206247,0.0
+558961,Will South Korea win the 2026 FIFA World Cup?,,2026-06-28 04:48:35+00:00,0,107521229.19240354,0.0
+2680257,Will Canada win on 2026-06-28?,,2026-06-28 21:26:13+00:00,1,36162490.191441655,0.0
+558949,Will Japan win the 2026 FIFA World Cup?,,2026-06-29 22:14:40+00:00,0,95790683.29305987,0.0
+558966,Will Ivory Coast win the 2026 FIFA World Cup?,,2026-06-30 22:13:05+00:00,0,111749187.63597094,0.0
+958443,Will the Iranian regime fall by June 30?,,2026-07-01 06:04:10+00:00,0,65931940.58445303,0.0
+558955,Will Ecuador win the 2026 FIFA World Cup?,,2026-07-01 07:21:31+00:00,0,96888032.22035679,0.0
+558981,Will Congo DR win the 2026 FIFA World Cup?,,2026-07-01 21:10:43+00:00,0,96120346.28892957,0.0
+558976,Will Croatia win the 2026 FIFA World Cup?,,2026-07-03 04:20:41+00:00,0,109483286.88874409,0.0
+558969,Will Algeria win the 2026 FIFA World Cup?,,2026-07-03 08:09:47+00:00,0,90337041.03721622,0.0
+558970,Will Cape Verde win the 2026 FIFA World Cup?,,2026-07-04 03:56:04+00:00,0,119207233.3327582,0.0
+558967,Will Ghana win the 2026 FIFA World Cup?,,2026-07-04 06:45:40+00:00,0,89137687.48381385,0.0
+558952,Will Canada win the 2026 FIFA World Cup?,,2026-07-04 22:13:29+00:00,0,102858402.64237365,0.0
+558956,Will Paraguay win the 2026 FIFA World Cup?,,2026-07-05 02:11:10+00:00,0,107400630.58821647,0.0
+558945,Will Mexico win the 2026 FIFA World Cup?,,2026-07-06 06:13:55+00:00,0,137807960.8917842,0.0
+947289,Will Roberto Sánchez Palomino win the 2026 Peruvian presidential election?,,2026-07-06 13:42:37+00:00,0,36601896.005035795,0.0
+558940,Will Portugal win the 2026 FIFA World Cup?,,2026-07-07 00:12:26+00:00,0,109092961.84747173,0.0
+558943,Will USA win the 2026 FIFA World Cup?,,2026-07-07 05:08:19+00:00,0,142460221.86557126,0.0
+1971905,Strait of Hormuz traffic returns to normal by end of June?,,2026-07-07 15:27:17+00:00,0,44111324.778536566,0.0
+558968,Will Egypt win the 2026 FIFA World Cup?,,2026-07-07 21:30:01+00:00,0,158580818.67117897,0.0
+558947,Will Colombia win the 2026 FIFA World Cup?,,2026-07-08 01:57:31+00:00,0,104668584.41449788,0.0
+558963,Will Morocco win the 2026 FIFA World Cup?,,2026-07-10 01:10:56+00:00,0,152254451.3257818,0.0
+558946,Will Belgium win the 2026 FIFA World Cup?,,2026-07-11 00:12:34+00:00,0,129278677.369467,0.0
+558951,Will Norway win the 2026 FIFA World Cup?,,2026-07-12 02:58:20+00:00,0,137345387.0652803,0.0
+558974,Will Switzerland win the 2026 FIFA World Cup?,,2026-07-12 06:56:43+00:00,0,132837715.7947361,0.0
+558936,Will France win the 2026 FIFA World Cup?,,2026-07-15 00:07:37+00:00,0,132448346.86106883,0.0
+558935,Will England win the 2026 FIFA World Cup?,,2026-07-16 00:11:11+00:00,0,110162254.18757918,0.0
+558934,Will Spain win the 2026 FIFA World Cup?,,2026-07-20 01:14:28+00:00,1,152168021.58979887,0.0
+558938,Will Argentina win the 2026 FIFA World Cup?,,2026-07-20 01:24:43+00:00,0,174315688.25573426,0.0
+2507607,Kharg Island no longer under Iranian control by July 31?,,2026-08-01 06:04:39+00:00,0,6273478.590044998,0.0
+3228928,Will Paris Saint-Germain win on 2026-08-12?,,2026-08-12 23:24:13+00:00,1,5047261.533852001,0.0
+3128885,Strait of Hormuz traffic returns to normal by August 15?,,2026-08-18 21:38:13+00:00,0,7192394.7597480025,0.0
+704475,Will James Fishback be the Republican nominee for Florida Governor?,,2026-08-19 03:01:46+00:00,0,6462255.492774996,0.0
+3435083,Will Brentford FC win on 2026-08-22?,,2026-08-22 18:48:42+00:00,1,4310424.187568009,0.0
+3558749,Will Real Madrid CF win on 2026-08-26?,,2026-08-26 22:21:43+00:00,1,5203081.155465007,0.0
+3653961,Will Chelsea FC win on 2026-08-30?,,2026-08-30 19:42:49+00:00,1,6054195.376877973,0.0
+3688221,Will Arsenal FC win on 2026-08-31?,,2026-08-31 21:14:19+00:00,1,11578177.229967006,0.0
+2507618,Kharg Island no longer under Iranian control by August 31?,,2026-09-01 06:32:30+00:00,0,5917973.911869001,0.0
+3829899,Will Manchester United FC win on 2026-09-06?,,2026-09-06 15:15:19+00:00,0,8513198.76983601,0.0
+2774056,Strait of Hormuz traffic returns to normal by August 31?,,2026-09-09 14:37:01+00:00,0,18063387.164730005,0.0
+3977543,Will Sporting CP win on 2026-09-09?,,2026-09-09 21:16:16+00:00,1,6539720.438565001,0.0
+4019510,Will Sevilla FC win on 2026-09-11?,,2026-09-11 21:24:54+00:00,1,6465770.197707989,0.0
+2252243,Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?,,2026-09-16 20:02:43+00:00,0,56255118.64173398,0.0
+2252244,Will there be no change in Fed interest rates after the September 2026 meeting?,,2026-09-16 20:02:43+00:00,0,56435144.72298723,0.0
+2252242,Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?,,2026-09-16 20:02:43+00:00,0,19739407.147784986,0.0
+2252246,Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?,,2026-09-16 20:02:43+00:00,0,33434867.861863002,0.0
+2252245,Will the Fed increase interest rates by 25 bps after the September 2026 meeting?,,2026-09-16 21:40:27+00:00,1,42158279.47949004,0.0
+4192756,Will AC Milan win on 2026-09-16?,,2026-09-16 23:02:28+00:00,0,5812247.504825997,0.0
+4208332,Will Real Betis Balompié win on 2026-09-17?,,2026-09-17 19:17:12+00:00,1,9048522.265029998,0.0
+4237425,Will Chelsea FC win on 2026-09-18?,,2026-09-18 21:13:27+00:00,0,6678023.133427986,0.0
+1130016,Will New People (NL) gain the most seats in the next Russian parliamentary election?,,2026-09-21 10:45:42+00:00,0,6052715.028636999,0.0
+1130012,Will United Russia (ER) gain the most seats in the next Russian parliamentary election?,,2026-09-21 12:43:47+00:00,1,24490194.082594994,0.0
+4464920,Will Norway win on 2026-09-24?,,2026-09-24 22:42:20+00:00,1,13521950.763898997,0.0
+2063133,Will Shimelis Abdisa be the next Prime Minister of Ethiopia?,,2026-10-06 02:16:39+00:00,0,41598520.195530996,0.0
+2063135,Will Gedion Timothewos be the next Prime Minister of Ethiopia?,,2026-10-06 02:18:39+00:00,0,55949081.662122995,0.0
+2063134,Will Adanech Abiebie be the next Prime Minister of Ethiopia?,,2026-10-06 02:19:40+00:00,0,83460060.365002,0.0
+2063132,Will Demeke Mekonnen be the next Prime Minister of Ethiopia?,,2026-10-06 02:20:40+00:00,0,29343979.385681998,0.0
+2063129,Will Belete Molla be the next Prime Minister of Ethiopia?,,2026-10-06 02:21:42+00:00,0,32292428.811427005,0.0
+2063130,Will Berhanu Nega be the next Prime Minister of Ethiopia?,,2026-10-06 02:22:39+00:00,0,29707814.499100003,0.0
