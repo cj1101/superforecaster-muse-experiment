@@ -94,6 +94,17 @@ out-of-sample (peer score 0.0000). Beating it net of spread, slippage, and
 fees — with calibration intact — is the whole game, and it is what
 $\mathcal{N}_{star}$ scores.
 
+## Metaculus bot — open source
+
+The fleet's tournament bot **kodaMuseSuperforecaster** (entered in the Fall 2026
+FutureEval Bot Tournament under the account RiverineCairn) lives in
+[`metaculus_bot/`](metaculus_bot/) and is **MIT-licensed, open source** (CJ's
+decision, 2026-10-17) — API client, price-blind intake, payload builders for
+binary / multiple-choice / numeric / group questions, and an offline self-test.
+It reads its API token from the `METACULUS_API_TOKEN` environment variable only;
+no credentials are in the tree. Public repo:
+https://github.com/cj1101/superforecaster-muse-experiment/tree/main/metaculus_bot
+
 ## Where this fleet stands (2026-10-17, all numbers from real runs)
 
 - **$\mathcal{N}_{star}$ = 0.0000 — certified, not an absence of trying.** Across
