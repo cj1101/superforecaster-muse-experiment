@@ -141,7 +141,20 @@ def cmd_edge(a):
     f_side = min(f_side, 0.15)  # cluster cap
     net_edge = abs(p - q)
     decision = "TRADE" if net_edge >= 0.05 else "SKIP"
-    _out({"decision": decision, "side": side if decision == "TRADE" else None,
+    skip_reason = None if decision == "TRADE" else "INSUFFICIENT_NET_EDGE"
+    # Gate D (fleet standard, r51/EC-14; alpha_kelly Gate 3 verbatim): SKIP when
+    # p_side < 0.60 AND p_side/q_side < 1.35 (their "LR" is the probability ratio).
+    lr = p_side / q_side
+    gate_d_pass = (p_side >= 0.60) or (lr >= 1.35)
+    if decision == "TRADE" and not gate_d_pass:
+        decision, skip_reason = "SKIP", "LOW_CONVICTION (Gate D)"
+    # Gate A (fleet standard, r51/EC-14): crypto requires on-chain verification.
+    if decision == "TRADE" and a.domain == "crypto" and not a.onchain_verified:
+        decision, skip_reason = "SKIP", "FAILED_CRYPTOBENCH_ONCHAIN_GATE (Gate A)"
+    _out({"decision": decision, "skip_reason": skip_reason,
+          "gate_d": {"p_side": round(p_side, 4), "likelihood_ratio": round(lr, 3), "pass": gate_d_pass},
+          "gate_a_onchain_verified": bool(a.onchain_verified) if a.domain == "crypto" else None,
+          "side": side if decision == "TRADE" else None,
           "p": p, "q_exec": q, "net_edge": round(net_edge, 4), "hurdle": 0.05,
           "kl_divergence_bits_edge": round(kl / np.log(2), 5), "kl_nats": round(kl, 5),
           "kelly_fraction_of_account": round(f_side, 4), "lambda": lam,
@@ -189,7 +202,7 @@ def cmd_schema(_a):
               "forecast": {"args": "--domain markets|crypto|predmarkets; markets: --symbol --horizon 1|5|21; crypto: --asset BTC|ETH --horizon 1|7|30; predmarkets: --slug",
                            "returns": "raw_p, prior, validated_skill, production_p (consume production_p only)"},
               "edge": {"args": "--p --q-exec [--lam 0.25..0.5] [--domain crypto applies 0.5x dampener]",
-                       "returns": "decision TRADE|SKIP (hurdle |p-q_exec|>=0.05), side, KL edge, capped Kelly fraction"},
+                       "returns": "decision TRADE|SKIP (hurdle |p-q_exec|>=0.05; Gate D conviction p_side>=0.60 or p_side/q_side>=1.35; Gate A crypto on-chain), side, KL edge, capped Kelly fraction"},
               "pool": {"args": "--probs a,b,c [--weights w1,w2,w3]", "returns": "log-odds pool, trimmed mean, mean, median"},
               "score": {"args": "--file CSV with columns y,p[,crowd]", "returns": "brier, log_score, ece, murphy, peer_score"},
               "harness-demo": "runs the alpha_kelly fixture benchmark (synthetic)",
@@ -204,8 +217,10 @@ def main():
     f.add_argument("--symbol"); f.add_argument("--asset"); f.add_argument("--slug")
     f.add_argument("--horizon", type=int, default=21)
     e = sub.add_parser("edge"); e.add_argument("--p", type=float, required=True)
-    e.add_argument("--q-exec", type=float, required=True); e.add_argument("--lam", type=float, default=0.375)
+    e.add_argument("--q-exec", type=float, required=True); e.add_argument("--lam", type=float, default=0.35)
     e.add_argument("--domain", default="predmarkets")
+    e.add_argument("--onchain-verified", action="store_true",
+                   help="Gate A: required for crypto trades (CryptoBench on-chain checks passed)")
     pl = sub.add_parser("pool"); pl.add_argument("--probs", required=True); pl.add_argument("--weights")
     sc = sub.add_parser("score"); sc.add_argument("--file", required=True)
     sub.add_parser("harness-demo"); sub.add_parser("schema")

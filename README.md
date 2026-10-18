@@ -89,7 +89,9 @@ $\mathcal{N}_{star}$ scores.
   longshot harvest (19.3% win rate, top-3 trades = 108% of profit, 58.8%
   drawdown) — reported as an artifact, not an edge.
 - Calibration scoreboard (now a gate, not the goal): production Brier
-  **0.2285** vs climatology 0.2290 over 37,589 forecasts; the fleet's one
+  **0.2285** vs climatology 0.2290 over 37,589 forecasts (as-shipped production
+  policy; corrected-policy research figure **0.22814**, r12 — dual-labelled per
+  governance decision 2026-10-17, never a silent swap); the fleet's one
   validated quant edge is crypto crash-risk (BTC Brier 0.0901 vs 0.0922,
   AUC 0.607).
 
