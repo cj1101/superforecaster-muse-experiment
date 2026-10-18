@@ -59,7 +59,7 @@ better opinions.**
 | --- | --- | --- |
 | **Good Judgment Superforecasters** (humans) | FOMC decisions since 2023: Brier **0.031 vs CME FedWatch 0.058** — 46% more accurate than the futures market, 4th straight year; historically ~30% more accurate than intelligence analysts with classified access | The calibration gold standard — and they beat a *market*, which is exactly our game |
 | **ForecastBench** (live, updated Oct 17 2026) | Tournament board: Google DeepMind systems 1–3 (Brier Index 69.0/68.9/68.7); human Superforecaster median tied 3rd (68.7); baseline board: Superforecaster median **#1** (67.7) ahead of every raw LLM (best 61.9). "LLM–superforecaster parity achieved June 2026" | Agent systems now match elite humans on accuracy; nobody has yet matched them *and* the market, net of costs |
-| **Metaculus** community + AI bot tournaments | **Unverified** — site bot-walled on 2026-10-17; we do not quote numbers we could not read | Tracked by the intel division |
+| **Metaculus / FutureEval** AI benchmark + bot tournaments (live-read 2026-10-18) | Pros **34.22** > Community **25.21** > best AI (Claude Fable 5 High) **16.10** peer score; Spring 2026 bot tourney: 173 bots, top GreeneiBot2 18.90; Pros-vs-bots gap collapsed −20.03 → −1.25 (n.s.) | Humans still lead on Metaculus's own benchmark; Fall 2026 bot tournament LIVE ($50K, to Jan 6 2027) — entry is a CJ-account action |
 
 **The algorithmic establishment (non-LLM):**
 

@@ -46,10 +46,28 @@ Rule: we never quote a number we could not read at its source.
   median 62.6, best raw LLM Kimi-K3 61.9; Random Uniform 41.9 (128/130).
   Site notes LLM–superforecaster parity achieved June 6, 2026; human
   comparison groups last surveyed July 2024.
-- **Metaculus** — UNVERIFIED: metaculus.com is behind a Cloudflare Turnstile
-  challenge that our browser could not pass (Oct 17 2026). Community
-  Prediction accuracy and AI-bot tournament standings are tracked as an open
-  intel task; no figures quoted until read at source.
+- **Metaculus / FutureEval** — VERIFIED at source via live browser session
+  (Oct 18 2026, no login; the earlier Turnstile wall did not recur). Metaculus
+  scores with log-score Peer Scores, not Brier. **Model leaderboard**
+  (futureeval/leaderboard, 99 models, continuously updated): #1 Metaculus Pro
+  Forecasters **34.22** (683 forecasts), #2 Community **25.21** (1,876),
+  #3 Claude Fable 5 High **16.10**, #4 Claude Opus 5 High 15.78, #5 Claude
+  Opus 4.8 High 14.12, #6 Gemini 3.6 Flash 13.22 — the best AI model trails
+  the Pros by ~18 points and the human community by ~9. **Spring 2026 Bot
+  Tournament** (Jan 7–Apr 15 2026; analysis Sep 2 2026): 173 bots, 297
+  questions, $50K pool; top bot GreeneiBot2 (avg spot peer 18.90); on the 99
+  shared questions, 9 of the top 10 individuals were Pros — but the seasonal
+  Pros-vs-bots head-to-head gap collapsed: Q2 2025 −20.03 (p=0.00001) →
+  Spring 2026 **−1.25 (n.s.)**. Metaculus's own cross-benchmark synthesis
+  (May 16 2026) concludes published bot-parity claims (Silicon Crowd, AIA
+  Forecaster, Phan et al.) carry leakage / small-n flaws; parity extrapolated
+  ~Nov 2026 (ForecastBench CI) to ~Jun 2027 (FutureEval trend). Notably,
+  Platt scaling improved Brier 0.016 on their binary tournament questions
+  (p<0.001) — a different population from our drifting quant streams, where
+  it is banned. **Fall 2026 Bot Tournament is LIVE** (Sep 28 2026–Jan 6
+  2027, $50K, 82 questions, bots only); entry needs a human account + form +
+  API token (a CJ action). MiniBench runs $1K biweekly; next seasonal starts
+  Jan 2027.
 
 ## Algorithmic establishment
 - **GIFT-Eval** (Hugging Face, Salesforce; read Oct 17 2026, no explicit
