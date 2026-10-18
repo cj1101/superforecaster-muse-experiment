@@ -1,6 +1,25 @@
 # Superforecaster
 
-# ⭐ NORTH STAR — $\mathcal{N}_{star}$ (Alpha-Kelly Composite): **0.00**
+> **Maintenance rule (CJ, 2026-10-17): every commit must fully update this README.**
+> A stale section is a defect. If a claim below cannot be reproduced from the code
+> and data as committed, the claim — not the code — is what gets fixed in that commit.
+
+# ⭐ NORTH STAR — $\mathcal{N}_{star}$ (Alpha-Kelly Composite): **0.0000**
+
+**Production $\mathcal{N}_{star}$ = 0.0000 — VERIFIED under EC-13 corrected quoting
+(Wave 3, 2026-10-17):** every ps1/r8 headline is restated on per-book eligible-set
+ECE (see `results/ec13_requote_RESULTS.md`); the maximum eligible $\mathcal{N}_{star}$
+over all 50 cells is 0.0000, attained only by zero-trade cells (best trading cell
+−0.0532). Canonical citations: ps1 S2a **−0.0949** / S3 **−0.3759** / S4 **−1.7736**;
+r8 R1 S2a **−0.2070** / S3 **−0.3681** / S4 **−1.1710**. Traded-subset headlines are
+retired to diagnostics. **Canonical scorer (designated v2.0):**
+`superforecaster/alpha_kelly.py` (`evaluate_fleet_north_star`, as written) —
+capital-weighted lock, $D_{lock} = \sum_k I_k D_k / \sum_k I_k$, with the 1-day lock
+floor. The harness copy (`superforecaster_out/nstar/nstar.py`, trade-weighted) is the
+deviant scorer; it is not repo code, and the repo contains no trade-weighted
+$\mathcal{N}_{star}$ surface, so no repo formula changed in v2.0. Cross-scorer
+comparisons are valid only at uniform lock until the harness is migrated (one-expression
+stake-weighted change + 1-day floor, per the Wave-3 velocity-canonical migration note).
 
 ## What this number is — and why it is the only score that matters here
 
@@ -77,10 +96,20 @@ $\mathcal{N}_{star}$ scores.
 
 ## Where this fleet stands (2026-10-17, all numbers from real runs)
 
-- **$\mathcal{N}_{star}$ = 0.00** — the fleet has found **no validated net edge
-  yet**, so it takes ~no trades and preserves capital. In a field where the
-  published norm is −16% to −31% of capital, a verified zero with an honest
-  measurement stack is a real position — and the score to beat.
+- **$\mathcal{N}_{star}$ = 0.0000 — certified, not an absence of trying.** Across
+  220 slots, ~200 workstreams, and **2,967 counted statistical comparisons (r53
+  deflation registry), the fleet holds ZERO validated tradeable claims.** The only
+  Wave-2 result surviving global Bonferroni is r6 — a *negative* (T2 recalibration
+  on direction streams is significantly harmful). The fleet takes ~no trades and
+  preserves capital. In a field where the published norm is −16% to −31% of
+  capital, a verified zero with an honest measurement stack is a real position —
+  and the score to beat.
+- **Wave 2's final stack test (w20) did not beat production v1:** the frozen v2
+  stack scored pooled Brier 0.22808 vs v1's 0.22846, Δ +0.00038, 95% CI
+  [−0.00013, +0.00090] — the CI includes 0, so **production v1 STANDS** and no
+  "production v2" ships on this evidence. The reproduction gate passed exactly
+  (0.22846 / 0.22904 / 0.23355), so the null is a property of the stack, not of
+  the measurement.
 - First real-data $\mathcal{N}_{star}$ backtest (287 Polymarket test markets,
   real cost model, live-book-validated): trading the market against itself
   scores exactly 0.000 (no manufactured profit); our Wave-1 shrink rule is
@@ -89,25 +118,103 @@ $\mathcal{N}_{star}$ scores.
   longshot harvest (19.3% win rate, top-3 trades = 108% of profit, 58.8%
   drawdown) — reported as an artifact, not an edge.
 - Calibration scoreboard (now a gate, not the goal): production Brier
-  **0.2285** vs climatology 0.2290 over 37,589 forecasts (as-shipped production
-  policy; corrected-policy research figure **0.22814**, r12 — dual-labelled per
-  governance decision 2026-10-17, never a silent swap); the fleet's one
+  **0.22846** vs benchmark 0.22904, raw models 0.23355, over 37,589 forecasts
+  (as-shipped production policy; corrected-policy research figure **0.22814**,
+  r12 — dual-labelled per governance decision 2026-10-17, never a silent swap;
+  relabelling the headline remains an M10/PM decision); the fleet's one
   validated quant edge is crypto crash-risk (BTC Brier 0.0901 vs 0.0922,
-  AUC 0.607).
+  AUC 0.607 — quoted with all three denominators in the Wave-2 closures below).
+- **ECE governance (r12):** production pooled ECE-10U-eligible = **0.0240** is
+  **telemetry only**. Every candidate book gates on its **own rows'**
+  ECE-10U-eligible, with the r12 bias floor attached (never subtracted). Quoting
+  the pooled constant as a book's ECE would have flipped 6 S2a cells positive
+  under EC-13 re-quoting — it must never gate a book.
+
+## Wave-2 closures (2026-10-17 synthesis; full record in the fleet ledger)
+
+Wave 2 mapped where edges are **not**, and closed those lines:
+
+- **Markets direction is signal absence, not an estimator problem** (r26/r28/
+  r30/r45/r56): every estimator fails on the same rows; the 21-day equity
+  direction-feature research line is **retired**. The −0.0024 markets gap is a
+  data problem (no causal feature family in 40+ attempts carries signal), not
+  a tuning problem. Production keeps fitted shrinkage + climatology discipline.
+- **T2-on-direction harm rule (r6)** — the fleet's only global-Bonferroni
+  survivor: temperature (T2) recalibration on direction streams is
+  significantly harmful (+0.00973, CI excl. 0). Fleet rule: never apply
+  T2/temperature transforms to direction streams (the production transform is
+  fitted shrinkage; see the engine policy below). The r18 transform table v2
+  is **not** re-routed into production — w20's pooled test did not promote it.
+- **Crash family — real but narrower than Wave 1 believed** (c4/m34/r35/r45/
+  r47): c4 v2 improves on Wave 1 (BTC 0.08925, ETH 0.13996) and w20's crash
+  domain is the stack's only positive domain (+0.00244 [+0.00048, +0.00434]),
+  but the gain is ETH-carried and shrinks against stronger denominators —
+  x1's v1-vintage lead +0.00249 is +0.00112 vs causal-primary and +0.00021 vs
+  pure decay. Any crash claim must carry all three denominators (v1 /
+  causal-primary / decay). The crash model stays a **research emitter**;
+  promotion is governed solely by r35's frozen pre-registration (below).
+- **Extremization / pooling — closed:** learned-only, a = 1.00 default, cap
+  1.40 (r15: a = 1.00 in 324/324 blocks). Engine enforces the [1.00, 1.40]
+  range with the ≥150-resolved-questions learning rule stated in code.
+- **Prediction markets — the price is the forecast:** raw price beat every
+  adjustment on every fresh frame (peer 0.0000 at T−7d, n=287). Ladder
+  underdispersion is **dead in all three families** (weather, crypto, econ).
+  Maker strategies are **closed** (markout tax exceeds any edge at every
+  horizon). The p9 resolution-risk auditor survives only as a **REJECT veto,
+  never a PASS-select** (r31/r37). Carried into Stage 4 only: p9-as-REJECT-veto,
+  r32's size curves as clip caps, M4's unified cost model as the q_exec basis.
+- **Sports moneylines (r22/r58) — CLOSED-DEAD:** the disjoint confirmation
+  scored the generation lead's primary cell at −0.047 [−0.112, +0.012] (n=198)
+  against the generation window's +0.073; all three pre-committed kill
+  conditions fired (winner's curse). No forward ask-side sports design will
+  be built.
+- **EC-14 execution gates — implemented (v1.8):** Gate D (conviction:
+  p_side ≥ 0.60 or p_side/q_side ≥ 1.35) and Gate A (crypto requires on-chain
+  verification) are implemented on the `sf edge` CLI path, with λ default
+  0.35 (crypto effective 0.175 via the 0.5 CryptoBench dampener). Verified
+  2026-10-17: `sf edge --p 0.55 --q-exec 0.45` → SKIP, LR 1.222 (Gate D);
+  `sf edge --p 0.58 --q-exec 0.42` → TRADE, LR 1.381; crypto without
+  `--onchain-verified` → SKIP (Gate A), with it → TRADE. Repo test suite
+  green at this commit (calibration suite + 14/14 backtest checks).
+
+## Live forward programmes (the only remaining paths to a validated positive $\mathcal{N}_{star}$)
+
+- **r35 — frozen crash confirmation:** dual block-30/60 bootstrap, both CIs
+  must exclude 0; honest power is a 2030s readout (D1 at 4,000 origins
+  ≈ 2032, D2 at 20,000 ≈ 2054), with DEAD and INCONCLUSIVE-PERMANENT bounds
+  pre-committed — silence is also an answer.
+- **FWD-1 — as of 2026-10-17: preregistration frozen; preconditions 4/8 PASS
+  with closures in flight.** Preregistration combined_sha256
+  `3c4448f0706035d612e5f14638c6c9400db6f12b1f700aa58f3323f22dc3cdf9` (frozen,
+  hash-anchored). Enrollment remains prohibited until all 8 day-1
+  preconditions pass. Cadence reality: Stage A reaches n=250 in ≈15+ weeks
+  under the frozen gates. No integration change until a Stage-A book meets
+  the F15 promote bar — and even then a positive paper $\mathcal{N}_{star}$
+  is a LEAD, not validation.
+- **r29 — forward accrual:** triple-barrier/path-risk (family C: pooled H2
+  skill +0.0401, deflated CI [+0.0055, +0.0774]) and vol-scaled sign accrue
+  fresh post-2026-10-16 origins under r29's frozen protocol on the collector
+  substrate; both remain LEADs (family-pool claims only) until accrual
+  re-tests them.
+- **Substrate:** the consolidated forward collector (S1–S9 in one file:
+  Deribit, tracked set, OI, crash emitter, resolutions, NWS archive, CBOE
+  options) is accruing on schedule — first `scheduled-r14-hourly` manifest
+  line 2026-10-18T00:53:51Z. CJ's **harvest-and-archive policy** is in force
+  fleet-wide: never fetch-and-discard; blocked sources fall back to the
+  newest archive snapshot, disclosed in results.
 
 ## The road to #1
 
-200 workstreams run 24/7 against a single gap: a posterior that clears
-**+0.05 post-cost edge with calibration intact**. The hunt is ordered the way
-the arenas say edge actually lives: (1) discovery across thousands of
-neglected contracts instead of famous markets, (2) order-book-native signals
-(depth, slippage, cross-venue dislocations), (3) crypto signals gated on
-on-chain data, (4) equity catalyst/event trades sized like prediction
-contracts, (5) calibration engineering that protects the ECE multiplier.
-Every claim this README makes is reproduced from code and data in this repo —
-when $\mathcal{N}_{star}$ moves, it will move here first.
+The discovery surface is exhausted (2,967 comparisons, zero validated
+tradeable claims); what remains is forward evidence. The fleet's work now
+runs on the three pre-registered forward programmes above (r35, FWD-1, r29
+accrual) against a single gap: a posterior that clears **+0.05 post-cost
+edge with calibration intact**, scored on its own book's eligible-set ECE
+under the canonical scorer. Every claim this README makes is reproduced
+from code and data in this repo — when $\mathcal{N}_{star}$ moves, it will
+move here first.
 
-## Calibration scoreboard — HEADLINE BRIER (secondary: gates + ECE feed) — Production: **0.2285** · Benchmark: 0.2290 · Raw models: 0.2336
+## Calibration scoreboard — HEADLINE BRIER (secondary: gates + ECE feed) — Production: **0.22846** · Benchmark: 0.22904 · Raw models: 0.23355 · Corrected-policy (research): 0.22814
 *Pooled over 37,589 scored forecasts (n-weighted). Production = the forecasts this
 system would actually ship: skill-gated, shrinkage-disciplined models for markets &
 crypto; the market price itself for prediction markets. Lower is better.
@@ -248,18 +355,39 @@ performance (Brier 0.0001 / AUC 1.0000).
    until learned per-domain).
 5. **Crash risk is a first-class output**, because it's the one place the
    models demonstrably know something direction models don't.
+6. **Execution gates (`sf edge`, EC-14, v1.8).** A trade must clear the
+   |p − q_exec| ≥ 0.05 hurdle, **Gate D** (conviction: p_side ≥ 0.60 or
+   p_side/q_side ≥ 1.35), and — for crypto — **Gate A** (on-chain
+   verification required). Sizing is fractional Kelly at λ = 0.35 by
+   default (crypto effective 0.175 via the 0.5 dampener), capped at 15%
+   of the account per correlated cluster. Candidate books are scored on
+   their **own eligible-set ECE** (EC-13); the pooled ECE 0.0240 is
+   telemetry only and never gates a book.
 
 ## Repository layout
 
 ```
 superforecaster/   calibration.py · backtest.py · markets.py · predmarkets.py
                    crypto.py · agents.py · engine.py (production policy)
+                   alpha_kelly.py (canonical N_star scorer) · cli.py (./sf)
 experiments/       run_markets_backtest.py · run_crypto_backtest.py · calibrate_oos.py
-tests/             9 calibration tests + 14 backtest checks (all passing)
-results/           every number above, machine-readable + written up
+tests/             calibration tests + 14 backtest checks (all passing)
+results/           every number above, machine-readable + written up;
+                   ec13_requote_RESULTS.md + ec13_requote_grid.csv +
+                   ec13_requote_results.json = EC-13 corrected N_star tables
 data/              price histories, out-of-sample prediction CSVs, market snapshots
-docs/              agent protocol design (personas, debate, aggregation, cadence)
+docs/              agent protocol design (personas, debate, aggregation, cadence);
+                   NORTH_STAR.md (spec) · WORLD_FIELD.md (verified field survey)
 ```
+
+Fleet artefacts outside this repo (referenced by the Wave-2 synthesis):
+`superforecaster_out/wave2/SYNTHESIS.md` (Wave-2 synthesis + integration
+checklist) · `superforecaster_out/wave2/LEDGER.md` (207-row workstream ledger)
+· `superforecaster_out/wave2/r53/` (deflation registry, 2,967 comparisons) ·
+`superforecaster_out/wave2/fwd1/manifest.json` (FWD-1 freeze manifest,
+combined_sha256 `3c4448f0…c3cdf9`) · `superforecaster_out/wave3/ec13-requote/`
+(EC-13 source) · `superforecaster_out/wave3/velocity-canonical/` (canonical
+scorer designation + migration note).
 
 ## Run it
 
@@ -291,6 +419,15 @@ bot-blocked and not used.
 - **v0.6** — agent ensemble protocol + simulated tournament (weighted pool wins)
 - **v1.0** — production policy engine + causal calibration-rescue experiment (shrinkage adopted, Platt demoted), this README
 - **v1.1** — external advice review (`docs/EXTERNAL_ADVICE_REVIEW.md`): peer score + trimmed-mean pool adopted and measured (all adjustment rules score ≈0 peer vs the market — the crowd stands); supervisor search-to-reconcile, anchorer isolation, contamination filters and scenario-mixture outputs adopted into the protocol; blanket √3 extremization **rejected** against our measurements
+- **v1.2** — headline production Brier 0.22846 pooled over 37,589 forecasts; objective restated as market prediction dominance
+- **v1.3** — NORTH STAR CHANGE: fleet objective is now $\mathcal{N}_{star}$ (Alpha-Kelly Composite); Brier demoted to gate/diagnostic
+- **v1.4** — agent CLI (`sf`: headline/forecast/edge/pool/score/schema, JSON contract) + alpha_kelly $\mathcal{N}_{star}$ harness adopted as canonical engine (fixture benchmark verified reproducible; synthetic, not evidence)
+- **v1.5** — north star internalized: `docs/NORTH_STAR.md` (adopted spec + our adaptations) + `docs/ARGON_BRIEF_3_NSTAR.md` archived; 7 benchmark papers added to `literature/`
+- **v1.6** — headline contextualized: what $\mathcal{N}_{star}$ means + the world field + fleet standing and road to #1; fleet playbook adopted (`docs/FLEET_NORTH_STAR_PROMPT.md`)
+- **v1.7** — world field = LIVE records (browser-verified 2026-10-17); `docs/WORLD_FIELD.md` full survey; Metaculus marked unverified (bot-walled) at that time
+- **v1.8** — EC-14 (CLI leg): Gate D + Gate A implemented in `sf edge` (r51 repro cases pass: 0.55/0.45 SKIP LR 1.222, 0.58/0.42 TRADE LR 1.381), λ default 0.35; README dual-labelled Brier (production 0.22846 / corrected-policy 0.22814)
+- **v1.9** — Metaculus/FutureEval VERIFIED at source (live browser read 2026-10-18): Pros 34.22 > Community 25.21 > best AI 16.10 peer; Spring 2026 bots 173, Pros-vs-bots gap −20.03 → −1.25 n.s.; Fall 2026 bot tournament LIVE; `docs/WORLD_FIELD.md` + README updated
+- **v2.0** — Wave-2 synthesis + Wave-3 verified outputs integrated: production $\mathcal{N}_{star}$ **0.0000 VERIFIED under EC-13 corrected (eligible-set ECE) quoting** (canonical citations ps1 S2a −0.0949 / S3 −0.3759 / S4 −1.7736; r8 R1 S2a −0.2070 / S3 −0.3681 / S4 −1.1710; corrected tables vendored in `results/ec13_requote_*`); **canonical scorer designated** — capital-weighted `alpha_kelly.py` as written (repo holds no trade-weighted $\mathcal{N}_{star}$ surface; the deviant harness copy is not repo code, no formula change); w20 final stack test did not beat production v1 (v1 stands); Wave-2 closures documented (markets signal absence, T2-on-direction harm rule r6, extremization/pooling closures, ladders dead in all families, maker closed, p9 = REJECT veto only, r58 sports CLOSED-DEAD); forward programmes documented (r35 frozen crash test, FWD-1 frozen preregistration with preconditions 4/8 PASS as of 2026-10-17, r29 accrual, consolidated S1–S9 collector + harvest-and-archive policy); EC-14 gates stated as implemented in v1.8 and re-verified at this commit; Metaculus section kept VERIFIED (v1.9); README maintenance rule carried in the header
 
 ## Limitations, stated plainly
 
@@ -298,7 +435,9 @@ Daily-bar price features may simply not contain the information needed to
 beat base rates in these domains; the sample windows include the unusual
 2020–2026 regimes; prediction-market sampling is top-volume (selection bias
 toward politics/crypto/sports); agent-tournament results are simulated
-(synthetic agents with a shared shock), not live LLM forecasts. The next
-frontiers, in order: richer market features (options-implied, rates,
-positioning), live agent forecasting on real questions with scored track
-records, and prediction-market *cross-venue* disagreement signals.
+(synthetic agents with a shared shock), not live LLM forecasts. After
+Wave 2, the honest frontier is no longer another backtest: it is the three
+pre-registered forward programmes (r35, FWD-1, r29 accrual) accruing fresh
+evidence on the collector substrate — readouts are slow by design (r35's
+honest horizon is the 2030s), and no backtest result in this repo should
+be read as a shortcut around them.
