@@ -176,6 +176,29 @@ Wave 2 mapped where edges are **not**, and closed those lines:
   `sf edge --p 0.58 --q-exec 0.42` → TRADE, LR 1.381; crypto without
   `--onchain-verified` → SKIP (Gate A), with it → TRADE. Repo test suite
   green at this commit (calibration suite + 14/14 backtest checks).
+- **EC-09 SKIP-Kelly fix — landed (v2.1):** the `sf edge` SKIP payload
+  previously returned a nonzero `kelly_fraction_of_account` (e.g. 0.0636 on
+  the Gate-D SKIP above) because the fraction was computed before the gate
+  decisions and never reset — a SKIP that appears to size a position is a
+  footgun for any consumer of the JSON contract. Fixed: **every SKIP
+  payload now carries `kelly_fraction_of_account` == 0.0 and
+  `expected_log_growth_at_kelly_size` == 0.0** (the sibling sizing field,
+  audited in the same pass; `side` was already null on SKIP, and the KL
+  fields stay populated — they are information diagnostics, not sizing).
+  The same class of leak in `alpha_kelly.py` — the CLUSTER_CAP_REACHED and
+  ORDER_BOOK_DEPTH_EXHAUSTED SKIP returns carrying the pre-cap/pre-sweep
+  `kelly_fraction_raw` while every other SKIP branch zeroed it — is fixed
+  the same way (their `allocated_fraction` / `invested_capital` were
+  already 0). **No TRADE-path number changed** (re-verified at this commit:
+  0.58/0.42 → TRADE kelly 0.0966, growth 0.02995; crypto verified →
+  0.0483 / 0.01665; 0.80/0.50 → capped 0.15 / 0.07931), EC-14 gates and
+  λ = 0.35 are untouched, and the alpha_kelly fixture benchmark is
+  unchanged (disciplined +0.1059 vs naive −0.1499). Regression coverage:
+  `tests/test_cli_edge.py` — 16/16 checks asserting kelly == 0.0 on every
+  SKIP branch of both surfaces (insufficient edge, Gate D long/short,
+  Gate A, dispersion, Gate 3, cluster cap, depth exhausted) and the exact
+  pre-fix values on TRADE branches; full suite green at this commit
+  (calibration suite + 14/14 backtest checks + 16/16 edge checks).
 
 ## Live forward programmes (the only remaining paths to a validated positive $\mathcal{N}_{star}$)
 
@@ -360,7 +383,9 @@ performance (Brier 0.0001 / AUC 1.0000).
    p_side/q_side ≥ 1.35), and — for crypto — **Gate A** (on-chain
    verification required). Sizing is fractional Kelly at λ = 0.35 by
    default (crypto effective 0.175 via the 0.5 dampener), capped at 15%
-   of the account per correlated cluster. Candidate books are scored on
+   of the account per correlated cluster. **A SKIP sizes zero (EC-09,
+   v2.1): every SKIP payload carries `kelly_fraction_of_account` == 0.0
+   and zero expected log growth at Kelly size.** Candidate books are scored on
    their **own eligible-set ECE** (EC-13); the pooled ECE 0.0240 is
    telemetry only and never gates a book.
 
@@ -371,7 +396,8 @@ superforecaster/   calibration.py · backtest.py · markets.py · predmarkets.py
                    crypto.py · agents.py · engine.py (production policy)
                    alpha_kelly.py (canonical N_star scorer) · cli.py (./sf)
 experiments/       run_markets_backtest.py · run_crypto_backtest.py · calibrate_oos.py
-tests/             calibration tests + 14 backtest checks (all passing)
+tests/             calibration tests + 14 backtest checks + 16 CLI edge /
+                   EC-09 SKIP-Kelly regression checks (all passing)
 results/           every number above, machine-readable + written up;
                    ec13_requote_RESULTS.md + ec13_requote_grid.csv +
                    ec13_requote_results.json = EC-13 corrected N_star tables
@@ -395,6 +421,7 @@ scorer designation + migration note).
 pip install -r requirements.txt          # numpy / pandas / scipy only
 python3 tests/test_calibration.py        # 9 checks
 python3 tests/test_backtest.py           # 14 checks
+python3 tests/test_cli_edge.py           # 16 checks (EC-14 gates + EC-09 SKIP-Kelly)
 python3 superforecaster/engine.py        # production-policy demo
 python3 experiments/calibrate_oos.py     # v2 rescue experiment (uses cached data)
 python3 experiments/run_markets_backtest.py   # full re-run (fetches live Yahoo data)
@@ -428,6 +455,7 @@ bot-blocked and not used.
 - **v1.8** — EC-14 (CLI leg): Gate D + Gate A implemented in `sf edge` (r51 repro cases pass: 0.55/0.45 SKIP LR 1.222, 0.58/0.42 TRADE LR 1.381), λ default 0.35; README dual-labelled Brier (production 0.22846 / corrected-policy 0.22814)
 - **v1.9** — Metaculus/FutureEval VERIFIED at source (live browser read 2026-10-18): Pros 34.22 > Community 25.21 > best AI 16.10 peer; Spring 2026 bots 173, Pros-vs-bots gap −20.03 → −1.25 n.s.; Fall 2026 bot tournament LIVE; `docs/WORLD_FIELD.md` + README updated
 - **v2.0** — Wave-2 synthesis + Wave-3 verified outputs integrated: production $\mathcal{N}_{star}$ **0.0000 VERIFIED under EC-13 corrected (eligible-set ECE) quoting** (canonical citations ps1 S2a −0.0949 / S3 −0.3759 / S4 −1.7736; r8 R1 S2a −0.2070 / S3 −0.3681 / S4 −1.1710; corrected tables vendored in `results/ec13_requote_*`); **canonical scorer designated** — capital-weighted `alpha_kelly.py` as written (repo holds no trade-weighted $\mathcal{N}_{star}$ surface; the deviant harness copy is not repo code, no formula change); w20 final stack test did not beat production v1 (v1 stands); Wave-2 closures documented (markets signal absence, T2-on-direction harm rule r6, extremization/pooling closures, ladders dead in all families, maker closed, p9 = REJECT veto only, r58 sports CLOSED-DEAD); forward programmes documented (r35 frozen crash test, FWD-1 frozen preregistration with preconditions 4/8 PASS as of 2026-10-17, r29 accrual, consolidated S1–S9 collector + harvest-and-archive policy); EC-14 gates stated as implemented in v1.8 and re-verified at this commit; Metaculus section kept VERIFIED (v1.9); README maintenance rule carried in the header
+- **v2.1** — EC-09 SKIP-Kelly fix: `sf edge` computed the Kelly fraction before the EC-14 gate decisions and emitted it unchanged on SKIP, so every SKIP branch (insufficient net edge, Gate D conviction, Gate A crypto on-chain) returned a nonzero `kelly_fraction_of_account` (0.0636 on the Gate-D repro) plus nonzero expected log growth at that size. Fix: SKIP now forces the fraction to 0.0 in `cli.py` after the gates decide, and the two `alpha_kelly.py` SKIP returns that leaked the pre-cap/pre-sweep `kelly_fraction_raw` (cluster cap, depth exhausted) now return 0.0 like every other SKIP branch. No TRADE-path number, gate, or λ changed (TRADE controls re-verified byte-identical; fixture benchmark unchanged at +0.1059 / −0.1499); $\mathcal{N}_{star}$ headline unchanged at 0.0000. New regression suite `tests/test_cli_edge.py` (16/16) covers every SKIP branch of both surfaces plus TRADE controls; full suite green (calibration + 14/14 backtest + 16/16 edge); `docs/AGENT_INTERFACE.md` contract updated to state SKIP sizes zero
 
 ## Limitations, stated plainly
 

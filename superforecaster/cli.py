@@ -151,6 +151,12 @@ def cmd_edge(a):
     # Gate A (fleet standard, r51/EC-14): crypto requires on-chain verification.
     if decision == "TRADE" and a.domain == "crypto" and not a.onchain_verified:
         decision, skip_reason = "SKIP", "FAILED_CRYPTOBENCH_ONCHAIN_GATE (Gate A)"
+    # EC-09: a SKIP sizes zero. f_side was computed before the gate decisions
+    # above, so without this reset every SKIP branch (insufficient edge,
+    # Gate D, Gate A) leaked a nonzero Kelly fraction — and a nonzero
+    # expected log growth at that size — into the JSON contract.
+    if decision == "SKIP":
+        f_side = 0.0
     _out({"decision": decision, "skip_reason": skip_reason,
           "gate_d": {"p_side": round(p_side, 4), "likelihood_ratio": round(lr, 3), "pass": gate_d_pass},
           "gate_a_onchain_verified": bool(a.onchain_verified) if a.domain == "crypto" else None,

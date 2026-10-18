@@ -473,6 +473,8 @@ def evaluate_and_size_opportunity(
     capped_fraction = min(target_fraction, remaining_cluster_room)
 
     if capped_fraction <= 0.001:
+        # EC-09: SKIP sizes zero — kelly_fraction_raw is 0.0 here, as on every
+        # other SKIP branch above (it previously leaked the pre-cap kelly_raw).
         return TradeExecutionResult(
             market_id=book.market_id,
             title=book.title,
@@ -485,7 +487,7 @@ def evaluate_and_size_opportunity(
             liquidation_bid_price=0.0,
             kl_divergence_nats=0.0,
             expected_log_growth=0.0,
-            kelly_fraction_raw=kelly_raw,
+            kelly_fraction_raw=0.0,
             allocated_fraction=0.0,
             invested_capital=0.0,
             shares_acquired=0.0,
@@ -504,6 +506,8 @@ def evaluate_and_size_opportunity(
     )
 
     if invested_capital <= 0.0 or shares_acquired <= 0.0:
+        # EC-09: SKIP sizes zero — kelly_fraction_raw is 0.0 here, as on every
+        # other SKIP branch above (it previously leaked the pre-sweep kelly_raw).
         return TradeExecutionResult(
             market_id=book.market_id,
             title=book.title,
@@ -516,7 +520,7 @@ def evaluate_and_size_opportunity(
             liquidation_bid_price=0.0,
             kl_divergence_nats=0.0,
             expected_log_growth=0.0,
-            kelly_fraction_raw=kelly_raw,
+            kelly_fraction_raw=0.0,
             allocated_fraction=0.0,
             invested_capital=0.0,
             shares_acquired=0.0,

@@ -11,7 +11,10 @@ source of truth and always matches the shipped code.
 - Trading decisions go through `sf edge`: it enforces the N_star rules
   (SKIP unless |p - q_exec| >= 0.05 after costs; fractional Kelly lambda in
   [0.25, 0.5]; 15% cluster cap; crypto x0.5 dampener) and returns the capped
-  Kelly fraction plus the KL information edge.
+  Kelly fraction plus the KL information edge. **A SKIP sizes zero (EC-09):
+  on any SKIP, `kelly_fraction_of_account` is 0.0 and
+  `expected_log_growth_at_kelly_size` is 0.0 — never size a position off a
+  SKIP payload's other fields.**
 - Score yourself with `sf score` (Brier / log / ECE / Murphy / peer score).
 - Pool colleagues with `sf pool` (production pool = track-record-weighted
   log-odds; extremization ships 1.00 until learned per-domain).
