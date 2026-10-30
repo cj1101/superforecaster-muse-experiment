@@ -68,6 +68,9 @@ better opinions.**
 | Arena | Status | Best verified record | The lesson |
 | --- | --- | --- | --- |
 | **Prophet Arena** (UChicago/USC/Meta) | **LIVE** board, 4,480 resolved events, scored thru Oct 15 2026 | #1 Claude Fable 5.1: Brier ≈ 0.052, ECE 0.021, edge over market **+0.061**; #3 Gemini 3.1 Pro posts the best edge (**+0.072**) and return (104%) | The accuracy bar: edge +0.06–0.07 over the market at ECE ≈ 0.02 |
+
+> **DENOMINATOR-FRAGILITY FLAG — SF-BL-4585 (verbatim):** Kimi K3 — headline #7 → #10 on the board's own Raw (own-events) column: 3-place move. GPT-6 Astra — headline #9 → #5 on Raw: 4-place move. Gemini 3.1 Pro — headline #2 → 10th of 10 on the measured (own answered reference-subset) ranking: 8 places. GPT-6 Luna — headline #10 → 4th on the measured ranking: 6 places. DeepSeek V4.1 Flash — headline #6 → 3rd on the measured ranking: 3 places. These flags are NOT intersection reversals — the true intersection ranking is not computable from public data (SF-BL-4585). Per the SF-BL-5935 steering gate, no fleet steering decision may cite a Prophet Arena headline rank for any flagged model unless this flag accompanies the citation.
+
 | **Prediction Arena** (Harvard/Arcada) | **PAUSED** — final standings, data thru Jul 7 2026 ($10K start) | Gemini 3.1 Pro **+74.3%**, GLM 5 +69.4%, Claude Opus 4.6 +40.7% (top 3 were paper trading); bottom: Gemini 3 Pro −31.0% | Even the "live money" arena's winners were paper; the real-money tail is brutal |
 | **PolyBench** (38,666 Polymarket markets, real CLOB) | No live board; repo frozen Mar 2026 = latest official | Only **2 of 7** models positive: MiMo-V2-Flash **+17.6% CWR**, Gemini-3-Flash +6.2%; leader's alpha collapsed as size grew toward $1,000 | Slippage is the silent tax; size is a strategy variable |
 | **LiveTradeBench** (UIUC) | Live board unreachable (Oct 17 2026); latest official = paper window Aug–Oct 2025 | GPT-4.1 best equities (+6.25% cum.); Qwen3-235B best Polymarket (+57.6%) — with a **72.1% max drawdown** | Raw return without drawdown discipline is a liability, and $\mathcal{N}_{star}$ prices it |
@@ -140,6 +143,39 @@ https://github.com/cj1101/superforecaster-muse-experiment/tree/main/metaculus_bo
   ECE-10U-eligible, with the r12 bias floor attached (never subtracted). Quoting
   the pooled constant as a book's ECE would have flipped 6 S2a cells positive
   under EC-13 re-quoting — it must never gate a book.
+  (Bookkeeping audit, 2026-10-20: the corrected comparison total is **2,993**
+  once SF-BL-1910's 16 cells are booked; the r53 registry artefacts still quote
+  2,967 — the registry correction is staged with the PM, and the
+  validated-positive count is unaffected.)
+
+### Fleet status, 2026-10-29 (backlog era, Oct 17–29)
+
+- The foundry/dispatcher era generated **41,487 backlog tasks** (seats F1–F4);
+  **12,557 completed** with independent tester AGREE, **28,872 queued**, **58
+  escalated** to the PM queue. Production $\mathcal{N}_{star}$ is unchanged at
+  **0.0000** — no validated tradeable claim emerged from the backlog era; every
+  positive claim remains gated on forward data that has not yet accrued.
+- Standing data-quality disclosures: three CLOB hole buckets (2026-10-18T00Z,
+  2026-10-22T08Z, 2026-10-28T16Z); FWD-1 cohort coverage kills = 3 (markets
+  1235552, 5340070, and 2589812 — the FOMC no-change leg, final coverage
+  0.940); weekly harvest suspended under HARVEST_STOP_429 since 2026-10-21.
+- Gates unchanged: FWD-1 preconditions board 6 PASS / 1 PARTIAL / 1 FAIL,
+  enrolment **prohibited**; the Metaculus dry run still waits on the manual
+  submissions switch on the egress host; ForecastBench's 2026-10-25 round
+  closed with **no submission** (sign-off packet unsigned and no go by the
+  pre-set cutoff — the default was honoured, not overridden); the FOMC T-7
+  freeze's execution remains **unverified** (packet hash field still null).
+- The fleet was **paused by CJ on 2026-10-29** (all processes; resume on his
+  word only). This commit sweeps the accumulated working tree — code, docs,
+  data refreshes, and 269 fleet-generated test files — into the repo as it
+  stood at the pause.
+- Test state at this commit, verified 2026-10-29: tracked suite 56 passed +
+  1 pre-existing fixture error (`test_backtest.py::test_leakage`, present
+  since v2.1); new pytest-style fleet tests (186 files): 2,876 passed, 57
+  failed, 1 skipped, 1 collection error (one file needs a `tests/pristine/`
+  fixture that lives outside this repo); new script-style fleet tests
+  (83 files): 70 pass, 13 fail standalone. The failures are the fleet's
+  recorded spec-vs-code gaps (its DISAGREE tail), published as-is.
 
 ## Wave-2 closures (2026-10-17 synthesis; full record in the fleet ledger)
 
@@ -467,6 +503,8 @@ bot-blocked and not used.
 - **v1.9** — Metaculus/FutureEval VERIFIED at source (live browser read 2026-10-18): Pros 34.22 > Community 25.21 > best AI 16.10 peer; Spring 2026 bots 173, Pros-vs-bots gap −20.03 → −1.25 n.s.; Fall 2026 bot tournament LIVE; `docs/WORLD_FIELD.md` + README updated
 - **v2.0** — Wave-2 synthesis + Wave-3 verified outputs integrated: production $\mathcal{N}_{star}$ **0.0000 VERIFIED under EC-13 corrected (eligible-set ECE) quoting** (canonical citations ps1 S2a −0.0949 / S3 −0.3759 / S4 −1.7736; r8 R1 S2a −0.2070 / S3 −0.3681 / S4 −1.1710; corrected tables vendored in `results/ec13_requote_*`); **canonical scorer designated** — capital-weighted `alpha_kelly.py` as written (repo holds no trade-weighted $\mathcal{N}_{star}$ surface; the deviant harness copy is not repo code, no formula change); w20 final stack test did not beat production v1 (v1 stands); Wave-2 closures documented (markets signal absence, T2-on-direction harm rule r6, extremization/pooling closures, ladders dead in all families, maker closed, p9 = REJECT veto only, r58 sports CLOSED-DEAD); forward programmes documented (r35 frozen crash test, FWD-1 frozen preregistration with preconditions 4/8 PASS as of 2026-10-17, r29 accrual, consolidated S1–S9 collector + harvest-and-archive policy); EC-14 gates stated as implemented in v1.8 and re-verified at this commit; Metaculus section kept VERIFIED (v1.9); README maintenance rule carried in the header
 - **v2.1** — EC-09 SKIP-Kelly fix: `sf edge` computed the Kelly fraction before the EC-14 gate decisions and emitted it unchanged on SKIP, so every SKIP branch (insufficient net edge, Gate D conviction, Gate A crypto on-chain) returned a nonzero `kelly_fraction_of_account` (0.0636 on the Gate-D repro) plus nonzero expected log growth at that size. Fix: SKIP now forces the fraction to 0.0 in `cli.py` after the gates decide, and the two `alpha_kelly.py` SKIP returns that leaked the pre-cap/pre-sweep `kelly_fraction_raw` (cluster cap, depth exhausted) now return 0.0 like every other SKIP branch. No TRADE-path number, gate, or λ changed (TRADE controls re-verified byte-identical; fixture benchmark unchanged at +0.1059 / −0.1499); $\mathcal{N}_{star}$ headline unchanged at 0.0000. New regression suite `tests/test_cli_edge.py` (16/16) covers every SKIP branch of both surfaces plus TRADE controls; full suite green (calibration + 14/14 backtest + 16/16 edge); `docs/AGENT_INTERFACE.md` contract updated to state SKIP sizes zero
+
+- **v2.2** — Backlog-era sweep-in (2026-10-29, on CJ's order): the fleet's accumulated post-v2.1 working tree committed in full — refinements across `superforecaster/*.py` and `metaculus_bot/`, `docs/AGENT_INTERFACE.md` + `docs/WORLD_FIELD.md` updates (including the SF-BL-5935 denominator-fragility steering gate), refreshed market data (`data/markets/*.csv`), expanded `tests/test_calibration.py` / `tests/test_cli_edge.py`, and 269 fleet-generated test files. Fleet status snapshot added above (41,487 backlog tasks; 12,557 tester-verified completions; $\mathcal{N}_{star}$ unchanged at 0.0000; fleet paused by CJ 2026-10-29). Test verification for this commit is stated in the fleet-status section — the new tests are **not** all green (57 pytest + 13 script failures, all recorded spec-vs-code gaps), and this entry does not claim otherwise; the tracked suite is unchanged from v2.1 (56 passed, 1 pre-existing fixture error)
 
 ## Limitations, stated plainly
 

@@ -49,6 +49,7 @@ may always pass `kind=` explicitly to override.
 from __future__ import annotations
 
 import copy
+import math
 import re
 from datetime import datetime
 from typing import Any, Iterable, Optional
@@ -109,13 +110,26 @@ def post_questions(post: dict) -> list[dict]:
 _MONTH_FORMATS = ("%B %Y", "%b %Y", "%Y-%m-%d", "%Y/%m/%d", "%d %B %Y", "%B %d, %Y")
 
 
+def _finite_or_none(value: float) -> Optional[float]:
+    """Return `value` only if it is finite; NaN/inf are not thresholds.
+
+    NaN has no order (every comparison is False) and inf/-inf would pin a
+    subquestion to an end of a ladder regardless of its real rank, so a
+    non-finite parsed value must be treated as "nothing parseable" rather
+    than as a threshold (SF-BL-10310).
+    """
+    return value if math.isfinite(value) else None
+
+
 def parse_threshold(subquestion: dict) -> Optional[float]:
     """Best-effort numeric threshold for ordering a ladder subquestion.
 
     Tries, in order: the subquestion `label` as a date, the label as a
     number, the title as a date/number, then a numeric `group_rank`.
     Dates map to Unix timestamps so date and numeric ladders share one
-    ordering scale. Returns None when nothing parseable is found.
+    ordering scale. Returns None when nothing parseable is found, and
+    also when the only candidate is non-finite (NaN / +/-inf): a corrupt
+    `group_rank` must not manufacture a threshold.
     """
     for text in (subquestion.get("label"), subquestion.get("title")):
         if not text:
@@ -123,32 +137,44 @@ def parse_threshold(subquestion: dict) -> Optional[float]:
         text = str(text).strip()
         for fmt in _MONTH_FORMATS:
             try:
-                return datetime.strptime(text, fmt).timestamp()
+                parsed = _finite_or_none(datetime.strptime(text, fmt).timestamp())
             except ValueError:
-                pass
+                parsed = None
+            if parsed is not None:
+                return parsed
         # A date embedded in a longer label, e.g. "By March 2027"
         m = re.search(r"(\d{4}-\d{2}-\d{2})", text)
         if m:
             try:
-                return datetime.strptime(m.group(1), "%Y-%m-%d").timestamp()
+                parsed = _finite_or_none(
+                    datetime.strptime(m.group(1), "%Y-%m-%d").timestamp()
+                )
             except ValueError:
-                pass
+                parsed = None
+            if parsed is not None:
+                return parsed
         m = re.search(r"(January|February|March|April|May|June|July|August|"
                       r"September|October|November|December)\s+(\d{4})", text)
         if m:
             try:
-                return datetime.strptime(f"{m.group(1)} {m.group(2)}", "%B %Y").timestamp()
+                parsed = _finite_or_none(
+                    datetime.strptime(f"{m.group(1)} {m.group(2)}", "%B %Y").timestamp()
+                )
             except ValueError:
-                pass
+                parsed = None
+            if parsed is not None:
+                return parsed
         m = re.search(r"-?\d[\d,]*\.?\d*", text)
         if m:
             try:
-                return float(m.group(0).replace(",", ""))
+                parsed = _finite_or_none(float(m.group(0).replace(",", "")))
             except ValueError:
-                pass
+                parsed = None
+            if parsed is not None:
+                return parsed
     rank = subquestion.get("group_rank")
     if isinstance(rank, (int, float)):
-        return float(rank)
+        return _finite_or_none(float(rank))
     return None
 
 
@@ -179,7 +205,14 @@ def infer_group_kind(group_or_subquestions: Any) -> str:
         subquestions = list(group_or_subquestions)
     if len(subquestions) >= 2 and all(q.get("type") == "binary" for q in subquestions):
         thresholds = [parse_threshold(q) for q in subquestions]
-        if all(t is not None for t in thresholds) and len(set(thresholds)) == len(thresholds):
+        # Defence in depth (SF-BL-10310): a ladder needs every threshold
+        # present, finite and distinct. NaN in particular must never pass
+        # this check on its own merits — NaN != NaN, so a set-distinctness
+        # test alone would count two NaN ranks as "distinct thresholds".
+        if (
+            all(t is not None and math.isfinite(t) for t in thresholds)
+            and len(set(thresholds)) == len(thresholds)
+        ):
             return "threshold_ladder"
     return "independent"
 
@@ -259,7 +292,7 @@ def validate_group_consistency(
         points: list[tuple[float, int, float]] = []
         for qid, payload in by_id.items():
             threshold = parse_threshold(subs_by_id[qid])
-            if threshold is None:
+            if threshold is None or not math.isfinite(threshold):
                 problems.append(f"ladder subquestion {qid} has no parseable threshold")
                 continue
             p = payload.get("probability_yes")

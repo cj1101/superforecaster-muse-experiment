@@ -10,7 +10,11 @@ Rule: we never quote a number we could not read at its source.
   #1 Claude Fable 5.1 (1−Brier 0.9484, edge +0.0606, ECE 0.0207, avg return
   95.98%); #2 GLM-5.3 (0.9479, +0.0621, ECE 0.0131); #3 Gemini 3.1 Pro (0.9474,
   best edge +0.0716, return 104.16%, ECE 0.0156); #4 Gemini 3.8 Flash (0.9471);
-  #5 Claude Opus 5.5 (0.9467). No movement Oct 16→17.
+  #5 Claude Opus 5.5 (0.9467). No movement Oct 16→17. [SV-1 vintage: as-of Oct 17 2026 read, last scored Oct 15 2026; cadence: rescore every 3 days, IRT projection refit ~hourly. CONSTRUCTION FLAG: the 1−Brier series above (0.9484…0.9467) is the as-displayed Oct-17 quote; the Oct-18 rescore audit (wave3/intel-prophet-rescore) found it matches neither the board's Projected nor its Raw column — do not delta it against either; the ECE/edge/return figures in this bullet were verified bit-identical at the Oct-18 fetch.]
+  *Steering-gate flag (SF-BL-5935) accompanying the Prophet Arena rank citations above:*
+
+> **DENOMINATOR-FRAGILITY FLAG — SF-BL-4585 (verbatim):** Kimi K3 — headline #7 → #10 on the board's own Raw (own-events) column: 3-place move. GPT-6 Astra — headline #9 → #5 on Raw: 4-place move. Gemini 3.1 Pro — headline #2 → 10th of 10 on the measured (own answered reference-subset) ranking: 8 places. GPT-6 Luna — headline #10 → 4th on the measured ranking: 6 places. DeepSeek V4.1 Flash — headline #6 → 3rd on the measured ranking: 3 places. These flags are NOT intersection reversals — the true intersection ranking is not computable from public data (SF-BL-4585). Per the SF-BL-5935 steering gate, no fleet steering decision may cite a Prophet Arena headline rank for any flagged model unless this flag accompanies the citation.
+
 - **Prediction Arena** — PAUSED (predictionarena.ai banner, checked Oct 17
   2026; last activity Jul 7 2026). Final all-time, $10K start: Gemini 3.1 Pro*
   +74.26% ($17,425.70), GLM 5* +69.42%, Claude Opus 4.6* +40.73%, GPT 5.4*
@@ -37,7 +41,7 @@ Rule: we never quote a number we could not read at its source.
   FOMC Brier since Jan 2023 (N=29): SFs **0.031** vs CME FedWatch **0.058**
   (46% more accurate; 4th consecutive year beating the futures market).
   Historical: ~30% more accurate than intelligence analysts with classified
-  access (IARPA tournament, 2011–2015; 500 questions, 1M+ forecasts).
+  access (IARPA tournament, 2011–2015; 500 questions, 1M+ forecasts). [SV-1 vintage: FOMC pair as read Oct 17 2026; cadence: cumulative series since Jan 2023 (N=29) as published by Good Judgment — no board rescore; the pair moves only when GJ republishes or the window extends.]
 - **ForecastBench** (forecastbench.org/leaderboards, "last updated
   2026-10-17"): Tournament board (380 entries, Brier Index 0–100): Google
   DeepMind "fire hedgehog" 69.0, "ceramic-kettle" 68.9, "blue croc" 68.7,
@@ -45,7 +49,7 @@ Rule: we never quote a number we could not read at its source.
   Baseline board (130 entries): Superforecaster median #1 at 67.7, public
   median 62.6, best raw LLM Kimi-K3 61.9; Random Uniform 41.9 (128/130).
   Site notes LLM–superforecaster parity achieved June 6, 2026; human
-  comparison groups last surveyed July 2024.
+  comparison groups last surveyed July 2024. [SV-1 vintage: both boards as-of the site's 2026-10-17 update; cadence: scores and datasets update nightly, new rounds biweekly, Tournament entry lag +50 days.]
 - **Metaculus / FutureEval** — VERIFIED at source via live browser session
   (Oct 18 2026, no login; the earlier Turnstile wall did not recur). Metaculus
   scores with log-score Peer Scores, not Brier. **Model leaderboard**
@@ -97,7 +101,7 @@ Rule: we never quote a number we could not read at its source.
 ## What this means for us (intel synthesis, 2026-10-17)
 1. Accuracy frontier (Prophet Arena/ForecastBench): edge +0.06–0.07 over
    market at ECE ~0.02, Brier ≈ 0.05 on shared events — the bar for our
-   Stage-2/3 pipeline on prediction questions.
+   Stage-2/3 pipeline on prediction questions. [SV-1 vintage: derived from the Prophet Arena Oct-17 2026 snapshot above (cadence: 3-day rescore); the Brier ≈ 0.05 term derives from WF-01's flagged 1−Brier series — see its construction flag before reusing.]
 2. Profit frontier is structural: speed, arbitrage, market-making, and
    cross-venue dislocations — a Stage-1/4 opportunity class our fleet
    underweights today; intel hypotheses queued accordingly.

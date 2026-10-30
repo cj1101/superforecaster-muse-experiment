@@ -29,6 +29,88 @@ def test_scores_known_values():
     assert log_score(y, np.array([0.01, 0.99, 0.99, 0.01])) < 0.1       # confident & right
 
 
+def test_scores_reject_out_of_range():
+    # SF-BL-9484: headline scoring rules must raise ValueError on any
+    # forecast outside [0,1] (incl. nan/inf) instead of clipping/scoring it.
+    bad = ([1.5], [2.0], [-0.5], [-1e-12], [1.0000001],
+           [float("nan")], [float("inf")], [float("-inf")])
+    for p in bad:
+        for fn, y in ((brier_score, [1]), (log_score, [1])):
+            try:
+                fn(y, p)
+            except ValueError:
+                pass
+            else:
+                raise AssertionError(f"{fn.__name__} accepted out-of-range p={p}")
+    # Mixed arrays: one bad element anywhere must reject the whole call.
+    for fn in (brier_score, log_score):
+        try:
+            fn([0, 1], [0.5, 1.5])
+        except ValueError:
+            pass
+        else:
+            raise AssertionError(f"{fn.__name__} accepted mixed out-of-range p")
+    # Lawful endpoints 0/1 still score (log_score clips them internally).
+    assert brier_score([1], [1.0]) == 0.0 and brier_score([1], [0.0]) == 1.0
+    assert log_score([1], [1.0]) < 1e-12 and log_score([1], [0.0]) > 30
+
+
+def test_nonfinite_inputs_rejected_everywhere():
+    # SF-BL-3596: NaN/Inf must raise ValueError at EVERY public entry
+    # point — _as_p/_norm_weights previously passed NaN silently
+    # (comparisons are False) while _as_y rejected it.
+    y = np.array([0., 1., 0., 1.]); p = np.array([0.2, 0.8, 0.3, 0.7])
+    P = np.column_stack([p, 1 - p])
+    fitted = [PlattScaler().fit(y, p), IsotonicCalibrator().fit(y, p),
+              BetaCalibrator().fit(y, p), TemperatureScaler().fit(y, p)]
+    for v in (float("nan"), float("inf"), float("-inf")):
+        bp = p.copy(); bp[1] = v
+        bw = np.array([0.5, 0.5]); bw[0] = v
+        calls = [
+            lambda: brier_score(y, bp), lambda: log_score(y, bp),
+            lambda: calibration_bins(y, bp), lambda: ece(y, bp),
+            lambda: mce(y, bp), lambda: murphy_decomposition(y, bp),
+            lambda: evaluate(y, bp),
+            lambda: PlattScaler().fit(y, bp), lambda: IsotonicCalibrator().fit(y, bp),
+            lambda: BetaCalibrator().fit(y, bp), lambda: TemperatureScaler().fit(y, bp),
+            lambda: linear_pool(np.column_stack([bp, 1 - p])),
+            lambda: linear_pool(P, bw), lambda: geometric_pool(P, bw),
+            lambda: log_odds_pool(P, bw), lambda: log_odds_pool(P, extremization=v),
+            lambda: optimize_pool_weights(y, np.column_stack([bp, 1 - p])),
+        ] + [lambda c=c: c.predict(bp) for c in fitted]
+        for fn in calls:
+            try:
+                fn()
+            except ValueError:
+                pass
+            else:
+                raise AssertionError(f"non-finite input {v} accepted by {fn}")
+
+
+def test_calibration_bins_reject_out_of_range():
+    # SF-BL-8778: calibration_bins (and ECE/MCE through it) must raise
+    # ValueError on any forecast outside [0,1] instead of digitizing it
+    # into an edge bin with mean_pred outside [0,1]. Non-finite values
+    # keep raising too (SF-BL-3596, subsumed by the range guard).
+    y = [0, 1, 0, 1]
+    bad = ([-0.1], [1.2], [-0.5], [2.0], [-1e-12], [1.000000001],
+           [float("nan")], [float("inf")], [float("-inf")])
+    for p_bad in bad:
+        p = [0.3, p_bad[0], 0.6, 0.9]  # one bad row among clean rows
+        for fn in (calibration_bins, ece, mce):
+            for kw in ({}, {"strategy": "quantile"}) if fn is calibration_bins else ({},):
+                try:
+                    fn(y, p, **kw)
+                except ValueError:
+                    pass
+                else:
+                    raise AssertionError(f"{fn.__name__} accepted out-of-range p={p} {kw}")
+    # Clean books unchanged: lawful endpoints bin, mean_pred stays in [0,1].
+    t = calibration_bins(y, [0.0, 1.0, 0.25, 0.75])
+    filled = t["count"] > 0
+    assert np.all((t["mean_pred"][filled] >= 0) & (t["mean_pred"][filled] <= 1))
+
+
 def test_murphy_identity():
     rng = np.random.default_rng(0)
     p_true = rng.beta(2, 2, 2000)
